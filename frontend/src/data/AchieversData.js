@@ -1,0 +1,133 @@
+import AadishImage from "../assets/team-photos/Senior Council/Aadish.jpg"
+import TanayImage from "../assets/team-photos/Senior Council/Tanay.jpg"
+import KaushalImage from "../assets/team-photos/Senior Council/Kaushal.jpg"
+import Bhavishyaamge from "../assets/team-photos/Senior Council/Bhavishya.jpg"
+
+const AchieversData = [
+    {
+        "id": 1,
+        "name": "Raman",
+        "batch": "2020-24",
+        "role": "Web Developer at Wiingy",
+        "exrole": "Intern at GRNConnect, Ingenium",
+        // "image": ,
+    },
+    {
+        "id": 2,
+        "name": "Siddhant Vijay Singh",
+        "batch": "2020-24",
+        "role": " Application Developer 1 at NCR Atleos",
+        "exrole": "DevOps Intern at Infrasity and SWE Intern at HyperSpace",
+        // "image": ,
+    },
+    {
+        "id": 3,
+        "name": "Ayush Garg",
+        "batch": "2020-24",
+        "role": "Product Manager at LawSikho",
+        "exrole": "Associate Product Manager at PW, Narra8ive",
+        // "image": ,
+    },
+    {
+        "id": 4,
+        "name": "Ayush Saini",
+        "batch": "2020-24",
+        "role": "DBA at Bachtel India",
+        "exrole": "Web Developer Intern at Bechtel India",
+        // "image": ,
+    },
+    {
+        "id": 5,
+        "name": "Manav Garg",
+        "batch": "2020-24",
+        "role": "Data Analyst at Internshala",
+        "exrole": "Data Analyst Intern at Pristyn Care",
+        // "image": ,
+    },
+    {
+        "id": 6,
+        "name": "Harshit Sharma",
+        "batch": "2020-24",
+        "role": "Data Analyst at Genpact",
+        "exrole": "Data Analyst Intern at Sparks Foundation",
+        // "image": ,
+    },
+    {
+        "id": 7,
+        "name": "Sumit Kumar",
+        "batch": "2020-24",
+        "role": "SDE(Mobile) at Raaho",
+        "exrole": " Android Developer at PowerhouseAI, Ingenium",
+        // "image": ,
+    },
+    {
+        "id": 8,
+        "name": "Mayank Nailwal",
+        "batch": "2021-25",
+        "role": " iOS developer intern at Mobilicis",
+        // "image": ,
+    },
+    {
+        "id": 9,
+        "name": "Udish Rawal",
+        "batch": "2021-25",
+        "role": "Flutter Developer Intern at Petro IT Solutions",
+        // "image": ,
+    },
+    {
+        "id": 10,
+        "name": "Tushar Sethi",
+        "batch": "2021-25",
+        "role": "AI Intern  at Blue Planet InfoSolutions",
+        // "image": ,
+    },
+    {
+        "id": 11,
+        "name": "Akanksha Mishra",
+        "batch": "2021-25",
+        "role": "Founder's Office Intern at Crossing Hurdles",
+        "ex-role": "Database Intern at OM Info Solutions",
+        // "image": ,
+    },
+    {
+        "id": 12,
+        "name": "Aadish Jain",
+        "batch": "2022-26",
+        "role": "SDE Intern at Appzlogic Mobility Solutions",
+        "image": AadishImage,
+    },
+    {
+        "id": 13,
+        "name": "Kaushal Kumar Rai",
+        "batch": "2022-26",
+        "role": "React Intern at Sanskaar Group",
+        "exrole": "React Intern at Brainchant" ,
+        "achievements": `Winner at Kaizen'23`,
+        "image": KaushalImage,
+    },
+    {
+        "id": 14,
+        "name": "Tanay Kumar",
+        "batch": "2022-26",
+        "role": "Full Stack Intern at Sanskaar Group",
+        "exrole": "Next.js Intern at Brainchant",
+        "image": TanayImage,
+    },
+    {
+        "id": 15,
+        "name": "Bhavishya Bhaskar",
+        "batch": "2022-26",
+        "role": "Specialist @Codeforces",
+        "image": Bhavishyaamge,
+    },
+    {
+        "id": 16,
+        "name": "Raushan",
+        "batch": "2022-26",
+        "role": "UI/UX designer Intern at Twoward Technologies",
+        "exrole": "Tech Analyst at Tata Play Fibre",
+        // "image": ,
+    }
+]
+
+export default AchieversData

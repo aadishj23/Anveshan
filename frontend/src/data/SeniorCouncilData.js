@@ -1,17 +1,24 @@
-import AadishImage from "../assets/team-photos/Aadish.jpg"
+import NehaImage from "../assets/team-photos/Senior Council/Neha.png"
+import ParthImage from "../assets/team-photos/Senior Council/Parth.jpg"
+import AadishImage from "../assets/team-photos/Senior Council/Aadish.jpg"
+import AlkaImage from "../assets/team-photos/Senior Council/Alka.jpg"
+import KaushalImage from "../assets/team-photos/Senior Council/Kaushal.jpg"
+import BhavishyaImage from "../assets/team-photos/Senior Council/Bhavishya.jpg"
+import TanayImage from "../assets/team-photos/Senior Council/Tanay.jpg"
+import AdityaImage from "../assets/team-photos/Senior Council/Aditya.jpg"
 
 const SeniorCouncilData = 
     [
         {
             "name": "Neha",
             "position": "President",
-            // "image": ,
+            "image": NehaImage,
             "id": 1
         },
         {
             "name": "Parth",
             "position": "Vice President",
-            // "image": ,
+            "image": ParthImage,
             "id": 2
         },
         {
@@ -23,7 +30,7 @@ const SeniorCouncilData =
         {
             "name": "Alka",
             "position": "Head of Operations",
-            // "image": ,
+            "image": AlkaImage,
             "id": 4
         },
         {
@@ -41,7 +48,7 @@ const SeniorCouncilData =
         {
             "name": "Kaushal",
             "position": "Graphics Head",
-            // "image": ,
+            "image": KaushalImage,
             "id": 7
         },
         {
@@ -59,19 +66,19 @@ const SeniorCouncilData =
         {
             "name": "Bhavishya",
             "position": "DSA Head",
-            // "image": ,
+            "image": BhavishyaImage,
             "id": 10
         },
         {
             "name": "Tanay",
             "position": "Web Head",
-            // "image": ,
+            "image": TanayImage,
             "id": 11
         },
         {
             "name": "Aditya",
             "position": "Android Head",
-            // "image": ,
+            "image": AdityaImage,
             "id": 12
         }
     ]

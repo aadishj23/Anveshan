@@ -1,3 +1,6 @@
+import GauriImage from '../assets/team-photos/Junior Council/Gauri.jpg'
+import KeshavImage from '../assets/team-photos/Junior Council/Keshav Mehra.jpg'
+
 const JuniorCouncilData= 
     [
         {
@@ -9,7 +12,7 @@ const JuniorCouncilData=
         {
             "name": "Gauri Behl",
             "position": "Junior Council",
-            // "image": ,
+            "image": GauriImage,
             "id": 14
         },
         {
@@ -51,7 +54,7 @@ const JuniorCouncilData=
         {
             "name": "Keshav Mehra",
             "position": "Junior Council",
-            // "image": ,
+            "image": KeshavImage,
             "id": 21
         }
     ]

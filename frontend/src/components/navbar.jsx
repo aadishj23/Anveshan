@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import logo_img from '../assets/logo_bg_remove.png';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <nav className="bg-gray-800 shadow-lg">
@@ -58,75 +60,95 @@ function Navbar() {
             </div>
             <div className="hidden sm:block sm:ml-6 flex-1">
               <div className="flex justify-center space-x-4">
-                <a
-                  href="#"
+                <button
+                  onClick={()=> {
+                    navigate("/")
+                  }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
+                  onClick={()=> {
+                    navigate("/team")
+                  }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Team
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
+                  onClick={()=> {
+                    navigate("/events")
+                  }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Events
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
+                  onClick={()=> {
+                    navigate("/achievements")
+                  }}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Achievements
-                </a>
+                </button>
               </div>
             </div>
             <div className="hidden sm:block">
-              <a
-                href="#"
+              <button
+                onClick={()=> {
+                  navigate("/contact")
+                }}
                 className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2  rounded-md text-sm font-medium"
               >
                 Contact Us
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1 text-center">
-          <a
-            href="#"
+        <div className="px-2 pt-2 pb-3 space-y-1 ">
+          <button
+            onClick={()=> {
+              navigate("/")
+            }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Home
-          </a>
-          <a
-            href="#"
+          </button>
+          <button
+            onClick={()=> {
+              navigate("/team")
+            }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Team
-          </a>
-          <a
-            href="#"
+          </button>
+          <button
+            onClick={()=> {
+              navigate("/events")
+            }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Events
-          </a>
-          <a
-            href="#"
+          </button>
+          <button
+            onClick={()=> {
+              navigate("/achievements")
+            }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Achievements
-          </a>
-          <a
-            href="#"
+          </button>
+          <button
+            onClick={()=> {
+              navigate("/contact")
+            }}
             className="text-white bg-blue-600 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium text-center"
           >
             Contact Us
-          </a>
+          </button>
         </div>
       </div>
     </nav>
