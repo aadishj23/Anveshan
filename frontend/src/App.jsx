@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/navbar'
-import TeamMain from './components/teamMain';
+import TeamMain from './components/team';
 import Home from './components/Home';
 import Events from './components/Events';
 import Achievements from './components/Achievements';
