@@ -114,7 +114,7 @@ function Navbar() {
               navigate("/")
               setIsOpen(false)
             }}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block m-auto px-3 py-2 rounded-md text-base font-medium"
           >
             Home
           </button>
@@ -123,7 +123,7 @@ function Navbar() {
               navigate("/team")
               setIsOpen(false)
             }}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block m-auto px-3 py-2 rounded-md text-base font-medium"
           >
             Team
           </button>
@@ -132,7 +132,7 @@ function Navbar() {
               navigate("/events")
               setIsOpen(false)
             }}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block m-auto px-3 py-2 rounded-md text-base font-medium"
           >
             Events
           </button>
@@ -141,7 +141,7 @@ function Navbar() {
               navigate("/achievements")
               setIsOpen(false)
             }}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block m-auto px-3 py-2 rounded-md text-base font-medium"
           >
             Achievements
           </button>
@@ -150,7 +150,7 @@ function Navbar() {
               navigate("/contact")
               setIsOpen(false)
             }}
-            className="text-white bg-blue-600 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium text-center"
+            className="text-white bg-blue-600 hover:bg-blue-700 block m-auto px-3 py-2 rounded-md text-base font-medium text-center"
           >
             Contact Us
           </button>
