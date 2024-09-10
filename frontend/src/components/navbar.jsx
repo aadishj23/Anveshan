@@ -112,6 +112,7 @@ function Navbar() {
           <button
             onClick={()=> {
               navigate("/")
+              setIsOpen(false)
             }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
@@ -120,6 +121,7 @@ function Navbar() {
           <button
             onClick={()=> {
               navigate("/team")
+              setIsOpen(false)
             }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
@@ -128,6 +130,7 @@ function Navbar() {
           <button
             onClick={()=> {
               navigate("/events")
+              setIsOpen(false)
             }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
@@ -136,6 +139,7 @@ function Navbar() {
           <button
             onClick={()=> {
               navigate("/achievements")
+              setIsOpen(false)
             }}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
@@ -144,6 +148,7 @@ function Navbar() {
           <button
             onClick={()=> {
               navigate("/contact")
+              setIsOpen(false)
             }}
             className="text-white bg-blue-600 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium text-center"
           >

@@ -1,5 +1,5 @@
 import React from 'react'
-import Achieverscard from './achieverscard'
+import Achieverscard from '../cards/achieverscard'
 import AchieversData from '../data/AchieversData'
 
 function Achievements() {

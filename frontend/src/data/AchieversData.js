@@ -1,7 +1,19 @@
+import AyushGImage from "../assets/team-photos/24 Batch/Ayush_Garg.png"
+import RamanImage from "../assets/team-photos/24 Batch/Raman.jpg"
+import SiddhantImage from "../assets/team-photos/24 Batch/Siddhant.jpg"
+import AyushSImage from "../assets/team-photos/24 Batch/Ayush_S.jpg"
+import ManavImage from "../assets/team-photos/24 Batch/Manav.jpg"
+import HarshitImage from "../assets/team-photos/24 Batch/Harshit.jpg"
+import SumitImage from "../assets/team-photos/24 Batch/Sumit.jpg"
+import MayankImage from "../assets/team-photos/25 Batch/Mayank.png"
+import UdishImage from "../assets/team-photos/25 Batch/Udish.png"
+import TusharImage from "../assets/team-photos/25 Batch/Tushar.png"
+import AkankshaImage from "../assets/team-photos/25 Batch/Akanksha.jpg"
 import AadishImage from "../assets/team-photos/Senior Council/Aadish.jpg"
 import TanayImage from "../assets/team-photos/Senior Council/Tanay.jpg"
 import KaushalImage from "../assets/team-photos/Senior Council/Kaushal.jpg"
 import Bhavishyaamge from "../assets/team-photos/Senior Council/Bhavishya.jpg"
+import RaushanImage from '../assets/team-photos/Junior Council/Raushan.jpg'
 
 const AchieversData = [
     {
@@ -10,7 +22,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "Web Developer at Wiingy",
         "exrole": "Intern at GRNConnect, Ingenium",
-        // "image": ,
+        "image": RamanImage,
     },
     {
         "id": 2,
@@ -18,7 +30,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": " Application Developer 1 at NCR Atleos",
         "exrole": "DevOps Intern at Infrasity and SWE Intern at HyperSpace",
-        // "image": ,
+        "image": SiddhantImage,
     },
     {
         "id": 3,
@@ -26,7 +38,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "Product Manager at LawSikho",
         "exrole": "Associate Product Manager at PW, Narra8ive",
-        // "image": ,
+        "image": AyushGImage,
     },
     {
         "id": 4,
@@ -34,7 +46,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "DBA at Bachtel India",
         "exrole": "Web Developer Intern at Bechtel India",
-        // "image": ,
+        "image": AyushSImage,
     },
     {
         "id": 5,
@@ -42,7 +54,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "Data Analyst at Internshala",
         "exrole": "Data Analyst Intern at Pristyn Care",
-        // "image": ,
+        "image": ManavImage,
     },
     {
         "id": 6,
@@ -50,7 +62,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "Data Analyst at Genpact",
         "exrole": "Data Analyst Intern at Sparks Foundation",
-        // "image": ,
+        "image": HarshitImage,
     },
     {
         "id": 7,
@@ -58,28 +70,28 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "SDE(Mobile) at Raaho",
         "exrole": " Android Developer at PowerhouseAI, Ingenium",
-        // "image": ,
+        "image": SumitImage,
     },
     {
         "id": 8,
         "name": "Mayank Nailwal",
         "batch": "2021-25",
         "role": " iOS developer intern at Mobilicis",
-        // "image": ,
+        "image": MayankImage,
     },
     {
         "id": 9,
         "name": "Udish Rawal",
         "batch": "2021-25",
         "role": "Flutter Developer Intern at Petro IT Solutions",
-        // "image": ,
+        "image": UdishImage,
     },
     {
         "id": 10,
         "name": "Tushar Sethi",
         "batch": "2021-25",
         "role": "AI Intern  at Blue Planet InfoSolutions",
-        // "image": ,
+        "image": TusharImage,
     },
     {
         "id": 11,
@@ -87,7 +99,7 @@ const AchieversData = [
         "batch": "2021-25",
         "role": "Founder's Office Intern at Crossing Hurdles",
         "ex-role": "Database Intern at OM Info Solutions",
-        // "image": ,
+        "image": AkankshaImage,
     },
     {
         "id": 12,
@@ -126,7 +138,7 @@ const AchieversData = [
         "batch": "2022-26",
         "role": "UI/UX designer Intern at Twoward Technologies",
         "exrole": "Tech Analyst at Tata Play Fibre",
-        // "image": ,
+        "image": RaushanImage,
     }
 ]
 

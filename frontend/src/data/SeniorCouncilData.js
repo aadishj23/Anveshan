@@ -2,7 +2,11 @@ import NehaImage from "../assets/team-photos/Senior Council/Neha.png"
 import ParthImage from "../assets/team-photos/Senior Council/Parth.jpg"
 import AadishImage from "../assets/team-photos/Senior Council/Aadish.jpg"
 import AlkaImage from "../assets/team-photos/Senior Council/Alka.jpg"
+import VaibhavImage from "../assets/team-photos/Senior Council/Vaibhav.jpg"
+import ShrutiIamge from "../assets/team-photos/Senior Council/Shruti.jpg"
 import KaushalImage from "../assets/team-photos/Senior Council/Kaushal.jpg"
+import SurenderImage from "../assets/team-photos/Senior Council/Surender.jpg"
+import AryamanImage from "../assets/team-photos/Senior Council/Aryaman.jpg"
 import BhavishyaImage from "../assets/team-photos/Senior Council/Bhavishya.jpg"
 import TanayImage from "../assets/team-photos/Senior Council/Tanay.jpg"
 import AdityaImage from "../assets/team-photos/Senior Council/Aditya.jpg"
@@ -36,13 +40,13 @@ const SeniorCouncilData =
         {
             "name": "Vaibhav",
             "position": "Secretary",
-            // "image": ,
+            "image": VaibhavImage,
             "id": 5
         },
         {
             "name": "Shruti",
             "position": "Social Media Head",
-            // "image": ,
+            "image": ShrutiIamge,
             "id": 6
         },
         {
@@ -54,13 +58,13 @@ const SeniorCouncilData =
         {
             "name": "Surender",
             "position": "Graphics Head",
-            // "image": ,
+            "image": SurenderImage,
             "id": 8 
         },
         {
             "name": "Aryaman",
             "position": "PR Head",
-            // "image": ,
+            "image": AryamanImage,
             "id": 9
         },
         {

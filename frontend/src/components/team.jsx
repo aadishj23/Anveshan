@@ -1,5 +1,5 @@
 import React from 'react'
-import TeamCard from './teamcard'
+import TeamCard from '../cards/teamcard'
 import SeniorCouncilData from '../data/SeniorCouncilData'
 import JuniorCouncilData from '../data/JuniorCouncilData'
 
