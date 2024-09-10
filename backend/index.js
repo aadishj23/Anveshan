@@ -10,6 +10,10 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send('Hello from Anveshan!');
+});
+
 app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
 

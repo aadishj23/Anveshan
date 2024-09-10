@@ -13,7 +13,7 @@ function Achieverscard({ name, image,batch, role, exrole , achieve}) {
             <p className="mt-2 text-lg text-gray-500">{batch}</p>
             <p className=" max-w-64 mt-2 text-lg text-gray-500">{role}</p>
             {exrole && <p className=" max-w-64 mt-2 text-lg text-gray-500">{`Ex- ${exrole}`}</p>}
-            {achieve && <p className="max-w-64 mt-2 text-lg text-gray-500">{`Achievements: ${achieve}`}</p>}
+            {achieve && <p className="max-w-64 mt-2 text-lg text-gray-500">{achieve}</p>}
         </div>
     </div>
   )

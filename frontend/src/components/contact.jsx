@@ -7,9 +7,27 @@ function Contact() {
     email: '',
     message: ''
   });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState('');
+
+  const handleContact = async () => {
+    try {
+      await axios({
+        url: 'https://anveshan.onrender.com/',
+        method: 'GET',
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      console.log('Contacted the backend');
+    }
+  };
+
+  React.useEffect(() => {
+    handleContact();
+  }, []);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -34,7 +52,7 @@ function Contact() {
           'Content-Type': 'application/json'
         }
       });
-      setSuccess('Your message has been successfully sent!');
+      setSuccess('Your message has been successfully sent! Anveshan team will get back to you soon.');
       setFormData({
         name: '',
         email: '',

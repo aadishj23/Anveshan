@@ -38,6 +38,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "Product Manager at LawSikho",
         "exrole": "Associate Product Manager at PW, Narra8ive",
+        "achievements": "Former President at Anveshan",
         "image": AyushGImage,
     },
     {
@@ -46,6 +47,7 @@ const AchieversData = [
         "batch": "2020-24",
         "role": "DBA at Bachtel India",
         "exrole": "Web Developer Intern at Bechtel India",
+        "achievements": "Former Vice President at Anveshan",
         "image": AyushSImage,
     },
     {
@@ -76,7 +78,8 @@ const AchieversData = [
         "id": 8,
         "name": "Mayank Nailwal",
         "batch": "2021-25",
-        "role": " iOS developer intern at Mobilicis",
+        "role": " iOS developer Intern at Mobilicis",
+        "achievements": "Former President at Anveshan",
         "image": MayankImage,
     },
     {
@@ -84,6 +87,7 @@ const AchieversData = [
         "name": "Udish Rawal",
         "batch": "2021-25",
         "role": "Flutter Developer Intern at Petro IT Solutions",
+        "achievements": "Former Vice President at Anveshan",
         "image": UdishImage,
     },
     {
@@ -91,6 +95,8 @@ const AchieversData = [
         "name": "Tushar Sethi",
         "batch": "2021-25",
         "role": "AI Intern  at Blue Planet InfoSolutions",
+        "exrole": "Python Instructor at Coding Blocks",
+        "achievements": "Former Secretary at Anveshan",
         "image": TusharImage,
     },
     {
@@ -99,6 +105,7 @@ const AchieversData = [
         "batch": "2021-25",
         "role": "Founder's Office Intern at Crossing Hurdles",
         "ex-role": "Database Intern at OM Info Solutions",
+        "achievements": "Former Social Media Head at Anveshan",
         "image": AkankshaImage,
     },
     {
@@ -106,6 +113,7 @@ const AchieversData = [
         "name": "Aadish Jain",
         "batch": "2022-26",
         "role": "SDE Intern at Appzlogic Mobility Solutions",
+        "achievements": "Current Vice President at Anveshan",
         "image": AadishImage,
     },
     {
@@ -130,6 +138,7 @@ const AchieversData = [
         "name": "Bhavishya Bhaskar",
         "batch": "2022-26",
         "role": "Specialist @Codeforces",
+        "achievements": "DSA Head at Anveshan",
         "image": Bhavishyaamge,
     },
     {
