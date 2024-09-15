@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Events from './components/Events';
 import Achievements from './components/Achievements';
 import Contact from './components/contact';
+import Footer from './components/Footer';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
       <div>
         <Navbar />
         <Home />
+        <Events />
+        <TeamMain />
+        <Achievements />
+        <Contact />
+        <Footer />
       </div>
   },
   {
@@ -21,9 +27,8 @@ function App() {
     element: 
     <div>
       <Navbar />
-      <main className='pt-16'>
-        <TeamMain />
-      </main>
+      <TeamMain />
+      <Footer />
     </div>
   },
   {
@@ -32,6 +37,7 @@ function App() {
       <div>
         <Navbar />
         <Events />
+        <Footer />
       </div>
   },
   {
@@ -40,6 +46,7 @@ function App() {
       <div>
         <Navbar />
         <Achievements />
+        <Footer />
       </div>
   },
   {
@@ -48,6 +55,7 @@ function App() {
       <div>
         <Navbar />
         <Contact />
+        <Footer />
       </div>
   }
 ])

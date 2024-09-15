@@ -7,7 +7,7 @@ function Navbar() {
   const navigate = useNavigate()
 
   return (
-    <nav className="bg-gray-800 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full shadow-md z-50 bg-black ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -58,7 +58,7 @@ function Navbar() {
             <div className="flex-shrink-0">
               <img className="h-12 w-auto p-2" src={logo_img} alt="Workflow" />
             </div>
-            <div className="hidden sm:block sm:ml-6 flex-1">
+            <div className="hidden sm:block sm:ml-6 flex-1 mt-1" >
               <div className="flex justify-center space-x-4">
                 <button
                   onClick={()=> {
@@ -99,7 +99,7 @@ function Navbar() {
                 onClick={()=> {
                   navigate("/contact")
                 }}
-                className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2  rounded-md text-sm font-medium"
+                className="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 mt-1 rounded-md text-sm font-medium"
               >
                 Contact Us
               </button>
@@ -150,7 +150,7 @@ function Navbar() {
               navigate("/contact")
               setIsOpen(false)
             }}
-            className="text-white bg-blue-600 hover:bg-blue-700 block m-auto px-3 py-2 rounded-md text-base font-medium text-center"
+            className="text-white bg-orange-500 hover:bg-orange-600 block m-auto px-3 py-2 rounded-md text-base font-medium text-center"
           >
             Contact Us
           </button>
