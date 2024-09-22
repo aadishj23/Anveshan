@@ -51,13 +51,6 @@ function Events() {
       className="bg-cover bg-center p-4 min-h-screen flex flex-col items-center justify-center pb-20"
       style={{ backgroundImage: `url(${events_bg})` }}
     >
-      <style>
-        {`
-          .slick-slide{
-            padding:0px
-          }
-        `}
-        </style>
       <div className="inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center w-full">
         <h1 className="mt-5 pt-12 mb-12 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-5xl md:text-7xl font-bold">
