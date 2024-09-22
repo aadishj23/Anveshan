@@ -15,7 +15,6 @@ function Events() {
       description={event.description}
       date={event.date}
       photos={event.image}
-      // className="w-full max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
     />
   ));
 
@@ -25,6 +24,8 @@ function Events() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true, 
+    centerPadding: '0px',
     responsive: [
       {
         breakpoint: 1024,
@@ -40,9 +41,21 @@ function Events() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false
+          arrows: false,
+          centerMode: true, 
+          centerPadding: '40px',
         }
       },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          centerMode: true,
+          centerPadding: '20px', 
+        }
+      }
     ]
   };
 

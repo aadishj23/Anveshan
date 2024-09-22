@@ -76,7 +76,7 @@ function App() {
       </div>
   },
   {
-    path: "/events/Succesfull Engineer ft Fraz",
+    path: "/events/Successful Engineer ft Fraz",
     element: 
       <div>
         {/* <Navbar /> */}
