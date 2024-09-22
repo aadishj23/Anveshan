@@ -51,7 +51,7 @@ const EventsData= [
     },
     {
         "id": 7,
-        "name": "Succesfull Engineer ft Fraz",
+        "name": "Successful Engineer ft Fraz",
         "description": "A session on how to be a successful engineer by famous youtuber Fraz",
         "date": "12-03-2022",
         "image": FrazImage,
