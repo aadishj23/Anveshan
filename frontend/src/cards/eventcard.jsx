@@ -10,14 +10,14 @@ const EventCard = ({ title, description, date, photos }) => {
         <h2 className="text-orange-500 font-bold text-3xl md:text-4xl mb-2">{title}</h2>
         <p className="text-white mb-2">{description}</p>
         <p className="text-gray-300 text-sm">{date}</p>
-        <button 
+        {/* <button 
           className="bg-orange-500 px-4 py-2 text-white rounded-md mt-5 font-medium hover:bg-orange-600 transition duration-300"
           onClick={()=>{
             navigate(`/events/${title}`)
           }}
         >
           View More
-        </button>
+        </button> */}
       </div>
       <img 
         src={photos} 

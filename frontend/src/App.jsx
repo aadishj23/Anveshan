@@ -6,7 +6,7 @@ import Events from './components/Events';
 import Achievements from './components/Achievements';
 import Contact from './components/contact';
 import Footer from './components/Footer';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider, Navigate} from 'react-router-dom'
 import HackBPIT from './components/event components/HackBPIT';
 import Fraz from './components/event components/Fraz';
 import Google from './components/event components/Google';
@@ -128,6 +128,10 @@ function App() {
         <Technovation />
         {/* <Footer /> */}
       </div>
+  },
+  {
+    path: '*', 
+    element: <Navigate to="/" replace />
   }
 ])
   return (

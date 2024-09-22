@@ -46,7 +46,7 @@ const EventsData= [
         "id": 6,
         "name": "Placements @Google",
         "description": "BPIT 2022 Alums Neha Didi and Chayan Bhaiya will be sharing their experience on how they cracked Google",
-        "date": "19-06-2024",
+        "date": "19-06-2022",
         "image": GoogleImage,
     },
     {
