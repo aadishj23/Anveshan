@@ -3,6 +3,10 @@ import TeamCard from '../cards/teamcard'
 import SeniorCouncilData from '../data/SeniorCouncilData'
 import JuniorCouncilData from '../data/JuniorCouncilData'
 import common from '../assets/bg.svg'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import '../custom css/corousel.css'
 
 function TeamMain() {
     const seniorCouncil = SeniorCouncilData.map((member) => {
@@ -12,18 +16,71 @@ function TeamMain() {
                 name={member.name}
                 position={member.position}
                 image={member.image}
+                LinkedInLink={member.LinkedinLink}
+                GithubLink={member.GithubLink}
+                LeetcodeLink={member.LeetcodeLink}
+                CodechefLink={member.CodechefLink}
+                CodeforcesLink={member.CodeforcesLink}
+                TwitterLink={member.TwitterLink}
+                InstagramLink={member.InstagramLink}
             />
         )
     })
+
     const juniorCouncil = JuniorCouncilData.map((member) => {
         return (
             <TeamCard
                 key={member.id}
                 name={member.name}
                 image={member.image}
+                LinkedInLink={member.LinkedinLink}
+                GithubLink={member.GithubLink}
+                LeetcodeLink={member.LeetcodeLink}
+                CodechefLink={member.CodechefLink}
+                CodeforcesLink={member.CodeforcesLink}
+                TwitterLink={member.TwitterLink}
+                InstagramLink={member.InstagramLink}
             />
         )
     })
+
+    var settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false
+                }
+            }
+        ]
+    };
 
     return (
         <div className='bg-gray-100 min-h-screen bg-cover'
@@ -44,13 +101,13 @@ function TeamMain() {
                     <p className='text-lg text-white text-center mb-10'>
                         Introducing the talented members of our Junior Council.
                     </p>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10 justify-items-center text-center'>
+                    <Slider {...settings} className='text-center'>
                         {juniorCouncil}
-                    </div>
+                    </Slider>                
                 </div>
             </div>
         </div>
     )
 }
 
-export default TeamMain
+export default TeamMain;
