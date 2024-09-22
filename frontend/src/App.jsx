@@ -7,13 +7,13 @@ import Achievements from './components/Achievements';
 import Contact from './components/contact';
 import Footer from './components/Footer';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import HackBPIT from './event components/HackBPIT';
-import Fraz from './event components/Fraz';
-import Google from './event components/Google';
-import Gate from './event components/Gate';
-import MeetAlumni from './event components/MeetAlumni';
-import TechStarter from './event components/TechStarter';
-import Technovation from './event components/Technovation';
+import HackBPIT from './components/event components/HackBPIT';
+import Fraz from './components/event components/Fraz';
+import Google from './components/event components/Google';
+import Gate from './components/event components/Gate';
+import MeetAlumni from './components/event components/MeetAlumni';
+import TechStarter from './components/event components/TechStarter';
+import Technovation from './components/event components/Technovation';
 
 
 function App() {

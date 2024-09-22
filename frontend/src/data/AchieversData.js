@@ -23,6 +23,7 @@ const AchieversData = [
         "role": "Web Developer at Wiingy",
         "exrole": "Intern at GRNConnect, Ingenium",
         "image": RamanImage,
+        "linkedin": "https://www.linkedin.com/in/raman-sde1/",
     },
     {
         "id": 2,
@@ -31,6 +32,7 @@ const AchieversData = [
         "role": " Application Developer 1 at NCR Atleos",
         "exrole": "DevOps Intern at Infrasity and SWE Intern at HyperSpace",
         "image": SiddhantImage,
+        "linkedin": "https://www.linkedin.com/in/sidvjsingh/",
     },
     {
         "id": 3,
@@ -40,6 +42,7 @@ const AchieversData = [
         "exrole": "Associate Product Manager at PW, Narra8ive",
         "achievements": "Former President at Anveshan",
         "image": AyushGImage,
+        "linkedin": "https://www.linkedin.com/in/gargayush909/",
     },
     {
         "id": 4,
@@ -49,6 +52,7 @@ const AchieversData = [
         "exrole": "Web Developer Intern at Bechtel India",
         "achievements": "Former Vice President at Anveshan",
         "image": AyushSImage,
+        "linkedin": "https://www.linkedin.com/in/ayush-saini-09686b217/",
     },
     {
         "id": 5,
@@ -57,6 +61,7 @@ const AchieversData = [
         "role": "Data Analyst at Internshala",
         "exrole": "Data Analyst Intern at Pristyn Care",
         "image": ManavImage,
+        "linkedin": "https://www.linkedin.com/in/manav-garg04/",
     },
     {
         "id": 6,
@@ -65,6 +70,7 @@ const AchieversData = [
         "role": "Data Analyst at Genpact",
         "exrole": "Data Analyst Intern at Sparks Foundation",
         "image": HarshitImage,
+        "linkedin": "https://www.linkedin.com/in/harshit-sharma-hsh/",
     },
     {
         "id": 7,
@@ -73,6 +79,7 @@ const AchieversData = [
         "role": "SDE(Mobile) at Raaho",
         "exrole": " Android Developer at PowerhouseAI, Ingenium",
         "image": SumitImage,
+        "linkedin": "https://www.linkedin.com/in/stkrr002/",
     },
     {
         "id": 8,
@@ -81,6 +88,7 @@ const AchieversData = [
         "role": " iOS developer Intern at Mobilicis",
         "achievements": "Former President at Anveshan",
         "image": MayankImage,
+        "linkedin": "https://www.linkedin.com/in/mayanktech/",
     },
     {
         "id": 9,
@@ -89,6 +97,7 @@ const AchieversData = [
         "role": "Flutter Developer Intern at Petro IT Solutions",
         "achievements": "Former Vice President at Anveshan",
         "image": UdishImage,
+        "linkedin": "https://www.linkedin.com/in/udish-rawal-a911a9268/",
     },
     {
         "id": 10,
@@ -98,6 +107,7 @@ const AchieversData = [
         "exrole": "Python Instructor at Coding Blocks",
         "achievements": "Former Secretary at Anveshan",
         "image": TusharImage,
+        "linkedin": "https://www.linkedin.com/in/tushar-sethi-9342a722b/",
     },
     {
         "id": 11,
@@ -107,6 +117,7 @@ const AchieversData = [
         "ex-role": "Database Intern at OM Info Solutions",
         "achievements": "Former Social Media Head at Anveshan",
         "image": AkankshaImage,
+        "linkedin": "https://www.linkedin.com/in/akanksha-mishra-120a95253/",
     },
     {
         "id": 12,
@@ -115,6 +126,7 @@ const AchieversData = [
         "role": "SDE Intern at Appzlogic Mobility Solutions",
         "achievements": "Current Vice President at Anveshan",
         "image": AadishImage,
+        "linkedin": "https://www.linkedin.com/in/aadishj23/",
     },
     {
         "id": 13,
@@ -124,6 +136,7 @@ const AchieversData = [
         "exrole": "React Intern at Brainchant" ,
         "achievements": `Winner at Kaizen'23`,
         "image": KaushalImage,
+        "linkedin": "https://www.linkedin.com/in/kaushalrai007/",
     },
     {
         "id": 14,
@@ -132,6 +145,7 @@ const AchieversData = [
         "role": "Full Stack Intern at Sanskaar Group",
         "exrole": "Next.js Intern at Brainchant",
         "image": TanayImage,
+        "linkedin": "https://www.linkedin.com/in/tanaykmr/",
     },
     {
         "id": 15,
@@ -140,6 +154,7 @@ const AchieversData = [
         "role": "Specialist @Codeforces",
         "achievements": "DSA Head at Anveshan",
         "image": Bhavishyaamge,
+        "linkedin": "https://www.linkedin.com/in/bhavishya-bhaskar-084445260/",
     },
     {
         "id": 16,
@@ -148,6 +163,7 @@ const AchieversData = [
         "role": "UI/UX designer Intern at Twoward Technologies",
         "exrole": "Tech Analyst at Tata Play Fibre",
         "image": RaushanImage,
+        "linkedin": "https://www.linkedin.com/in/raushan-kumar-singh-31b6b8326/",
     }
 ]
 

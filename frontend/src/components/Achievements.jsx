@@ -15,6 +15,7 @@ function Achievements() {
         exrole={member.exrole}
         achieve={member.achievements}
         image={member.image}
+        LinkedInLink={member.linkedin}
       />
     )
   })
