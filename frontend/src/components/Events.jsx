@@ -32,6 +32,7 @@ function Events() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
           infinite: true,
           dots: true
         }
