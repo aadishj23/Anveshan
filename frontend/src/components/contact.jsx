@@ -70,7 +70,7 @@ function Contact() {
 
   return (
     <div className='min-h-screen w-full bg-cover bg-center ' style={{ backgroundImage: `url(${contact_bg})` }}>
-      <div className="p-6 shadow-md rounded-lg flex justify-around pt-20">
+      <div className="p-6 shadow-md rounded-lg flex justify-around pt-32">
         <form 
           onSubmit={handleSubmit} 
           className="space-y-6 px-10 py-10 md:px-20 md:py-20 w-screen md:w-full lg:w-2/5"
