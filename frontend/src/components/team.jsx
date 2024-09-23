@@ -57,7 +57,8 @@ function TeamMain() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
+                    arrows: false,
+                    infinite: false,
                     dots: true
                 }
             },
