@@ -9,7 +9,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black w-full rounded-md z-0 ",
+        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black w-full z-0 ",
       )}>
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 invisible md:visible md:pt-60 ">
         <motion.div
