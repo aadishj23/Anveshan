@@ -5,8 +5,8 @@ const EventCard = ({ title, description, date, photos }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col md:flex-row items-center rounded overflow-hidden shadow-lg md:py-20 md:px-10">
-      <div className="p-4 w-full md:w-3/5">
+    <div className="flex flex-col lg:flex-row items-center rounded overflow-hidden shadow-lg md:py-20 md:px-10">
+      <div className="p-4 w-full lg:w-3/5 text-center lg:text-left">
         <h2 className="text-orange-500 font-bold text-3xl md:text-4xl mb-2">{title}</h2>
         <p className="text-white mb-2">{description}</p>
         <p className="text-gray-300 text-sm">{date}</p>
