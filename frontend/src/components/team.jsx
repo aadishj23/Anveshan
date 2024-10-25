@@ -23,6 +23,7 @@ function TeamMain() {
                 CodeforcesLink={member.CodeforcesLink}
                 TwitterLink={member.TwitterLink}
                 InstagramLink={member.InstagramLink}
+                CodolioLink={member.CodolioLink}
             />
         )
     })
@@ -40,6 +41,7 @@ function TeamMain() {
                 CodeforcesLink={member.CodeforcesLink}
                 TwitterLink={member.TwitterLink}
                 InstagramLink={member.InstagramLink}
+                CodolioLink={member.CodolioLink}
             />
         )
     })

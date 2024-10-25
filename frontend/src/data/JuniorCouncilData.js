@@ -7,6 +7,10 @@ import ShwetImage from '../assets/team-photos/Junior Council/Shwet.jpg'
 import PreetiImage from '../assets/team-photos/Junior Council/Preeti.jpg'
 import RiyaImage from '../assets/team-photos/Junior Council/Riya.jpg'
 import KeshavImage from '../assets/team-photos/Junior Council/Keshav Mehra.jpg'
+import AnamikaImage from '../assets/team-photos/Junior Council/Anamika.jpg'
+import DrishtiImage from '../assets/team-photos/Junior Council/Drishti.jpg'
+import GauravImage from '../assets/team-photos/Junior Council/Gaurav.jpg'
+import KunalImage from '../assets/team-photos/Junior Council/Kunal.jpg'
 
 const JuniorCouncilData= 
     [
@@ -99,6 +103,45 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/keshav-mehra-543362296",
             "GithubLink": "https://github.com/Airbone25",
             "InstagramLink": "https://www.instagram.com/theautisticone__?igsh=MXIzbmV0ZjhzOXgzbg=="
+        },
+        {
+            "name": "Anamika Singh",
+            "position": "Junior Council",
+            "image": AnamikaImage,
+            "id": 22,
+            "LinkedinLink": "https://www.linkedin.com/in/anamikasingh20/",
+            "GithubLink": "https://github.com/Anamiiikka",
+            "LeetcodeLink": "https://leetcode.com/u/Anamiiika/",
+            "InstagramLink": "https://www.instagram.com/yb_anamika/?hl=en"
+        },
+        {
+            "name": "Drishti Goel",
+            "position": "Junior Council",
+            "image": DrishtiImage,
+            "id": 23,
+            "LinkedinLink": "https://www.linkedin.com/in/drishti-goel-27b897297/",
+            "GithubLink": "https://github.com/drishtigoel083",
+            "LeetcodeLink": "https://leetcode.com/u/drishtigoel205/",
+            "TwitterLink": "https://x.com/DrishtiGoe22413",
+            "InstagramLink": "https://www.instagram.com/drishtigoel205/"
+        },
+        {
+            "name": "Gaurav",
+            "position": "Junior Council",
+            "image": GauravImage,
+            "id": 24,
+            "LinkedinLink": "https://www.linkedin.com/in/gauravsingh640",
+            "CodolioLink": "https://codolio.com/profile/Gaurav640",
+            "InstagramLink": "https://www.instagram.com/itsme_gaurav_rajput?igsh=cDg2NDdnejR0c2I="
+        },
+        {
+            "name": "Kunal Jain",
+            "position": "Junior Council",
+            "image": KunalImage,
+            "id": 25,
+            "LinkedinLink": "https://www.linkedin.com/in/kunal-jain-ba463a202/",
+            "LeetcodeLink": "https://leetcode.com/u/kunaljain9898/",
+            "InstagramLink": "https://www.instagram.com/kunaljain9898/"
         }
     ]
 
