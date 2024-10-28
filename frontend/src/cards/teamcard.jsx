@@ -6,7 +6,7 @@ import Twitter from '../assets/Socials/x.svg';
 import Leetcode from '../assets/Socials/Leetcode.svg';
 import Codechef from '../assets/Socials/Codechef.svg';
 import Codeforces from '../assets/Socials/Codeforces.svg';
-import Codolio from '../assets/Socials/Codolio.svg';
+import Codolio from '../assets/Socials/codolio.svg';
 
 function TeamCard({ name, position, image , LinkedInLink , GithubLink , LeetcodeLink , CodechefLink , CodeforcesLink , TwitterLink , InstagramLink , CodolioLink }) {
     return (
