@@ -11,6 +11,7 @@ import AnamikaImage from '../assets/team-photos/Junior Council/Anamika.jpg'
 import DrishtiImage from '../assets/team-photos/Junior Council/Drishti.jpg'
 import GauravImage from '../assets/team-photos/Junior Council/Gaurav.jpg'
 import KunalImage from '../assets/team-photos/Junior Council/Kunal.jpg'
+import KarnitaImage from '../assets/team-photos/Junior Council/Karnita.jpg'
 
 const JuniorCouncilData= 
     [
@@ -142,6 +143,15 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/kunal-jain-ba463a202/",
             "LeetcodeLink": "https://leetcode.com/u/kunaljain9898/",
             "InstagramLink": "https://www.instagram.com/kunaljain9898/"
+        }, 
+        {
+            "name": "Karnita Saumya",
+            "position": "Junior Council",
+            "image": KarnitaImage,
+            "id": 26,
+            "LinkedinLink": "https://www.linkedin.com/in/karnita-saumya/",
+            "GithubLink": "https://github.com/Karnita-Saumya",
+            "LeetcodeLink": "https://leetcode.com/u/KarnitaSaumya/",
         }
     ]
 

@@ -35,7 +35,7 @@ function Home() {
           {'<Powered By Code />'}
         </p>
         <p className="text-2xl w-full text-center md:w-3/5 block mr-auto ml-auto p-6">
-          Anveshan is the community where focus is on your growth and learning via persoalized mentorship and support theroughout your journey. At Anveshan, we believe in the power of community and the impact it can have on your learning journey. We are here to help you grow and learn in the best possible way.
+          Anveshan is the community where focus is on your growth and learning via personalized mentorship and support throughout your journey. At Anveshan, we believe in the power of community and the impact it can have on your learning journey. We are here to help you grow and learn in the best possible way.
         </p>
       </motion.h1>
     </LampContainer>

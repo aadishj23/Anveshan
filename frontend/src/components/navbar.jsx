@@ -56,7 +56,7 @@ function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
             <div className="flex-shrink-0">
-              <img className="h-12 w-auto p-2" src={logo_img} alt="Workflow" />
+              <a href="/"><img className="h-12 w-auto p-2" src={logo_img} alt="Workflow" /></a>
             </div>
             <div className="hidden sm:block sm:ml-6 flex-1 mt-1" >
               <div className="flex justify-center space-x-4">
