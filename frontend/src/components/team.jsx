@@ -80,7 +80,7 @@ function TeamMain() {
                     slidesToScroll: 1,
                     dots: true,
                     centerMode: true, 
-                    centerPadding: '10px',
+                    centerPadding: '18px',
                     arrows: false
                 }
             }
