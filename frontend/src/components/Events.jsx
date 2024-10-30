@@ -1,11 +1,11 @@
 import React from 'react';
 import EventCard from '../cards/eventcard';
 import EventsData from '../data/EventsData';
-import events_bg from '../assets/events_bg.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../custom css/corousel.css';
+import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 
 function Events() {
   const events = EventsData.map((event) => (
@@ -61,13 +61,10 @@ function Events() {
   };
 
   return (
-    <div
-      className="bg-cover bg-center p-4 min-h-screen flex flex-col items-center justify-center pb-20"
-      style={{ backgroundImage: `url(${events_bg})` }}
-    >
+    <BackgroundBeamsWithCollision className="pb-16">
       <div className="inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center w-full">
-        <h1 className="mt-5 pt-12 mb-12 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-5xl md:text-7xl font-bold">
+        <h1 className="mt-5 pt-16 mb-8 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-5xl md:text-7xl font-bold">
           EVENTS
         </h1>
         <div className="w-full max-w-7xl px-4 lg:px-0">
@@ -76,7 +73,7 @@ function Events() {
           </Slider>
         </div>
       </div>
-    </div>
+    </BackgroundBeamsWithCollision>
   );
 }
 
