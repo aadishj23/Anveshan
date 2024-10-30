@@ -19,7 +19,7 @@ const SeniorCouncilData =
             "image": NehaImage,
             "id": 1,
             "LinkedinLink": "https://www.linkedin.com/in/neha-a9333124b",
-            "GithubLink": "https://github.com/nehaaaah123",
+            // "GithubLink": "https://github.com/nehaaaah123",
             "TwitterLink": "https://x.com/nehaa0667?s=09",
             "InstagramLink": "https://www.instagram.com/_alsoneha?igsh=aWN4a2p0NnV0N2xy"
         },
@@ -31,7 +31,7 @@ const SeniorCouncilData =
             "LinkedinLink": "https://www.linkedin.com/in/parth-nepalia-a2780a249/" ,
             "GithubLink": "http://www.github.com/parth-n",
             "TwitterLink": "https://x.com/ParthNtwt",
-            "InstagramLink": "http://www.instagram.com/lolcat_pn03"
+            // "InstagramLink": "http://www.instagram.com/lolcat_pn03"
         },
         {
             "name": "Aadish",
@@ -41,7 +41,7 @@ const SeniorCouncilData =
             "LinkedinLink":"https://www.linkedin.com/in/aadishj23" ,
             "GithubLink": "https://github.com/aadishj23",
             "TwitterLink":"https://x.com/AadishJ23" ,
-            "InstagramLink": "https://www.instagram.com/aadish017/"
+            // "InstagramLink": "https://www.instagram.com/aadish017/"
         },
         {
             "name": "Alka",
@@ -50,7 +50,7 @@ const SeniorCouncilData =
             "id": 4,
             "LinkedinLink": "https://www.linkedin.com/in/alka-kumari-653770256" ,
             "GithubLink":"https://github.com/ALKA-SINGH25" ,
-            "TwitterLink": "https://x.com/SinghAlka25?t=-pvc4ss4iLu702mf6HzQ0w&s=09",
+            // "TwitterLink": "https://x.com/SinghAlka25?t=-pvc4ss4iLu702mf6HzQ0w&s=09",
             "InstagramLink": "https://www.instagram.com/alkasingh2528?igsh=MWs3MGxnY2RmaGZwYg=="
         },
         {
@@ -77,7 +77,7 @@ const SeniorCouncilData =
             "id": 7,
             "LinkedinLink": "https://www.linkedin.com/in/kaushalrai007",
             "GithubLink":"https://github.com/Kaushal5033" ,
-            "TwitterLink": "https://x.com/__Kaushal__01?t=4Cage40z--RvkHmB2B7vcg&s=09",
+            // "TwitterLink": "https://x.com/__Kaushal__01?t=4Cage40z--RvkHmB2B7vcg&s=09",
             "InstagramLink": "https://www.instagram.com/kaushal__rai07?igsh=eHQ4M2c3cTdpZmkz"
         },
         {
@@ -88,7 +88,7 @@ const SeniorCouncilData =
             "LinkedinLink": "https://www.linkedin.com/in/surender-243a81222",
             "GithubLink": "https://github.com/surender18",
             "TwitterLink": "https://x.com/Surender251032?t=FDvmUbHRdzKccWFjEBE8oQ&s=09",
-            "InstagramLink": "https://instagram.com/surender_18_?igshid=MzNlNGNkZWQ4Mg=="
+            // "InstagramLink": "https://instagram.com/surender_18_?igshid=MzNlNGNkZWQ4Mg=="
         },
         {
             "name": "Aryaman",
@@ -116,7 +116,7 @@ const SeniorCouncilData =
             "LinkedinLink": "http://linkedin.com/in/tanaykmr",
             "GithubLink": "http://github.com/tanaykmr",
             "TwitterLink": "http://x.com/tanaykmr",
-            "InstagramLink": "http://instagram.com/tanaykmr"
+            // "InstagramLink": "http://instagram.com/tanaykmr"
         },
         {
             "name": "Aditya",
@@ -126,7 +126,7 @@ const SeniorCouncilData =
             "LinkedinLink": "https://www.linkedin.com/in/aditya-bhatt-aa6a21212",
             "GithubLink": "https://github.com/Stryker998",
             "TwitterLink": "https://x.com/stryker0071",
-            "InstagramLink": "https://www.instagram.com/adityabhatt71/"
+            // "InstagramLink": "https://www.instagram.com/adityabhatt71/"
         }
     ]
 

@@ -23,7 +23,7 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/shamit-gupta-80b842279/",
             "GithubLink": "https://github.com/Shamit20",
             "LeetcodeLink": "https://leetcode.com/u/guptashamit20/" ,
-            "InstagramLink": "https://www.instagram.com/shamit__gupta/"
+            // "InstagramLink": "https://www.instagram.com/shamit__gupta/"
         },
         {
             "name": "Gauri Behl",
@@ -41,8 +41,9 @@ const JuniorCouncilData=
             "id": 15,
             "LinkedinLink": "https://www.linkedin.com/in/raushan-kumar-singh-31b6b8326/",
             "GithubLink": "https://github.com/Anonymousrox01",
-            "LeetcodeLink": "https://leetcode.com/u/Almighty_ransh08/" ,
-            "InstagramLink": "https://www.instagram.com/raushan_kr.singh2004/"
+            // "LeetcodeLink": "https://leetcode.com/u/Almighty_ransh08/" ,
+            "TwitterLink": "https://x.com/RaushanKsingh22",
+            // "InstagramLink": "https://www.instagram.com/raushan_kr.singh2004/"
         },
         {
             "name": "Vanshika Tanwar",
@@ -61,7 +62,7 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/astha-negi-90874b2b3/",
             "GithubLink": "https://github.com/astha-negi",
             "LeetcodeLink": "https://leetcode.com/u/Astha_Negi/",
-            "CodechefLink": "https://www.codechef.com/users/astha_027",
+            // "CodechefLink": "https://www.codechef.com/users/astha_027",
         },
         {
             "name": "Shwet Kashyap",
@@ -71,8 +72,8 @@ const JuniorCouncilData=
             "LinkedinLink": "http://www.linkedin.com/in/shwet-kashyap-56179b289",
             "GithubLink": "https://github.com/SHWETKASHYAP",
             "LeetcodeLink": "https://leetcode.com/u/kashyap5927/",
-            "CodechefLink": "https://www.codechef.com/users/astha_027",
-            "InstagramLink": "https://www.instagram.com/shwetkashyap01?igsh=Y2k5cnRwdDQ2dmFq"
+            // "CodechefLink": "https://www.codechef.com/users/kashyap5927",
+            // "InstagramLink": "https://www.instagram.com/shwetkashyap01?igsh=Y2k5cnRwdDQ2dmFq"
         },
         {
             "name": "Preeti Kumari",
@@ -82,8 +83,8 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/preeti-kumari-436731293",
             "GithubLink": "https://github.com/preetikumari15",
             "LeetcodeLink": "https://leetcode.com/u/Preetikumari15/",
-            "CodechefLink": "https://www.codechef.com/users/preetikumari15",
-            "InstagramLink": "https://www.instagram.com/preeti.kushwaha154?igsh=MXNta2ZrNHYyd2draQ=="
+            // "CodechefLink": "https://www.codechef.com/users/preetikumari15",
+            // "InstagramLink": "https://www.instagram.com/preeti.kushwaha154?igsh=MXNta2ZrNHYyd2draQ=="
         },
         {
             "name": "Riya Verma",
@@ -93,8 +94,8 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/riya-v-7973782a1",
             "GithubLink": "https://github.com/verma-riya20",
             "LeetcodeLink": "https://leetcode.com/u/riyaverma12/",
-            "CodechefLink": "https://www.codechef.com/users/riya_verma20",
-            "InstagramLink": "https://www.instagram.com/riyaa__verma20?igsh=Y2NkdnozbXptb29l"
+            // "CodechefLink": "https://www.codechef.com/users/riya_verma20",
+            // "InstagramLink": "https://www.instagram.com/riyaa__verma20?igsh=Y2NkdnozbXptb29l"
         },
         {
             "name": "Keshav Mehra",
@@ -112,7 +113,7 @@ const JuniorCouncilData=
             "id": 22,
             "LinkedinLink": "https://www.linkedin.com/in/anamikasingh20/",
             "GithubLink": "https://github.com/Anamiiikka",
-            "LeetcodeLink": "https://leetcode.com/u/Anamiiika/",
+            // "LeetcodeLink": "https://leetcode.com/u/Anamiiika/",
             "InstagramLink": "https://www.instagram.com/yb_anamika/?hl=en"
         },
         {
@@ -122,9 +123,9 @@ const JuniorCouncilData=
             "id": 23,
             "LinkedinLink": "https://www.linkedin.com/in/drishti-goel-27b897297/",
             "GithubLink": "https://github.com/drishtigoel083",
-            "LeetcodeLink": "https://leetcode.com/u/drishtigoel205/",
+            // "LeetcodeLink": "https://leetcode.com/u/drishtigoel205/",
             "TwitterLink": "https://x.com/DrishtiGoe22413",
-            "InstagramLink": "https://www.instagram.com/drishtigoel205/"
+            // "InstagramLink": "https://www.instagram.com/drishtigoel205/"
         },
         {
             "name": "Gaurav",
@@ -141,7 +142,7 @@ const JuniorCouncilData=
             "image": KunalImage,
             "id": 25,
             "LinkedinLink": "https://www.linkedin.com/in/kunal-jain-ba463a202/",
-            "LeetcodeLink": "https://leetcode.com/u/kunaljain9898/",
+            // "LeetcodeLink": "https://leetcode.com/u/kunaljain9898/",
             "InstagramLink": "https://www.instagram.com/kunaljain9898/"
         }, 
         {
@@ -151,7 +152,7 @@ const JuniorCouncilData=
             "id": 26,
             "LinkedinLink": "https://www.linkedin.com/in/karnita-saumya/",
             "GithubLink": "https://github.com/Karnita-Saumya",
-            "LeetcodeLink": "https://leetcode.com/u/KarnitaSaumya/",
+            // "LeetcodeLink": "https://leetcode.com/u/KarnitaSaumya/",
         }
     ]
 

@@ -105,7 +105,7 @@ function TeamMain() {
                     <p className='text-lg text-white text-center mb-10'>
                         Introducing the talented members of our Junior Council.
                     </p>
-                    <Slider {...settings} className='text-center'>
+                    <Slider {...settings} className='text-center gap-10 lg:pl-20'>
                         {juniorCouncil}
                     </Slider>                
                 </div>

@@ -5,7 +5,7 @@ import AyushSImage from "../assets/team-photos/24 Batch/Ayush_S.jpg"
 import ManavImage from "../assets/team-photos/24 Batch/Manav.jpg"
 import HarshitImage from "../assets/team-photos/24 Batch/Harshit.jpg"
 import SumitImage from "../assets/team-photos/24 Batch/Sumit.jpg"
-import MayankImage from "../assets/team-photos/25 Batch/Mayank.png"
+import MayankImage from "../assets/team-photos/25 Batch/Mayank.jpg"
 import UdishImage from "../assets/team-photos/25 Batch/Udish.png"
 import TusharImage from "../assets/team-photos/25 Batch/Tushar.png"
 import AkankshaImage from "../assets/team-photos/25 Batch/Akanksha.jpg"
@@ -85,7 +85,8 @@ const AchieversData = [
         "id": 8,
         "name": "Mayank Nailwal",
         "batch": "2021-25",
-        "role": " iOS developer Intern at Mobilicis",
+        "role": "SDE(iOS) at Rooter.gg",
+        "exrole": " iOS developer Intern at Mobilicis",
         "achievements": "Former President at Anveshan",
         "image": MayankImage,
         "linkedin": "https://www.linkedin.com/in/mayanktech/",

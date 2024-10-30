@@ -3,7 +3,9 @@ import Navbar from './components/navbar'
 import TeamMain from './components/team';
 import Home from './components/Home';
 import Events from './components/Events';
+import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Blogs from './components/Blogs';
 import Contact from './components/contact';
 import Footer from './components/Footer';
 import {createBrowserRouter, RouterProvider, Navigate} from 'react-router-dom'
@@ -25,6 +27,7 @@ function App() {
         <Home />
         <Events />
         <TeamMain />
+        {/* <Projects /> */}
         <Achievements />
         <Contact />
         <Footer />
@@ -48,6 +51,15 @@ function App() {
         <Footer />
       </div>
   },
+  // {
+  //   path: "/projects",
+  //   element: 
+  //     <div>
+  //       <Navbar />
+  //       <Projects />
+  //       <Footer />
+  //     </div>
+  // },
   {
     path: "/achievements",
     element: 
@@ -57,6 +69,15 @@ function App() {
         <Footer />
       </div>
   },
+  // {
+  //   path: "/blogs",
+  //   element: 
+  //     <div>
+  //       <Navbar />
+  //       <Blogs />
+  //       <Footer />
+  //     </div>
+  // },
   {
     path: "/contact",
     element: 
@@ -70,63 +91,63 @@ function App() {
     path: "/events/HackBPIT 2k23",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <HackBPIT />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
     path: "/events/Successful Engineer ft Fraz",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <Fraz />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
     path: "/events/Placements @Google",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <Google />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
     path: "/events/Cracking Gate by Unacademy",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <Gate />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
     path: "/events/Meet Your Alumni: Sawarnee Sethi",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <MeetAlumni />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
     path: "/events/Tech Starter 2k24",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <TechStarter />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
     path: "/events/Technovation 2k23",
     element: 
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <Technovation />
-        {/* <Footer /> */}
+        <Footer />
       </div>
   },
   {
