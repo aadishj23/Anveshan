@@ -10,11 +10,27 @@ function Projects() {
   return (
     <div>
       <BackgroundBeamsWithCollision>
-        <h1 className="mt-5 pt-12 mb-8 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-5xl md:text-7xl font-bold">
-          PROJECTS
-        </h1>
-        <Projectscard vis={visual1} name={ProjectsData[0].name} GithubRepo={ProjectsData[0].name}  Deployment= {ProjectsData[0].name} owner={ProjectsData[0].owner} />
-        <ProjectCard2 />
+        <div className="relative z-10 flex flex-col items-center w-full">
+          <h1 className="mt-5 pt-16 mb-12 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-5xl md:text-7xl font-bold">
+            PROJECTS
+          </h1>
+          {ProjectsData.map((project, i) => (
+            i % 2 === 0 && (
+              <div key={i} className='flex flex-col'>
+                <div className='flex space-x-5'>
+                  <Projectscard vis={visual1} name={project.name} GithubRepo={project.GithubRepo} Deployment={project.Deployment} owner={project.owner} work={project.Work} description={project.description} />
+                  <ProjectCard2 image={project.image} work={project.Work} description={project.description} />
+                </div>
+                {ProjectsData[i+1] && (
+                  <div className='flex space-x-5'>
+                    <ProjectCard2 image={ProjectsData[i+1].image} work={ProjectsData[i+1].Work} description={ProjectsData[i+1].description} />
+                    <Projectscard vis={visual2} name={ProjectsData[i+1].name} GithubRepo={ProjectsData[i+1].GithubRepo}  Deployment= {ProjectsData[i+1].Deployment} owner={ProjectsData[i+1].owner} work={ProjectsData[i+1].Work} description={ProjectsData[i+1].description} />
+                  </div>
+                )}
+              </div>
+            )
+          ))}
+        </div>
       </BackgroundBeamsWithCollision>
     </div>
   )

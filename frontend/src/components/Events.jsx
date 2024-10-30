@@ -62,7 +62,6 @@ function Events() {
 
   return (
     <BackgroundBeamsWithCollision className="pb-16">
-      <div className="inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center w-full">
         <h1 className="mt-5 pt-16 mb-8 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-5xl md:text-7xl font-bold">
           EVENTS

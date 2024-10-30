@@ -26,7 +26,7 @@ const ProjectsData = [
         "Deployment": "https://dhunmart.vercel.app/",
         "image": Image2,
         "Work": "A Dynamic Electronics Hub",
-        "descripton": "Online platform for electronics enthusiasts, specializing in high-quality earphones and audio gear.",
+        "description": "Online platform for electronics enthusiasts, specializing in high-quality earphones and audio gear.",
     },
     {
         "id": 3,
