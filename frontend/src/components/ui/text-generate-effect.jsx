@@ -40,7 +40,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    (<div className={cn("font-serif", className)}>
+    (<div className={cn("font-normal", className)}>
       <div className="mt-4">
         <div
           className=" dark:text-slate-400 text-black text-2xl leading-snug tracking-wide">
