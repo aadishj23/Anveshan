@@ -49,8 +49,7 @@ function Contact() {
     try {
       await axios({
         method: 'POST',
-        // url: 'https://anveshan.onrender.com/contact', 
-        url: 'http://localhost:3000/contact', 
+        url: 'https://anveshan.onrender.com/contact',
         data: JSON.stringify({ name, email, message }),
         headers: {
           'Content-Type': 'application/json'
