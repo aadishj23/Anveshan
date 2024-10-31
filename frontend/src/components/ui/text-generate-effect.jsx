@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "../../lib/utils";
+import { useEffect } from "react";
 
 export const TextGenerateEffect = ({
   words,
@@ -40,7 +39,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    (<div className={cn("font-normal", className)}>
+    (<div>
       <div className="mt-4">
         <div
           className=" dark:text-slate-400 text-black text-2xl leading-snug tracking-wide">
