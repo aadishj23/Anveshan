@@ -29,7 +29,7 @@ function App() {
         <TeamMain />
         <Projects />
         <Achievements />
-        <Blogs />
+        {/* <Blogs /> */}
         <Contact />
         <Footer />
       </div>
@@ -70,15 +70,15 @@ function App() {
         <Footer />
       </div>
   },
-  {
-    path: "/blogs",
-    element: 
-      <div>
-        <Navbar />
-        <Blogs />
-        <Footer />
-      </div>
-  },
+  // {
+  //   path: "/blogs",
+  //   element: 
+  //     <div>
+  //       <Navbar />
+  //       <Blogs />
+  //       <Footer />
+  //     </div>
+  // },
   {
     path: "/contact",
     element: 

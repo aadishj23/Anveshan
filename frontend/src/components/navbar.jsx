@@ -51,7 +51,7 @@ function Navbar() {
               </a>
             </div>
             <div className="hidden md:flex md:flex-1 justify-center space-x-4">
-              {['Home', 'Events', 'Team', 'Projects', 'Achievements', 'Blogs'].map((item) => (
+              {['Home', 'Events', 'Team', 'Projects', 'Achievements'].map((item) => (
                 <button
                   key={item}
                   onClick={() => navigate(`/${item.toLowerCase()}`)}
@@ -75,7 +75,7 @@ function Navbar() {
 
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 transition-all ease-in-out duration-200">
-          {['Home', 'Events', 'Team', 'Projects', 'Achievements', 'Blogs'].map((item) => (
+          {['Home', 'Events', 'Team', 'Projects', 'Achievements'].map((item) => (
             <button
               key={item}
               onClick={() => {
