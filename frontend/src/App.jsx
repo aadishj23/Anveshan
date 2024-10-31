@@ -27,7 +27,7 @@ function App() {
           <TeamMain />
           <Projects />
           <Achievements />
-          <Blogs />
+          {/* <Blogs /> */}
           <Contact />
         </Layout>
       ),
@@ -64,14 +64,14 @@ function App() {
         </Layout>
       ),
     },
-    {
-      path: '/blogs',
-      element: (
-        <Layout>
-          <Blogs />
-        </Layout>
-      ),
-    },
+    // {
+    //   path: '/blogs',
+    //   element: (
+    //     <Layout>
+    //       <Blogs />
+    //     </Layout>
+    //   ),
+    // },
     {
       path: '/contact',
       element: (

@@ -37,7 +37,7 @@ function Home() {
         <p className="text-base text-black w-48 md:w-96 ml-auto mr-auto text-center sm:text-lg md:text-xl lg:text-2xl italic bg-white bg-opacity-50 px-4 py-2 rounded-lg shadow-md mb-20 mt-5 md:mt-10">
           {'<Powered By Code />'}
         </p>
-        <p className="text-2xl w-full text-center md:w-3/5 block mr-auto ml-auto p-6">
+        <p className="text-2xl w-full text-center md:w-3/5 block mr-auto ml-auto px-4 md:px-6">
           <TextGenerateEffect words={words} />
         </p>
       </motion.h1>
