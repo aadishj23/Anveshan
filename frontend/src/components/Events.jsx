@@ -4,7 +4,7 @@ import EventsData from '../data/EventsData';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../custom css/corousel.css';
+import '../custom css/events.css';
 import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 
 function Events() {

@@ -41,7 +41,7 @@ const ProjectsData = [
     {
         "id": 4,
         "name": "Sanskaar Group Website",
-        "owner": "Kaushal Kumar Rai",
+        "owner": "Kaushal and Tanay",
         "GithubRepo":"https://github.com/sanskaargroup/sg-website",
         "Deployment": "http://www.sanskaargroup.com",
         "image": Image4,
