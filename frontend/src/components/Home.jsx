@@ -7,7 +7,7 @@ import { StarsBackground } from "./ui/stars-background";
 import { Typewriter } from 'react-simple-typewriter';
 
 function Home() {
-  const words = "Anveshan is a premier technical society dedicated to equipping students with essential tech skills, knowledge, and hands-on experience. We create a collaborative space for innovation across areas like Data Structures and Algorithms, Development, and emerging technologies. Driven by curiosity and mentorship, our community supports learners at all levels, from beginners to advanced coders, fostering continuous growth and success.";
+  const words = "Anveshan is a premier technical society focused on providing personal mentorship to equip students with essential tech skills, knowledge, and hands-on experience. We cultivate a collaborative environment for innovation in areas such as Data Structures and Algorithms, Development, and emerging technologies. Our community, driven by curiosity and mentorship, supports learners at all levels, from beginners to advanced coders, promoting continuous growth and success.";
 
   return (
     <div>

@@ -19,7 +19,7 @@ function TeamCard({ name, position, image , LinkedInLink , GithubLink , Leetcode
         },
         GithubLink && {
             title: 'Github',
-            icon: <img src={Github} alt='Github' className='h-7 w-auto text-neutral-500 dark:text-neutral-300' />,
+            icon: <img src={Github} alt='Github' className='h-6 w-auto text-neutral-500 dark:text-neutral-300' />,
             href: GithubLink
         },
         LeetcodeLink && {

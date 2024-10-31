@@ -10,7 +10,7 @@ function Footer() {
     <div className='bg-black'>
       <hr/>
       <div className='flex flex-col md:flex-row justify-between items-center px-20'>
-        <img src={Anveshan} alt='Anveshan Logo' className='h-8 w-auto my-4' />
+        <a href='/'><img src={Anveshan} alt='Anveshan Logo' className='h-8 w-auto my-4' /></a>
         <div className='my-4' >
             <div className='flex space-x-6 mb-2'>
               <a href="https://www.instagram.com/anveshan.bpit/" target='_blank' rel="noopener noreferrer">

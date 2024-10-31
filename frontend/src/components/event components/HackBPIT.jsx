@@ -83,12 +83,12 @@ function HackBPIT() {
           <img src={Judge5} alt="HackBPIT 2k23 Judge 5" className="w-1/3 rounded-lg" />
         </Slider>
       </div>
-      <h3 className="pt-4 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-3xl md:text-5xl font-bold">
+      <h3 className="mt-5 md:mt-0 pt-4 text-center bg-gradient-to-b from-white via-white to-[#FF8A00] bg-clip-text text-transparent text-3xl md:text-5xl font-bold">
           WINNERS
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 px-5 py-5 md:px-10 lg:px-16 space-y-8 justify-items-center items-center">
-        <img src={Winner1} alt="HackBPIT 2k23 Winner 1" className="w-96 lg:w-[500px] rounded-lg" />
-        <img src={Winner2} alt="HackBPIT 2k23 Winner 2" className="w-96 lg:w-[500px] rounded-lg" />
+        <img src={Winner2} alt="HackBPIT 2k23 Winner 1" className="w-96 lg:w-[500px] rounded-lg" />
+        <img src={Winner1} alt="HackBPIT 2k23 Winner 2" className="w-96 lg:w-[500px] rounded-lg" />
       </div>
       <ShootingStars />
       <StarsBackground />

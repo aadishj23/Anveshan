@@ -27,7 +27,7 @@ function App() {
         <Home />
         <Events />
         <TeamMain />
-        {/* <Projects /> */}
+        <Projects />
         <Achievements />
         <Contact />
         <Footer />
@@ -51,15 +51,15 @@ function App() {
         <Footer />
       </div>
   },
-  // {
-  //   path: "/projects",
-  //   element: 
-  //     <div>
-  //       <Navbar />
-  //       <Projects />
-  //       <Footer />
-  //     </div>
-  // },
+  {
+    path: "/projects",
+    element: 
+      <div>
+        <Navbar />
+        <Projects />
+        <Footer />
+      </div>
+  },
   {
     path: "/achievements",
     element: 

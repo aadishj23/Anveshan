@@ -4,6 +4,8 @@ import Image3 from '../assets/projects/3.png'
 import Image4 from '../assets/projects/4.png'
 import Image5 from '../assets/projects/5.png'
 import Image6 from '../assets/projects/6.png'
+import Image7 from '../assets/projects/7.png'
+import Image8 from '../assets/projects/8.png'
 
 const ProjectsData = [
     {
@@ -24,7 +26,7 @@ const ProjectsData = [
         "Deployment": "https://dhunmart.vercel.app/",
         "image": Image2,
         "Work": "A Dynamic Electronics Hub",
-        "descripton": "Online platform for electronics enthusiasts, specializing in high-quality earphones and audio gear.",
+        "description": "Online platform for electronics enthusiasts, specializing in high-quality earphones and audio gear.",
     },
     {
         "id": 3,
@@ -42,8 +44,8 @@ const ProjectsData = [
         "owner": "Kaushal Kumar Rai",
         "Deployment": "http://www.sanskaargroup.com",
         "image": Image4,
-        // "Work": "A website for a group of companies",
-        // "description": "This is a project",
+        "Work": "Event Management Website",
+        "description": "Manage all type of social and corporate events",
     },
     {
         "id": 5,
@@ -67,9 +69,23 @@ const ProjectsData = [
     },
     {
         "id": 7,
-        "name": "The Coding Club Backend",
+        "name": "Financify",
         "owner": "Keshav Mehra",
-        "description": "This is a project",
-    }
+        "GithubRepo": "https://github.com/Airbone25/nextjs-finance-dashboard.git",
+        "Deployment": "https://nextjs-finance-dashboard-gamma.vercel.app/dashboard",
+        "image": Image7,
+        "Work": "Finance Dashboard app",
+        "description": "Manage invoices and customers with this one web app",
+    },
+    {
+        "id": 8,
+        "name": "ChatApp",
+        "owner": "Keshav Mehra",
+        "GithubRepo": "https://github.com/Airbone25/ChatApp.git",
+        "Deployment": "https://chatapp-b2fm.onrender.com/",
+        "image": Image8,
+        "Work": "Chat room",
+        "description": "Chat with your friends.",
+    },
 ];
 export default ProjectsData;
