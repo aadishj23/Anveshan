@@ -4,7 +4,7 @@ import Link from '../../assets/Socials/icons.png'
 
 function Projectscard({vis, name, GithubRepo, Deployment, owner , work, description}) {
   return (
-    <div className='border rounded-lg border-slate-400 p-8 bg-black sm:h-96 w-80 mb-10 mx-5 sm:mx-0'>
+    <div className='border rounded-lg border-slate-400 p-8 bg-black sm:h-96 w-80 mb-10 mx-5 sm:mx-0 shadow-2xl'>
       <img src={vis} />
       <h1 className='text-white pt-6 pb-3 font-bold'>{name} </h1>
       <span className='flex justify pb-3'>

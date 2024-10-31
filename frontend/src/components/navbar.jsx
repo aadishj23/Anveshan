@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full shadow-md z-50 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -44,13 +44,13 @@ function Navbar() {
               )}
             </button>
           </div>
-          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
+          <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-between">
             <div className="flex-shrink-0">
               <a href="/">
                 <img className="h-12 w-auto p-2" src={logo_img} alt="Logo" />
               </a>
             </div>
-            <div className="hidden sm:flex sm:flex-1 justify-center space-x-4">
+            <div className="hidden md:flex md:flex-1 justify-center space-x-4">
               {['Home', 'Events', 'Team', 'Projects', 'Achievements', 'Blogs'].map((item) => (
                 <button
                   key={item}
@@ -61,7 +61,7 @@ function Navbar() {
                 </button>
               ))}
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
               <button
                 onClick={() => navigate('/contact')}
                 className="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm font-medium"
@@ -73,7 +73,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 transition-all ease-in-out duration-200">
           {['Home', 'Events', 'Team', 'Projects', 'Achievements', 'Blogs'].map((item) => (
             <button

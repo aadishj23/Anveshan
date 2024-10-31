@@ -17,12 +17,12 @@ function Projects() {
           {ProjectsData.map((project, i) => (
             i % 2 === 0 && (
               <div key={i} className='flex flex-col'>
-                <div className='flex space-x-5'>
+                <div className='flex space-x-5 hover:scale-95'>
                   <Projectscard vis={visual1} name={project.name} GithubRepo={project.GithubRepo} Deployment={project.Deployment} owner={project.owner} work={project.Work} description={project.description} />
                   <ProjectCard2 image={project.image} work={project.Work} description={project.description} />
                 </div>
                 {ProjectsData[i+1] && (
-                  <div className='flex space-x-5'>
+                  <div className='flex space-x-5 hover:scale-95'>
                     <ProjectCard2 image={ProjectsData[i+1].image} work={ProjectsData[i+1].Work} description={ProjectsData[i+1].description} />
                     <Projectscard vis={visual2} name={ProjectsData[i+1].name} GithubRepo={ProjectsData[i+1].GithubRepo}  Deployment= {ProjectsData[i+1].Deployment} owner={ProjectsData[i+1].owner} work={ProjectsData[i+1].Work} description={ProjectsData[i+1].description} />
                   </div>
