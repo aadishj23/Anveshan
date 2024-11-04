@@ -47,7 +47,7 @@ const FloatingDockMobile = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   key={item.title}
-                  className="h-10 w-10 rounded-full dark:bg-neutral-800 flex items-center justify-center">
+                  className="h-10 w-10 rounded-full bg-neutral-800 flex items-center justify-center">
                   <div className="h-6 w-6">{item.icon}</div>
                 </a>
               </motion.div>
