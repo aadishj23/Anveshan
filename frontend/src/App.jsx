@@ -25,7 +25,7 @@ function App() {
           <Home />
           <Events />
           <TeamMain />
-          <Projects />
+          <Projects limit={3}/>
           <Achievements />
           {/* <Blogs /> */}
           <Contact />
