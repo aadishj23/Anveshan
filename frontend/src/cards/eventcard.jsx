@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const EventCard = ({ title, description, date, photos }) => {
   const navigate = useNavigate();
-  const [isExpanded, setIsExpanded] = React.useState(false);
-  const maxLength = 250; // Adjust this value based on your needs
-  
-  const shouldShowReadMore = description.length > maxLength;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const maxLength = 250;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); 
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const shouldShowReadMore = isMobile && description.length > maxLength;
   const displayText = shouldShowReadMore && !isExpanded 
     ? `${description.slice(0, maxLength)}...` 
     : description;
@@ -30,9 +40,7 @@ const EventCard = ({ title, description, date, photos }) => {
         <p className="text-gray-300 text-sm">{date}</p>
         <button 
           className="bg-orange-500 px-4 py-2 text-white rounded-md mt-7 font-medium hover:bg-orange-600 transition duration-300"
-          onClick={()=>{
-            navigate(`/events/${title}`)
-          }}
+          onClick={() => navigate(`/events/${title}`)}
         >
           View More
         </button>
