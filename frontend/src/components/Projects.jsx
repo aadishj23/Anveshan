@@ -4,9 +4,11 @@ import ProjectCard2 from '../cards/Project/ProjectCard2';
 import visual1 from '../assets/projects/Visual.png';
 import visual2 from '../assets/projects/Visual 2.png';
 import ProjectsData from '../data/ProjectsData';
+import { useNavigate } from 'react-router-dom';
 import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 
 function Projects({ limit }) {
+  const navigate = useNavigate();
   const projectsToDisplay = limit ? ProjectsData.slice(0, limit) : ProjectsData;
 
   return (
@@ -32,6 +34,9 @@ function Projects({ limit }) {
               </div>
             )
           ))}
+        {limit && (<div>
+          <button className='bg-gradient-to-r from-[#FF8A00] to-[#FF0000] text-white px-4 py-2 rounded-md mb-7 font-medium hover:bg-orange-600 transition duration-300 hover:scale-105' onClick={() => navigate('/projects')}>View More</button>
+        </div>)}
         </div>
       </BackgroundBeamsWithCollision>
     </div>
