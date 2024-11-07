@@ -1,3 +1,3 @@
 # Anveshan
 
-https://anveshanbpit.vercel.app/
+https://anveshan.dev/
