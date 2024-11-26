@@ -18,7 +18,7 @@ function Contact() {
   const handleContact = async () => {
     try {
       await axios({
-        url: 'https://anveshan.onrender.com/',
+        url: `${import.meta.env.VITE_BACKEND_URL}`,
         method: 'GET',
       });
     } catch (error) {
@@ -49,7 +49,7 @@ function Contact() {
     try {
       await axios({
         method: 'POST',
-        url: 'https://anveshan.onrender.com/contact',
+        url: `${import.meta.env.VITE_BACKEND_URL}/contact`,
         data: JSON.stringify({ name, email, message }),
         headers: {
           'Content-Type': 'application/json'
