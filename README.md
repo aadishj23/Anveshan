@@ -11,6 +11,9 @@ https://anveshan.dev/
 ### 1. Home
 The landing page provides an overview of Anveshan, featuring highlights, key achievements, and a brief introduction to the platform.
 
+![Home](https://drive.google.com/uc?id=1wCpDvm6t304087V0ebNlwp4_PUvvCHbe)
+
+
 ### 2. Events
 A dedicated section to showcase past and upcoming events, complete with event details, dates, and participation options.
 
