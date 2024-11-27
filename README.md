@@ -17,17 +17,32 @@ The landing page provides an overview of Anveshan, featuring highlights, key ach
 ### 2. Events
 A dedicated section to showcase past and upcoming events, complete with event details, dates, and participation options.
 
+![Events](https://drive.google.com/uc?id=1GKcVMCS79W9hxsKp7EDSlnygC-t67G-5)
+
+
 ### 3. Team
 Meet the brilliant minds behind Anveshan! This page highlights the team members, their roles, and contributions.
 
-### 4. Achievers
+![Team](https://drive.google.com/uc?id=1G0lvqLq5Ao72N_isUfIAfCA8MjeyTUhx)
+
+
+### 4. Projects
+Explore the various projects undertaken by Anveshan. Each project is detailed with its goals, progress, and outcomes.
+
+![Projects](https://drive.google.com/uc?id=1VgdJPb3ZqZXtMplx6XUbnRtIjVh9pMv6)
+
+
+### 5. Achievers
 A hall of fame to celebrate the outstanding achievements of individuals and teams associated with Anveshan.
 
-### 5. Projects
-Explore the various projects undertaken by Anveshan. Each project is detailed with its goals, progress, and outcomes.
+![Achievers](https://drive.google.com/uc?id=1c8fFsiFGFdCaDRvqLIS3JnwL_S6xN_an)
+
 
 ### 6. Contact Us
 Get in touch! The contact page provides a form and details to reach out to us for queries, feedback, or collaborations.
+
+![Contact Us](https://drive.google.com/uc?id=1NrUBbNP1q6o6-EurwGftpaSNbK4TzdKr)
+
 
 ## Technologies Used
 
