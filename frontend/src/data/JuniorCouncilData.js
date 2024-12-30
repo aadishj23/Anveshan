@@ -71,7 +71,8 @@ const JuniorCouncilData=
             "id": 18,
             "LinkedinLink": "http://www.linkedin.com/in/shwet-kashyap-56179b289",
             "GithubLink": "https://github.com/SHWETKASHYAP",
-            "LeetcodeLink": "https://leetcode.com/u/kashyap5927/",
+            "CodolioLink": "https://codolio.com/profile/Shwetkashyap"
+            // "LeetcodeLink": "https://leetcode.com/u/kashyap5927/",
             // "CodechefLink": "https://www.codechef.com/users/kashyap5927",
             // "InstagramLink": "https://www.instagram.com/shwetkashyap01?igsh=Y2k5cnRwdDQ2dmFq"
         },
