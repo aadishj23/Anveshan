@@ -12,6 +12,11 @@ import DrishtiImage from '../assets/team-photos/Junior Council/Drishti.jpg'
 import GauravImage from '../assets/team-photos/Junior Council/Gaurav.jpg'
 import KunalImage from '../assets/team-photos/Junior Council/Kunal.jpg'
 import KarnitaImage from '../assets/team-photos/Junior Council/Karnita.jpg'
+import ParthImage from '../assets/team-photos/Junior Council/Parth.jpg'
+import DipeshImage from '../assets/team-photos/Junior Council/Dipesh.jpg'
+import VanshImage from '../assets/team-photos/Junior Council/Vansh.jpg'
+import SarthakImage from '../assets/team-photos/Junior Council/Sarthak.jpg'
+import KrishnaImage from '../assets/team-photos/Junior Council/Krishna.jpg'
 
 const JuniorCouncilData= 
     [
@@ -154,6 +159,51 @@ const JuniorCouncilData=
             "LinkedinLink": "https://www.linkedin.com/in/karnita-saumya/",
             "GithubLink": "https://github.com/Karnita-Saumya",
             // "LeetcodeLink": "https://leetcode.com/u/KarnitaSaumya/",
+        },
+        {
+            "name": "Parth Sharma",
+            "position": "Junior Council",
+            "image": ParthImage,
+            "id": 27,
+            "LinkedinLink": "https://www.linkedin.com/in/parthsharma00/",
+            "GithubLink": "https://github.com/parthsharma5575",
+            "InstagramLink": "https://www.instagram.com/_.parthsharma.__/"
+        },
+        {
+            "name": "Dipesh Lohchab",
+            "position": "Junior Council",
+            "image": DipeshImage,
+            "id": 28,
+            "LinkedinLink": "https://www.linkedin.com/in/dipesh-lohchab/",
+            "GithubLink": "https://github.com/dipeshlohchab",
+            "LeetcodeLink": "https://leetcode.com/u/dipeshlohchab0302/",
+        },
+        {
+            "name": "Vansh Ahuja",
+            "position": "Junior Council",
+            "image": VanshImage,
+            "id": 29,
+            "LinkedinLink": "https://www.linkedin.com/in/vansh-ahuja-b3648b273/",
+            "GithubLink": "https://github.com/vansh3175",
+            "LeetcodeLink": "https://leetcode.com/u/vansh317/",
+        },
+        {
+            "name": "Sarthak Jain",
+            "position": "Junior Council",
+            "image": SarthakImage,
+            "id": 30,
+            "LinkedinLink": "https://www.linkedin.com/in/sarthak-jain-93b875294",
+            "GithubLink": "https://github.com/Sarthak-Jain18",
+            "LeetcodeLink": "https://leetcode.com/u/sarthak_jain18/",
+        },
+        {
+            "name": "Krishna Tyagi",
+            "position": "Junior Council",
+            "image": KrishnaImage,
+            "id": 31,
+            "LinkedinLink": "https://www.linkedin.com/in/krishna-tyagi-/",
+            "GithubLink": "github.com/knight22-21",
+            "LeetcodeLink": "https://leetcode.com/u/knight22-21/",
         }
     ]
 
