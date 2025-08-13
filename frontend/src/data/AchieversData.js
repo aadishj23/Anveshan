@@ -9,11 +9,11 @@ import MayankImage from "../assets/team-photos/25 Batch/Mayank.jpg"
 import UdishImage from "../assets/team-photos/25 Batch/Udish.png"
 import TusharImage from "../assets/team-photos/25 Batch/Tushar.png"
 import AkankshaImage from "../assets/team-photos/25 Batch/Akanksha.jpg"
-import AadishImage from "../assets/team-photos/Senior Council/Aadish.jpg"
-import TanayImage from "../assets/team-photos/Senior Council/Tanay.jpg"
-import KaushalImage from "../assets/team-photos/Senior Council/Kaushal.jpg"
-import Bhavishyaamge from "../assets/team-photos/Senior Council/Bhavishya.jpg"
-import RaushanImage from '../assets/team-photos/Junior Council/Raushan.jpg'
+import AadishImage from "../assets/team-photos/26 Batch/Aadish.jpg"
+import TanayImage from "../assets/team-photos/26 Batch/Tanay.jpg"
+import KaushalImage from "../assets/team-photos/26 Batch/Kaushal.jpg"
+import Bhavishyaamge from "../assets/team-photos/26 Batch/Bhavishya.jpg"
+import RaushanImage from '../assets/team-photos/26 Batch/Raushan.jpg'
 
 const AchieversData = [
     {
