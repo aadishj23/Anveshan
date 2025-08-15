@@ -95,9 +95,9 @@ const JuniorCouncilData =
             "position": "Junior Council",
             "image": LaksyaImage,
             "id": 25,
-            "LinkedinLink": "https://www.linkedin.com/in/preeti-kumari-436731293",
-            "GithubLink": "https://github.com/preetikumari15",
-            "LeetcodeLink": "https://leetcode.com/u/Preetikumari15/",
+            "LinkedinLink": "https://www.linkedin.com/in/lakshay-dawar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "LeetcodeLink": "https://leetcode.com/u/LakshayDawar/",
+           "TwitterLink": "https://x.com/LakshayINcode?t=EXGJF6cIA5GLXHAX1BLHlg&s=09",
             // "CodechefLink": "https://www.codechef.com/users/preetikumari15",
             // "InstagramLink": "https://www.instagram.com/preeti.kushwaha154?igsh=MXNta2ZrNHYyd2draQ=="
         },
