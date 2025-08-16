@@ -1,210 +1,154 @@
-import ShamitImage from '../assets/team-photos/Junior Council/Shamit.jpg'
-import GauriImage from '../assets/team-photos/Junior Council/Gauri.jpg'
-import RaushanImage from '../assets/team-photos/Junior Council/Raushan.jpg'
-import VanshikaImage from '../assets/team-photos/Junior Council/VanshikaTanwar.jpg'
-import AsthaImage from '../assets/team-photos/Junior Council/astha.jpg'
-import ShwetImage from '../assets/team-photos/Junior Council/Shwet.jpg'
-import PreetiImage from '../assets/team-photos/Junior Council/Preeti.jpg'
-import RiyaImage from '../assets/team-photos/Junior Council/Riya.jpg'
-import KeshavImage from '../assets/team-photos/Junior Council/Keshav Mehra.jpg'
-import AnamikaImage from '../assets/team-photos/Junior Council/Anamika.jpg'
-import DrishtiImage from '../assets/team-photos/Junior Council/Drishti.jpg'
-import GauravImage from '../assets/team-photos/Junior Council/Gaurav.jpg'
-import KunalImage from '../assets/team-photos/Junior Council/Kunal.jpg'
-import KarnitaImage from '../assets/team-photos/Junior Council/Karnita.jpg'
-import ParthImage from '../assets/team-photos/Junior Council/Parth.jpg'
-import DipeshImage from '../assets/team-photos/Junior Council/Dipesh.jpg'
-import VanshImage from '../assets/team-photos/Junior Council/Vansh.jpg'
-import SarthakImage from '../assets/team-photos/Junior Council/Sarthak.jpg'
-import KrishnaImage from '../assets/team-photos/Junior Council/Krishna.jpg'
+//import ShamitImage from '../assets/team-photos/Junior Council/Shamit.jpg'
+//import GauriImage from '../assets/team-photos/Junior Council/Gauri.jpg'
+//import RaushanImage from '../assets/team-photos/Junior Council/Raushan.jpg'
+//import VanshikaImage from '../assets/team-photos/Junior Council/VanshikaTanwar.jpg'
+//import AsthaImage from '../assets/team-photos/Junior Council/astha.jpg'
+//import ShwetImage from '../assets/team-photos/Junior Council/Shwet.jpg'
+//import PreetiImage from '../assets/team-photos/Junior Council/Preeti.jpg'
+//import RiyaImage from '../assets/team-photos/Junior Council/Riya.jpg'
+//import KeshavImage from '../assets/team-photos/Junior Council/Keshav Mehra.jpg'
+//import AnamikaImage from '../assets/team-photos/Junior Council/Anamika.jpg'
+//import DrishtiImage from '../assets/team-photos/Junior Council/Drishti.jpg'
+//import GauravImage from '../assets/team-photos/Junior Council/Gaurav.jpg'
+//import KunalImage from '../assets/team-photos/Junior Council/Kunal.jpg'
+//import KarnitaImage from '../assets/team-photos/Junior Council/Karnita.jpg'
+//import ParthImage from '../assets/team-photos/Junior Council/Parth.jpg'
+//import DipeshImage from '../assets/team-photos/Junior Council/Dipesh.jpg'
+//import VanshImage from '../assets/team-photos/Junior Council/Vansh.jpg'
+//import SarthakImage from '../assets/team-photos/Junior Council/Sarthak.jpg'
+//import KrishnaImage from '../assets/team-photos/Junior Council/Krishna.jpg'
+import AakritiImage from '../assets/team-photos/Junior Council/aakriti.jpg'
+import AlokImage from '../assets/team-photos/Junior Council/Alok_pfp.jpg'
+import ArpitImage from '../assets/team-photos/Junior Council/arpit jindal.jpg'
+import ArshiaImage from '../assets/team-photos/Junior Council/arshia.jpg'
+import DevanshImage from '../assets/team-photos/Junior Council/devansh.jpg'
+import GarvitImage from '../assets/team-photos/Junior Council/garvit.jpg'
+import LaksyaImage from '../assets/team-photos/Junior Council/lakshay.jpg'
+import NishthaImage from '../assets/team-photos/Junior Council/nishtha.jpg'
+import PallaviImage from '../assets/team-photos/Junior Council/pallavi.jpg'
+import PrernaImage from '../assets/team-photos/Junior Council/prerna.jpg'
+import SaiyamImage from '../assets/team-photos/Junior Council/saiyam .jpg'
+import VartikaImage from '../assets/team-photos/Junior Council/vartika.jpg'
 
-const JuniorCouncilData= 
+const JuniorCouncilData =
     [
         {
-            "name": "Shamit Gupta",
+            "name": "Aakriti",
             "position": "Junior Council",
-            "image": ShamitImage,
-            "id": 13,
-            "LinkedinLink": "https://www.linkedin.com/in/shamit-gupta-80b842279/",
-            "GithubLink": "https://github.com/Shamit20",
-            "LeetcodeLink": "https://leetcode.com/u/guptashamit20/" ,
+            "image": AakritiImage,
+            "id": 19,
+            "LinkedinLink": "https://www.linkedin.com/in/aakriti-arya/",
+            "GithubLink": "https://github.com/Aakriti0207",
+            "LeetcodeLink": "https://leetcode.com/u/AakritiArya/" ,
             // "InstagramLink": "https://www.instagram.com/shamit__gupta/"
         },
         {
-            "name": "Gauri Behl",
+            "name": "Alok",
             "position": "Junior Council",
-            "image": GauriImage,
-            "id": 14,
-            "LinkedinLink": "https://www.linkedin.com/in/gauri-behl-93b0422a4/",
-            "GithubLink": "https://github.com/gauribehl100" ,
-            "InstagramLink": "https://www.instagram.com/gauri_behl2003/"
+            "image": AlokImage,
+            "id": 20,
+            "LinkedinLink": "https://www.linkedin.com/in/alok-pratap-singh-rathor-209240324",
+            "GithubLink": "https://github.com/alok-psr" ,
+             "LeetcodeLink": "https://leetcode.com/u/Al0k__psr/"
         },
         {
-            "name": "Raushan",
+            "name": "Arpit Jindal",
             "position": "Junior Council",
-            "image": RaushanImage,
-            "id": 15,
-            "LinkedinLink": "https://www.linkedin.com/in/raushan-kumar-singh-31b6b8326/",
-            "GithubLink": "https://github.com/Anonymousrox01",
-            // "LeetcodeLink": "https://leetcode.com/u/Almighty_ransh08/" ,
-            "TwitterLink": "https://x.com/RaushanKsingh22",
-            // "InstagramLink": "https://www.instagram.com/raushan_kr.singh2004/"
+            "image": ArpitImage,
+            "id": 21,
+            "LinkedinLink": "https://www.linkedin.com/in/arpit-jindal-370434319/",
+           // "TwitterLink": "https://x.com/RaushanKsingh22",
+             "GithubLink": "https://github.com/AJ914",
+              "LeetcodeLink": "https://leetcode.com/u/Arpitajrocks914/" ,
         },
         {
-            "name": "Vanshika Tanwar",
+            "name": "Arshia",
             "position": "Junior Council",
-            "image": VanshikaImage,
-            "id": 16,
-            "LinkedinLink": "https://www.linkedin.com/in/vanshika-tanwar-75b897297?originalSubdomain=in",
-            "GithubLink": "https://github.com/Vanshika-Tanwar",
-            "InstagramLink": "https://www.instagram.com/mess.vanshika_tanwar/"
+            "image": ArshiaImage,
+            "id": 22,
+            "LinkedinLink": "https://www.linkedin.com/in/arshia-gupta-ba4672284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            "GithubLink": "https://github.com/arshiagupta0807",
+            "LeetcodeLink": "https://leetcode.com/arshiagupta08/"
         },
         {
-            "name": "Astha Negi",
+            "name": "Devansh",
             "position": "Junior Council",
-            "image": AsthaImage,
-            "id": 17,
-            "LinkedinLink": "https://www.linkedin.com/in/astha-negi-90874b2b3/",
-            "GithubLink": "https://github.com/astha-negi",
+            "image": DevanshImage,
+            "id": 23,
+            "LinkedinLink": "https://www.linkedin.com/in/devansh-sharma-ba0a54302/",
+            "GithubLink": "https://github.com/Devansh865",
             "LeetcodeLink": "https://leetcode.com/u/Astha_Negi/",
-            // "CodechefLink": "https://www.codechef.com/users/astha_027",
+              "InstagramLink": "https://www.instagram.com/devansh.26_/",
         },
         {
-            "name": "Shwet Kashyap",
+            "name": "Garvit Arora",
             "position": "Junior Council",
-            "image": ShwetImage,
-            "id": 18,
-            "LinkedinLink": "http://www.linkedin.com/in/shwet-kashyap-56179b289",
-            "GithubLink": "https://github.com/SHWETKASHYAP",
-            "CodolioLink": "https://codolio.com/profile/Shwetkashyap"
-            // "LeetcodeLink": "https://leetcode.com/u/kashyap5927/",
-            // "CodechefLink": "https://www.codechef.com/users/kashyap5927",
-            // "InstagramLink": "https://www.instagram.com/shwetkashyap01?igsh=Y2k5cnRwdDQ2dmFq"
+            "image": GarvitImage,
+            "id": 24,
+            "LinkedinLink": "https://www.linkedin.com/in/garvit-",
+            "GithubLink": "https://github.com/garvit-arora",
+            "LeetcodeLink": "https://leetcode.com/u/garvit-",
+            
         },
         {
-            "name": "Preeti Kumari",
+            "name": "lakshya",
             "position": "Junior Council",
-            "image": PreetiImage,
-            "id": 19,
-            "LinkedinLink": "https://www.linkedin.com/in/preeti-kumari-436731293",
-            "GithubLink": "https://github.com/preetikumari15",
-            "LeetcodeLink": "https://leetcode.com/u/Preetikumari15/",
+            "image": LaksyaImage,
+            "id": 25,
+            "LinkedinLink": "https://www.linkedin.com/in/lakshay-dawar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "LeetcodeLink": "https://leetcode.com/u/LakshayDawar/",
+           "TwitterLink": "https://x.com/LakshayINcode?t=EXGJF6cIA5GLXHAX1BLHlg&s=09",
             // "CodechefLink": "https://www.codechef.com/users/preetikumari15",
             // "InstagramLink": "https://www.instagram.com/preeti.kushwaha154?igsh=MXNta2ZrNHYyd2draQ=="
         },
         {
-            "name": "Riya Verma",
+            "name": "Nishtha",
             "position": "Junior Council",
-            "image": RiyaImage,
-            "id": 20,
-            "LinkedinLink": "https://www.linkedin.com/in/riya-v-7973782a1",
-            "GithubLink": "https://github.com/verma-riya20",
-            "LeetcodeLink": "https://leetcode.com/u/riyaverma12/",
-            // "CodechefLink": "https://www.codechef.com/users/riya_verma20",
-            // "InstagramLink": "https://www.instagram.com/riyaa__verma20?igsh=Y2NkdnozbXptb29l"
-        },
-        {
-            "name": "Keshav Mehra",
-            "position": "Junior Council",
-            "image": KeshavImage,
-            "id": 21,
-            "LinkedinLink": "https://www.linkedin.com/in/keshav-mehra-543362296",
-            "GithubLink": "https://github.com/Airbone25",
-            "InstagramLink": "https://www.instagram.com/theautisticone__?igsh=MXIzbmV0ZjhzOXgzbg=="
-        },
-        {
-            "name": "Anamika Singh",
-            "position": "Junior Council",
-            "image": AnamikaImage,
-            "id": 22,
-            "LinkedinLink": "https://www.linkedin.com/in/anamikasingh20/",
-            "GithubLink": "https://github.com/Anamiiikka",
-            // "LeetcodeLink": "https://leetcode.com/u/Anamiiika/",
-            "InstagramLink": "https://www.instagram.com/yb_anamika/?hl=en"
-        },
-        {
-            "name": "Drishti Goel",
-            "position": "Junior Council",
-            "image": DrishtiImage,
-            "id": 23,
-            "LinkedinLink": "https://www.linkedin.com/in/drishti-goel-27b897297/",
-            "GithubLink": "https://github.com/drishtigoel083",
-            // "LeetcodeLink": "https://leetcode.com/u/drishtigoel205/",
-            "TwitterLink": "https://x.com/DrishtiGoe22413",
-            // "InstagramLink": "https://www.instagram.com/drishtigoel205/"
-        },
-        {
-            "name": "Gaurav",
-            "position": "Junior Council",
-            "image": GauravImage,
-            "id": 24,
-            "LinkedinLink": "https://www.linkedin.com/in/gauravsingh640",
-            "CodolioLink": "https://codolio.com/profile/Gaurav640",
-            "InstagramLink": "https://www.instagram.com/itsme_gaurav_rajput?igsh=cDg2NDdnejR0c2I="
-        },
-        {
-            "name": "Kunal Jain",
-            "position": "Junior Council",
-            "image": KunalImage,
-            "id": 25,
-            "LinkedinLink": "https://www.linkedin.com/in/kunal-jain-ba463a202/",
-            // "LeetcodeLink": "https://leetcode.com/u/kunaljain9898/",
-            "InstagramLink": "https://www.instagram.com/kunaljain9898/"
-        }, 
-        {
-            "name": "Karnita Saumya",
-            "position": "Junior Council",
-            "image": KarnitaImage,
+            "image": NishthaImage,
             "id": 26,
-            "LinkedinLink": "https://www.linkedin.com/in/karnita-saumya/",
-            "GithubLink": "https://github.com/Karnita-Saumya",
-            // "LeetcodeLink": "https://leetcode.com/u/KarnitaSaumya/",
+            "LinkedinLink": "https://www.linkedin.com/in/nishtha-sood-53a75a306",
+            "GithubLink": "https://github.com/nishthaasood",
+            "InstagramLink": "https://www.instagram.com/nishthasood7"
         },
         {
-            "name": "Parth Sharma",
+            "name": "Pallavi",
             "position": "Junior Council",
-            "image": ParthImage,
+            "image": PallaviImage,
             "id": 27,
-            "LinkedinLink": "https://www.linkedin.com/in/parthsharma00/",
-            "GithubLink": "https://github.com/parthsharma5575",
-            "InstagramLink": "https://www.instagram.com/_.parthsharma.__/"
+            "LinkedinLink": "https://www.linkedin.com/in/pallavi-jain-4b340032a",
+            "GithubLink": "https://github.com/pallavithegod",
+            "LeetcodeLink": "https://leetcode.com/u/code_pallavi/",
         },
         {
-            "name": "Dipesh Lohchab",
+            "name": "Prerna",
             "position": "Junior Council",
-            "image": DipeshImage,
+            "image": PrernaImage,
             "id": 28,
-            "LinkedinLink": "https://www.linkedin.com/in/dipesh-lohchab/",
-            "GithubLink": "https://github.com/dipeshlohchab",
-            "LeetcodeLink": "https://leetcode.com/u/dipeshlohchab0302/",
+            "LinkedinLink": "https://www.linkedin.com/in/prerna-sharma-b3001b335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "GithubLink": "https://github.com/prerna020",
+            "LeetcodeLink": "https://leetcode.com/u/PrernaS_20/",
+           
         },
         {
-            "name": "Vansh Ahuja",
+            "name": "Saiyam",
             "position": "Junior Council",
-            "image": VanshImage,
+            "image": SaiyamImage,
             "id": 29,
-            "LinkedinLink": "https://www.linkedin.com/in/vansh-ahuja-b3648b273/",
-            "GithubLink": "https://github.com/vansh3175",
-            "LeetcodeLink": "https://leetcode.com/u/vansh317/",
+            "LinkedinLink": "https://www.linkedin.com/in/saiyam-kumar-0b8933324/",
+            "GithubLink": "https://github.com/SaiyamKumar510",
+            "LeetcodeLink": "https://leetcode.com/u/Kumar_Saiyam/",
+           
         },
         {
-            "name": "Sarthak Jain",
+            "name": "Vartika",
             "position": "Junior Council",
-            "image": SarthakImage,
+            "image": VartikaImage,
             "id": 30,
-            "LinkedinLink": "https://www.linkedin.com/in/sarthak-jain-93b875294",
-            "GithubLink": "https://github.com/Sarthak-Jain18",
-            "LeetcodeLink": "https://leetcode.com/u/sarthak_jain18/",
+            "LinkedinLink": "https://linkedin.com/in/vartika-sharma-5b3868325",
+             "GithubLink": "https://github.com/vartika6451",
+            "LeetcodeLink": "https://leetcode.com/u/vartika6451/",
         },
-        {
-            "name": "Krishna Tyagi",
-            "position": "Junior Council",
-            "image": KrishnaImage,
-            "id": 31,
-            "LinkedinLink": "https://www.linkedin.com/in/krishna-tyagi-/",
-            "GithubLink": "github.com/knight22-21",
-            "LeetcodeLink": "https://leetcode.com/u/knight22-21/",
-        }
+        
     ]
 
 export default JuniorCouncilData

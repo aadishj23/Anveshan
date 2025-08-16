@@ -9,11 +9,12 @@ import MayankImage from "../assets/team-photos/25 Batch/Mayank.jpg"
 import UdishImage from "../assets/team-photos/25 Batch/Udish.png"
 import TusharImage from "../assets/team-photos/25 Batch/Tushar.png"
 import AkankshaImage from "../assets/team-photos/25 Batch/Akanksha.jpg"
-import AadishImage from "../assets/team-photos/Senior Council/Aadish.jpg"
-import TanayImage from "../assets/team-photos/Senior Council/Tanay.jpg"
-import KaushalImage from "../assets/team-photos/Senior Council/Kaushal.jpg"
-import Bhavishyaamge from "../assets/team-photos/Senior Council/Bhavishya.jpg"
-import RaushanImage from '../assets/team-photos/Junior Council/Raushan.jpg'
+import AadishImage from "../assets/team-photos/26 Batch/Aadish.jpg"
+import TanayImage from "../assets/team-photos/26 Batch/Tanay.jpg"
+import KaushalImage from "../assets/team-photos/26 Batch/Kaushal.jpg"
+import Bhavishyaamge from "../assets/team-photos/26 Batch/Bhavishya.jpg"
+import RaushanImage from '../assets/team-photos/26 Batch/Raushan.jpg'
+import ParthImage from '../assets/team-photos/26 Batch/Parth.jpg'
 
 const AchieversData = [
     {
@@ -124,8 +125,9 @@ const AchieversData = [
         "id": 12,
         "name": "Aadish Jain",
         "batch": "2022-26",
-        "role": "SDE Intern at Appzlogic Mobility Solutions",
-        "achievements": "Current Vice President at Anveshan",
+        "role": "Backend Developer Trainee at PW",
+        "ex-role": "SDE Intern at Appzlogic Mobility Solutions",
+        "achievements": "Former Vice President at Anveshan",
         "image": AadishImage,
         "linkedin": "https://www.linkedin.com/in/aadishj23/",
     },
@@ -143,8 +145,8 @@ const AchieversData = [
         "id": 14,
         "name": "Tanay Kumar",
         "batch": "2022-26",
-        "role": "Full Stack Intern at Sanskaar Group",
-        "exrole": "Next.js Intern at Brainchant",
+        "role": "Founding Engineer at Tradermesh",
+        "exrole": "SDE Intern at Brainchant,Sanksaar group,ReferRush",
         "image": TanayImage,
         "linkedin": "https://www.linkedin.com/in/tanaykmr/",
     },
@@ -165,6 +167,15 @@ const AchieversData = [
         "exrole": "Tech Analyst at Tata Play Fibre",
         "image": RaushanImage,
         "linkedin": "https://www.linkedin.com/in/raushan-kumar-singh-31b6b8326/",
+    },
+     {
+        "id": 17,
+        "name": "Parth Nepalia",
+        "batch": "2022-26",
+        "role": "Backend Developer Intern at Gocomet",
+        "achievements": "Former Vice President at Anveshan",
+        "image": ParthImage,
+        "linkedin": "https://www.linkedin.com/in/parth-nepalia0203/",
     }
 ]
 
