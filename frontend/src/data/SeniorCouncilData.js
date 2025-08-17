@@ -61,9 +61,9 @@ const SeniorCouncilData =
             "position": "Vice President",
             "image": VanshikaImage,
             "id": 3,
-            "LinkedinLink":"https://www.linkedin.com/in/aadishj23" ,
-            "GithubLink": "https://github.com/aadishj23",
-            "TwitterLink":"https://x.com/AadishJ23" ,
+            "LinkedinLink":"https://www.linkedin.com/in/vanshika-tanwar-75b897297" ,
+            "GithubLink": "https://github.com/Vanshika-Tanwar/",
+            "LeetcodeLink":"https://leetcode.com/u/VanshikaTanwar/" ,
             // "InstagramLink": "https://www.instagram.com/aadish017/"
         },
         {
@@ -114,14 +114,14 @@ const SeniorCouncilData =
             // "LeetcodeLink": "https://leetcode.com/u/KarnitaSaumya/",
         },
         {
-            "name": "Tanishka",
+            "name": "Tanishq",
             "position": "Graphics Head",
             "image": TanishqImage,
             "id": 9,
-            "LinkedinLink": "https://www.linkedin.com/in/kaushalrai007",
-            "GithubLink":"https://github.com/Kaushal5033" ,
+            "LinkedinLink": "https://www.linkedin.com/in/tanishqbhadula/",
+            "GithubLink":"https://github.com/tanishqbhadula" ,
             // "TwitterLink": "https://x.com/__Kaushal__01?t=4Cage40z--RvkHmB2B7vcg&s=09",
-            "InstagramLink": "https://www.instagram.com/kaushal__rai07?igsh=eHQ4M2c3cTdpZmkz"
+            //"InstagramLink": "https://www.instagram.com/kaushal__rai07?igsh=eHQ4M2c3cTdpZmkz"
         },
         {
             "name": "Parth ",
@@ -171,13 +171,13 @@ const SeniorCouncilData =
             // "InstagramLink": "http://instagram.com/tanaykmr"
         },
         {
-            "name": "Tanishka",
+            "name": "Tanishq",
             "position": "Android Head",
             "image": TanishqImage,
             "id": 15,
-            "LinkedinLink": "https://www.linkedin.com/in/aditya-bhatt-aa6a21212",
-            "GithubLink": "https://github.com/Stryker998",
-            "TwitterLink": "https://x.com/stryker0071",
+            "LinkedinLink": "https://www.linkedin.com/in/tanishqbhadula/",
+            "GithubLink": "https://github.com/tanishqbhadula",
+            //"TwitterLink": "https://x.com/stryker0071",
             // "InstagramLink": "https://www.instagram.com/adityabhatt71/"
         },
          {
