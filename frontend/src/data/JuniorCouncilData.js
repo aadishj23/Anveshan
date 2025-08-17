@@ -77,7 +77,6 @@ const JuniorCouncilData =
             "id": 23,
             "LinkedinLink": "https://www.linkedin.com/in/devansh-sharma-ba0a54302/",
             "GithubLink": "https://github.com/Devansh865",
-            "LeetcodeLink": "https://leetcode.com/u/Astha_Negi/",
               "InstagramLink": "https://www.instagram.com/devansh.26_/",
         },
         {
