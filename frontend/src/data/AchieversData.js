@@ -9,20 +9,23 @@ import MayankImage from "../assets/team-photos/25 Batch/Mayank.jpg"
 import UdishImage from "../assets/team-photos/25 Batch/Udish.png"
 import TusharImage from "../assets/team-photos/25 Batch/Tushar.png"
 import AkankshaImage from "../assets/team-photos/25 Batch/Akanksha.jpg"
+import YashImage from "../assets/team-photos/25 Batch/Yash.png"
 import AadishImage from "../assets/team-photos/26 Batch/Aadish.jpg"
 import TanayImage from "../assets/team-photos/26 Batch/Tanay.jpg"
 import KaushalImage from "../assets/team-photos/26 Batch/Kaushal.jpg"
 import Bhavishyaamge from "../assets/team-photos/26 Batch/Bhavishya.jpg"
 import RaushanImage from '../assets/team-photos/26 Batch/Raushan.jpg'
 import ParthImage from '../assets/team-photos/26 Batch/Parth.jpg'
-
+import AnamikaImage from '../assets/team-photos/Senior Council/anamika.jpg'
+import KarnitaImage from "../assets/team-photos/Senior Council/karnita.jpg"
+import AsthaImage from "../assets/team-photos/Senior Council/astha.jpg"
 const AchieversData = [
     {
         "id": 1,
         "name": "Raman",
         "batch": "2020-24",
-        "role": "Web Developer at Wiingy",
-        "exrole": "Intern at GRNConnect, Ingenium",
+        "role": "Full Stack Developer at Styli",
+        "exrole": "Wiingy, GRNConnect, Ingenium",
         "image": RamanImage,
         "linkedin": "https://www.linkedin.com/in/raman-sde1/",
     },
@@ -39,8 +42,8 @@ const AchieversData = [
         "id": 3,
         "name": "Ayush Garg",
         "batch": "2020-24",
-        "role": "Product Manager at LawSikho",
-        "exrole": "Associate Product Manager at PW, Narra8ive",
+        "role": "APM at PW",
+        "exrole": "LawSikho, Narra8ive",
         "achievements": "Former President at Anveshan",
         "image": AyushGImage,
         "linkedin": "https://www.linkedin.com/in/gargayush909/",
@@ -77,8 +80,8 @@ const AchieversData = [
         "id": 7,
         "name": "Sumit Kumar",
         "batch": "2020-24",
-        "role": "SDE(Mobile) at Raaho",
-        "exrole": " Android Developer at PowerhouseAI, Ingenium",
+        "role": "SDE(Android) at Yulu",
+        "exrole": "Raaho, PowerhouseAI, Ingenium",
         "image": SumitImage,
         "linkedin": "https://www.linkedin.com/in/stkrr002/",
     },
@@ -86,7 +89,7 @@ const AchieversData = [
         "id": 8,
         "name": "Mayank Nailwal",
         "batch": "2021-25",
-        "role": "SDE(iOS) at Rooter.gg",
+        "role": "SDE-1 (Android) at Rooter.gg",
         "exrole": " iOS developer Intern at Mobilicis",
         "achievements": "Former President at Anveshan",
         "image": MayankImage,
@@ -105,8 +108,8 @@ const AchieversData = [
         "id": 10,
         "name": "Tushar Sethi",
         "batch": "2021-25",
-        "role": "AI Intern  at Blue Planet InfoSolutions",
-        "exrole": "Python Instructor at Coding Blocks",
+        "role": "ASE at Accenture",
+        "exrole": "Blue Planet, Coding Blocks",
         "achievements": "Former Secretary at Anveshan",
         "image": TusharImage,
         "linkedin": "https://www.linkedin.com/in/tushar-sethi-9342a722b/",
@@ -121,18 +124,26 @@ const AchieversData = [
         "image": AkankshaImage,
         "linkedin": "https://www.linkedin.com/in/akanksha-mishra-120a95253/",
     },
-    {
+     {
         "id": 12,
+        "name": "Yash Verma",
+        "batch": "2021-25",
+        "role": "Full stack Developer at Finzarc",
+        "image": YashImage,
+        "linkedin": "https://www.linkedin.com/in/yash-verma-5ba426333/",
+    },
+    {
+        "id": 13,
         "name": "Aadish Jain",
         "batch": "2022-26",
         "role": "Backend Developer Trainee at PW",
-        "ex-role": "SDE Intern at Appzlogic Mobility Solutions",
+        "exrole": "SDE Intern at Appzlogic Mobility Solutions",
         "achievements": "Former Vice President at Anveshan",
         "image": AadishImage,
         "linkedin": "https://www.linkedin.com/in/aadishj23/",
     },
     {
-        "id": 13,
+        "id": 14,
         "name": "Kaushal Kumar Rai",
         "batch": "2022-26",
         "role": "React Intern at Sanskaar Group",
@@ -142,25 +153,25 @@ const AchieversData = [
         "linkedin": "https://www.linkedin.com/in/kaushalrai007/",
     },
     {
-        "id": 14,
+        "id": 15,
         "name": "Tanay Kumar",
         "batch": "2022-26",
-        "role": "Founding Engineer at Tradermesh",
-        "exrole": "SDE Intern at Brainchant,Sanksaar group,ReferRush",
+        "role": "Founding Engineer at FinalRound AI",
+        "exrole": "TraderMesh, Brainchant,Sanksaar group,ReferRush",
         "image": TanayImage,
         "linkedin": "https://www.linkedin.com/in/tanaykmr/",
     },
     {
-        "id": 15,
+        "id": 16,
         "name": "Bhavishya Bhaskar",
         "batch": "2022-26",
-        "role": "Specialist @Codeforces",
-        "achievements": "DSA Head at Anveshan",
+        "role": "Expert @Codeforces",
+        "achievements": "Former DSA Head at Anveshan",
         "image": Bhavishyaamge,
         "linkedin": "https://www.linkedin.com/in/bhavishya-bhaskar-084445260/",
     },
     {
-        "id": 16,
+        "id": 17,
         "name": "Raushan",
         "batch": "2022-26",
         "role": "UI/UX designer Intern at Twoward Technologies",
@@ -169,13 +180,38 @@ const AchieversData = [
         "linkedin": "https://www.linkedin.com/in/raushan-kumar-singh-31b6b8326/",
     },
      {
-        "id": 17,
+        "id": 18,
         "name": "Parth Nepalia",
         "batch": "2022-26",
         "role": "Backend Developer Intern at Gocomet",
         "achievements": "Former Vice President at Anveshan",
         "image": ParthImage,
         "linkedin": "https://www.linkedin.com/in/parth-nepalia0203/",
+    },
+     {
+        "id": 19,
+        "name": "Anamika Singh",
+        "batch": "2023-27",
+        "role": "Web Developer Intern at Ada labs",
+        "achievements": "3+ Hackathon Winner",
+        "image": AnamikaImage,
+        "linkedin": "https://www.linkedin.com/in/anamikasingh20/",
+    },
+     {
+        "id": 20,
+        "name": "Karnita Saumya",
+        "batch": "2023-27",
+        "role": "Data Analyst Intern at Gocomet",
+        "image": KarnitaImage,
+        "linkedin": "https://www.linkedin.com/in/karnita-saumya/",
+    },
+    {
+        "id": 21,
+        "name": "Astha Negi",
+        "batch": "2023-27",
+        "role": "Business Intelligence Engineer Intern at Amazon",
+        "image": AsthaImage,
+        "linkedin": "https://www.linkedin.com/in/astha-negi-90874b2b3/",
     }
 ]
 
