@@ -201,7 +201,7 @@ const AchieversData = [
         "id": 20,
         "name": "Karnita Saumya",
         "batch": "2023-27",
-        "role": "Data Analyst Intern at IMVED technologies Pvt Ltd.",
+        "role": "Data Analyst Intern at IMVED technologies Pvt Ltd.",
         "image": KarnitaImage,
         "linkedin": "https://www.linkedin.com/in/karnita-saumya/",
     },
