@@ -192,7 +192,7 @@ const AchieversData = [
         "id": 19,
         "name": "Anamika Singh",
         "batch": "2023-27",
-        "role": "Web Developer Intern at Ada labs",
+        "role": "Web Development Intern at Ada labs",
         "achievements": "3+ Hackathon Winner",
         "image": AnamikaImage,
         "linkedin": "https://www.linkedin.com/in/anamikasingh20/",
