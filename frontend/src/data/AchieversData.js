@@ -183,7 +183,7 @@ const AchieversData = [
         "id": 18,
         "name": "Parth Nepalia",
         "batch": "2022-26",
-        "role": "Backend Developer Intern at Gocomet",
+        "role": "Software Engineer intern at Gocomet",
         "achievements": "Former Vice President at Anveshan",
         "image": ParthImage,
         "linkedin": "https://www.linkedin.com/in/parth-nepalia0203/",
