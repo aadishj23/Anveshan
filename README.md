@@ -2,110 +2,113 @@
 
 Anveshan is a premier technical society focused on providing personal mentorship to equip students with essential tech skills, knowledge, and hands-on experience. We cultivate a collaborative environment for innovation in areas such as Data Structures and Algorithms, Development, and emerging technologies. Our community, driven by curiosity and mentorship, supports learners at all levels, from beginners to advanced coders, promoting continuous growth and success.
 
-## Website
+## Official Website
 
-https://anveshan.dev/
+[https://anveshan.dev/](https://anveshan.dev/)
 
-## Pages
+---
 
-### 1. Home
-The landing page provides an overview of Anveshan, featuring highlights, key achievements, and a brief introduction to the platform.
+## Architecture & Modern Tech Stack
 
-![Home](https://drive.google.com/uc?id=1wCpDvm6t304087V0ebNlwp4_PUvvCHbe)
+The platform is built on a unified, high-performance Next.js fullstack architecture:
 
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Turbopack)
+- **UI & Components**: [React 19](https://react.dev/), [shadcn/ui](https://ui.shadcn.com/), [Lucide React](https://lucide.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations & Effects**: [Motion](https://motion.dev/), [GSAP](https://gsap.com/), [Lenis Smooth Scroll](https://lenis.darkroom.engineering/), Canvas Confetti
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Database / API**: [MongoDB](https://www.mongodb.com/) via [Mongoose](https://mongoosejs.com/) (Integrated Route Handlers)
 
-### 2. Events
-A dedicated section to showcase past and upcoming events, complete with event details, dates, and participation options.
+---
 
-![Events](https://drive.google.com/uc?id=1GKcVMCS79W9hxsKp7EDSlnygC-t67G-5)
+## Sections & Features
 
+### 1. Home / Hero
 
-### 3. Team
-Meet the brilliant minds behind Anveshan! This page highlights the team members, their roles, and contributions.
+High-impact hero section showcasing Anveshan's motto **"Explore • Innovate • Build"** with responsive measurement lines, ASCII console greetings, and direct CTAs.
 
-![Team](https://drive.google.com/uc?id=1G0lvqLq5Ao72N_isUfIAfCA8MjeyTUhx)
+### 2. About Anveshan
 
+Highlights our mission, history, and community values at Bhagwan Parshuram Institute of Technology (BPIT).
 
-### 4. Projects
-Explore the various projects undertaken by Anveshan. Each project is detailed with its goals, progress, and outcomes.
+### 3. Events & Timeline
 
-![Projects](https://drive.google.com/uc?id=1VgdJPb3ZqZXtMplx6XUbnRtIjVh9pMv6)
+Interactive roadmap of flagship events including **HackBPIT**, **Tech Starter**, **Technovation**, and **Meet Your Alumni** sessions.
 
+### 4. Our Team
 
-### 5. Achievers
-A hall of fame to celebrate the outstanding achievements of individuals and teams associated with Anveshan.
+Council directory showcasing the Senior and Junior Councils with instant tab switching, member headshots, and social links (LinkedIn, GitHub, LeetCode, Codolio).
 
-![Achievers](https://drive.google.com/uc?id=1c8fFsiFGFdCaDRvqLIS3JnwL_S6xN_an)
+### 5. Projects
 
+Curated repository of open-source and student-built software applications with live demo links and GitHub sources.
 
-### 6. Contact Us
-Get in touch! The contact page provides a form and details to reach out to us for queries, feedback, or collaborations.
+### 6. Hall of Fame (Achievers)
 
-![Contact Us](https://drive.google.com/uc?id=1NrUBbNP1q6o6-EurwGftpaSNbK4TzdKr)
+Celebrating our alumni and students placed at top tech organizations (Google, Amazon, NCR Atleos, PW, FinalRound AI, Rooter, etc.).
 
+### 7. Contact Us
 
-## Technologies Used
+Fullstack contact form saving inquiries directly to MongoDB via the `/api/contact` route handler.
 
-### Frontend
-- **React**: For building the user interface.
-- **Tailwind CSS**: For responsive and modern styling.
+---
 
-### Backend
-- **Node.js**: For server-side logic and handling requests.
-- **Express.js**: For building the API.
-
-### Database
-- **MongoDB**: For storing and managing data convenient.
-
-### State Management
-- **Recoil**: To manage the application state seamlessly.
-
-### Others
-- **Vite**: For fast and optimized frontend development.
-
-## Installation
-
-Follow the steps below to set up Anveshan locally:
+## Getting Started Locally
 
 ### Prerequisites
-- **Node.js**: Ensure you have version 14.x or higher installed.
-- **MongoDB**: Install and configure MongoDB
 
-### Steps
+- **Node.js**: v20 or higher
+- **npm**: v10 or higher
+- **MongoDB**: Local MongoDB instance or MongoDB Atlas cluster URI
 
-1. **Clone the Repository**
+### Installation & Setup
+
+1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/aadishj23/Anveshan.git
-   cd anveshan
+   cd Anveshan
    ```
 
-2. **Install Dependencies**
+2. **Install dependencies:**
 
-   - **Frontend**:
-     ```bash
-     cd frontend
-     npm install
-     ```
+   ```bash
+   npm install
+   ```
 
-   - **Backend**:
-     ```bash
-     cd backend
-     npm install
-     ```
+3. **Configure Environment Variables:**
 
-3. **Set Up Environment Variables**
+   ```bash
+   cp .env.example .env
+   ```
 
-   - Create `.env` files for both the frontend and backend.
-   - Use the provided `.env.example` files as a reference to define required variables.
+   Add your `DATABASE_URL` in `.env`.
 
-4. **Run the Application**
+4. **Run the Development Server:**
 
-   - **Start the Backend Server**:
-     ```bash
-     npm start
-     ```
+   ```bash
+   npm run dev
+   ```
 
-   - **Start the Frontend Development Server**:
-     ```bash
-     npm run dev
-     ```
+   Visit [http://localhost:3000](http://localhost:3000) to view the application.
+
+---
+
+## Scripts
+
+- `npm run dev`: Start Next.js development server with Turbopack.
+- `npm run build`: Build production optimized bundle.
+- `npm run start`: Start production server.
+- `npm run lint`: Run ESLint checks.
+- `npm run format`: Format code using Prettier.
+
+---
+
+## Community & Contributing
+
+- Please review our [Contributing Guide](./CONTRIBUTING.md) before submitting pull requests.
+- All members and contributors are expected to follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
