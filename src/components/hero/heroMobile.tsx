@@ -17,14 +17,14 @@ export const HeroMobile = React.memo(() => {
       <div className="flex flex-col">
         {/* Top Section */}
         <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-4 pb-[4svh]">
-          <div className="text-black text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">
+          <div className="text-white/80 text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">
             LARGEST STUDENT
             <br />
             RUN HACKATHON
           </div>
           <div className="w-[16vw] h-[16vw] ">
-            <div className="w-[8vw] h-[8vw] ml-[8vw] bg-[#EAEAEA]"></div>
-            <div className="w-[8vw] h-[8vw]  bg-[#EAEAEA]"></div>
+            <div className="w-[8vw] h-[8vw] ml-[8vw] bg-[#262626]"></div>
+            <div className="w-[8vw] h-[8vw]  bg-[#262626]"></div>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export const HeroMobile = React.memo(() => {
                 return (
                   <div
                     key={line.id}
-                    className="absolute bg-[#C7C7C7]"
+                    className="absolute bg-[#333333]"
                     style={line.style}
                   />
                 );
@@ -77,7 +77,7 @@ export const HeroMobile = React.memo(() => {
             {measurementData.labels.map((item) => (
               <div
                 key={item.id}
-                className="absolute text-[#3a3a3a] text-right whitespace-nowrap font-museo transform -translate-x-1/2 -translate-y-1/2"
+                className="absolute text-[#a3a3a3] text-right whitespace-nowrap font-museo transform -translate-x-1/2 -translate-y-1/2"
                 style={{
                   fontWeight: 300,
                   letterSpacing: "3.01px",
@@ -102,7 +102,7 @@ export const HeroMobile = React.memo(() => {
                 {item.text.split("").map((char, charIndex) => (
                   <div
                     key={`${item.id}-${charIndex}`}
-                    className={`text-black text-center text-base leading-snug text-[clamp(0.5rem,1.7vw,5rem)] ${
+                    className={`text-white/80 text-center text-base leading-snug text-[clamp(0.5rem,1.7vw,5rem)] ${
                       item.isBold ? "font-bold" : "font-light"
                     }`}
                   >
@@ -111,17 +111,17 @@ export const HeroMobile = React.memo(() => {
                 ))}
               </div>
             ))}
-            <div className="w-[6vw] h-[6vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
+            <div className="w-[6vw] h-[6vw] bg-[#262626] mt-2 xl:mt-4" />
           </div>
         </div>
         {/* <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
-          Registeration <span className="text-[#0534C7]">Deadline </span>
+          Registeration <span className="text-[#FFBE0D]">Deadline </span>
           Extended
         </div> */}
 
-        <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
-          EXPLORE <span className="text-[#0534C7]">•</span> INNOVATE{" "}
-          <span className="text-[#0534C7]">•</span> BUILD
+        <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center text-white">
+          EXPLORE <span className="text-[#FFBE0D]">•</span> INNOVATE{" "}
+          <span className="text-[#FFBE0D]">•</span> BUILD
         </div>
         <div>
           <DevfolioAndDiscordButtons />

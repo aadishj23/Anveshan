@@ -24,7 +24,7 @@ export default function TeamSection() {
         <Typography.Display className="font-sketch-block font-normal text-primary text-5xl sm:text-6xl md:text-7xl leading-tight">
           OUR TEAM
         </Typography.Display>
-        <Typography.Lead className="font-prompt text-gray-700 text-base sm:text-lg max-w-2xl mx-auto mt-2">
+        <Typography.Lead className="font-prompt text-white/80 text-base sm:text-lg max-w-2xl mx-auto mt-2">
           Meet the minds and leaders powering Anveshan at BPIT.
         </Typography.Lead>
 
@@ -34,8 +34,8 @@ export default function TeamSection() {
             onClick={() => setActiveTab("senior")}
             className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 cursor-pointer ${
               activeTab === "senior"
-                ? "bg-primary text-white shadow-md"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "bg-primary text-black font-bold shadow-lg"
+                : "bg-[#1a1a1a] text-white/80 hover:bg-[#262626] hover:text-white border border-white/10"
             }`}
           >
             Senior Council
@@ -44,8 +44,8 @@ export default function TeamSection() {
             onClick={() => setActiveTab("junior")}
             className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 cursor-pointer ${
               activeTab === "junior"
-                ? "bg-primary text-white shadow-md"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "bg-primary text-black font-bold shadow-lg"
+                : "bg-[#1a1a1a] text-white/80 hover:bg-[#262626] hover:text-white border border-white/10"
             }`}
           >
             Junior Council
@@ -66,12 +66,12 @@ export default function TeamSection() {
           {members.map((member) => (
             <div
               key={member.id}
-              className="group bg-white rounded-2xl border-2 border-black/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center p-6 text-center"
+              className="group bg-[#141414] rounded-2xl border border-white/10 hover:border-primary/50 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center p-6 text-center"
             >
               {/* Profile Image with outline */}
-              <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/20 mb-4 group-hover:scale-105 transition-transform duration-300 bg-gray-50">
+              <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/30 mb-4 group-hover:scale-105 transition-transform duration-300 bg-[#1c1c1c]">
                 <Image
-                  src={member.image}
+                  src={member.image || '/assets/team-photos/avatar-placeholder.svg'}
                   alt={member.name}
                   fill
                   sizes="(max-width: 640px) 144px, 160px"
@@ -80,11 +80,11 @@ export default function TeamSection() {
               </div>
 
               {/* Name & Role */}
-              <Typography.H3 className="font-sketch-block text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+              <Typography.H3 className="font-sketch-block text-2xl font-bold text-white group-hover:text-primary transition-colors">
                 {member.name}
               </Typography.H3>
               {member.position && member.position !== "Junior Council" ? (
-                <Typography.P className="text-sm font-medium text-gray-600 mt-1 mb-4">
+                <Typography.P className="text-sm font-medium text-white/70 mt-1 mb-4">
                   {member.position}
                 </Typography.P>
               ) : (
@@ -92,13 +92,13 @@ export default function TeamSection() {
               )}
 
               {/* Social Links */}
-              <div className="flex items-center justify-center gap-3 mt-auto pt-2 border-t border-gray-100 w-full">
+              <div className="flex items-center justify-center gap-3 mt-auto pt-2 border-t border-white/10 w-full">
                 {member.LinkedinLink && (
                   <Link
                     href={member.LinkedinLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-blue-600 transition-colors p-1"
+                    className="text-white/70 hover:text-primary transition-colors p-1"
                     aria-label={`${member.name} LinkedIn`}
                   >
                     <Linkedin size={18} />
@@ -109,7 +109,7 @@ export default function TeamSection() {
                     href={member.GithubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-black transition-colors p-1"
+                    className="text-white/70 hover:text-primary transition-colors p-1"
                     aria-label={`${member.name} GitHub`}
                   >
                     <Github size={18} />
@@ -120,7 +120,7 @@ export default function TeamSection() {
                     href={member.LeetcodeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-amber-500 transition-colors p-1"
+                    className="text-white/70 hover:text-primary transition-colors p-1"
                     aria-label={`${member.name} LeetCode`}
                   >
                     <Code2 size={18} />
@@ -131,7 +131,7 @@ export default function TeamSection() {
                     href={member.CodolioLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-indigo-600 transition-colors p-1"
+                    className="text-white/70 hover:text-primary transition-colors p-1"
                     aria-label={`${member.name} Codolio`}
                   >
                     <Globe size={18} />

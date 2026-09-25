@@ -31,7 +31,7 @@ function Event({
     offset: ["start 60%", "end 60%"],
   });
 
-  const color = useTransform(scrollYProgress, [0, 0.4], ["#ADADAD", "#000000"]);
+  const color = useTransform(scrollYProgress, [0, 0.4], ["#555555", "#FFBE0D"]);
 
   const { border } = svgs;
   const [isLgScreen, setIsLgScreen] = useState(false);
@@ -59,14 +59,14 @@ function Event({
         <div className=" sm:self-start  ">
           <motion.h2
             style={{ color }}
-            className="  font-sketch-block font-normal text-[70px]  sm:text-[100px]  md:text-[130px] lg:text-[130px] xlg:text-[200px] xl:text-[220px] 2xl:text-[280px] leading-[120%] text-[#ADADAD]  tracking-[6px]"
+            className="  font-sketch-block font-normal text-[70px]  sm:text-[100px]  md:text-[130px] lg:text-[130px] xlg:text-[200px] xl:text-[220px] 2xl:text-[280px] leading-[120%] text-white/40  tracking-[6px]"
           >
             {eventNumber}
           </motion.h2>
         </div>
         <div className=" lg:py-4 px-2 sm:px-6 flex flex-col">
           <Typography.H5
-            className=" text-[#0617B0] leading-none pt-2 lg:pt-0 sm:leading-10 font-semibold
+            className=" text-primary leading-none pt-2 lg:pt-0 sm:leading-10 font-semibold
           text-base     sm:text-xl lg:text-xl xlg:text-3xl 2xl:text-4xl "
           >
             {title}
@@ -76,13 +76,13 @@ function Event({
             alt={border.alt}
             width={0}
             height={0}
-            className="w-[54vw] "
+            className="w-[54vw] opacity-40 invert "
           />
           <div className=" mt-3">
-            <Typography.H6 className=" text-base sm:text-lg font-semibold text-[#454545] leading-none sm:leading-7">
+            <Typography.H6 className=" text-base sm:text-lg font-semibold text-white leading-none sm:leading-7">
               {duration}
             </Typography.H6>
-            <Typography.P className="text-sm sm:text-base  font-normal text-[#454545] leading-none sm:leading-7">
+            <Typography.P className="text-sm sm:text-base  font-normal text-white/80 leading-none sm:leading-7">
               {description}
             </Typography.P>
           </div>

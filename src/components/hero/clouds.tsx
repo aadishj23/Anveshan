@@ -21,7 +21,7 @@ export default function Clouds() {
 
   return (
     <div
-      className={`overflow-x-clip relative z-30 pointer-events-none ${
+      className={`overflow-x-clip relative z-10 pointer-events-none ${
         isSmall ? " -mt-[18svh]" : "mt-20"
       } `}
     >

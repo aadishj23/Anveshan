@@ -95,7 +95,7 @@ export const TimelineEffect = ({
         {/* dash dash path */}
         <path
           d="M9.00101 3.99977C9.00101 3.99977 -15.1548 65.4995 50.5004 133.499C116.155 201.499 229.557 204.076 294.5 296.499C352.121 378.502 348.348 441.21 440.5 511.999C550.5 596.499 710.501 479.853 862.001 535.003C985.501 579.959 1058.43 986.896 1184.5 1033.5"
-          stroke="#ADADAD"
+          stroke="#333333"
           strokeWidth="7.9875"
           strokeLinecap="round"
           strokeDasharray="15.98 15.98"
@@ -153,8 +153,8 @@ export const TimelineEffect = ({
             y2="707.481"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#ADADAD" />
-            <stop offset="1" />
+            <stop stopColor="#FFBE0D" />
+            <stop offset="1" stopColor="#FFD866" />
           </linearGradient>
 
           {/* Gradient for the tip indicator */}

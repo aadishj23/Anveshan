@@ -18,7 +18,7 @@ interface SponsorCardProps {
 const SponsorCard: React.FC<SponsorCardProps> = ({ sponsor, cardType }) => {
   const getCardStyles = () => {
     const baseStyles =
-      "flex flex-col justify-center items-center bg-[#fff] rounded-2xl shadow-[7px_7px_5px_0px_#0534c7] transition-transform duration-300 ease-in-out hover:scale-105";
+      "flex flex-col justify-center items-center bg-[#fff] rounded-2xl shadow-[7px_7px_5px_0px_#FFBE0D] transition-transform duration-300 ease-in-out hover:scale-105";
 
     switch (cardType) {
       case "alpha":

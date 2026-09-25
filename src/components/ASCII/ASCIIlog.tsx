@@ -16,7 +16,7 @@ export default function AsciiLogger() {
 >> Bhagwan Parshuram Institute of Technology <<
 >> https://anveshan.dev <<
 `,
-      "font-family: monospace; color: #0534C7; font-weight: bold;",
+      "font-family: monospace; color: #FFBE0D; font-weight: bold;",
     );
   }, []);
 

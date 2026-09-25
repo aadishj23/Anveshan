@@ -23,7 +23,7 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-black hover:opacity-75 transition-opacity"
+              className="flex items-center gap-2 text-white/90 hover:text-primary transition-colors"
             >
               <Image
                 src={social.icon}
@@ -31,8 +31,9 @@ export default function Footer() {
                 width={28}
                 height={28}
                 className="w-6 h-6 object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
-              <Typography.P className="font-prompt my-auto text-sm! font-medium text-black">
+              <Typography.P className="font-prompt my-auto text-sm! font-medium text-white/90">
                 {social.name.toUpperCase()}
               </Typography.P>
             </Link>
@@ -47,7 +48,7 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-black hover:opacity-75 transition-opacity"
+              className="flex items-center gap-2 text-white/90 hover:text-primary transition-colors"
             >
               <Image
                 src={social.icon}
@@ -55,8 +56,9 @@ export default function Footer() {
                 width={28}
                 height={28}
                 className="w-6 h-6 object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
-              <Typography.P className="font-prompt my-auto text-sm! font-medium text-black">
+              <Typography.P className="font-prompt my-auto text-sm! font-medium text-white/90">
                 {social.name.toUpperCase()}
               </Typography.P>
             </Link>
@@ -80,6 +82,7 @@ export default function Footer() {
               width={28}
               height={28}
               className="w-6 h-6 object-contain"
+              style={{ filter: "brightness(0) invert(1)" }}
             />
           </Link>
         ))}
@@ -91,14 +94,14 @@ export default function Footer() {
           <Typography.Display className="text-center font-sketch-block font-normal text-primary text-[14vw] sm:text-[12vw] leading-none tracking-wider">
             ANVESHAN
           </Typography.Display>
-          <Typography.Lead className="font-prompt text-xs sm:text-sm md:text-base text-black/70 -mt-2 tracking-widest uppercase">
+          <Typography.Lead className="font-prompt text-xs sm:text-sm md:text-base text-white/70 -mt-2 tracking-widest uppercase">
             Bhagwan Parshuram Institute of Technology
           </Typography.Lead>
         </div>
       </div>
 
       {/* Footer Text */}
-      <Typography.Lead className="text-xs sm:text-sm text-black/80 text-center mt-6">
+      <Typography.Lead className="text-xs sm:text-sm text-white/60 text-center mt-6">
         {FOOTER_TEXT}
       </Typography.Lead>
     </footer>

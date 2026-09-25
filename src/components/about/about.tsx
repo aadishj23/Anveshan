@@ -1,23 +1,21 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 
 import { TextReveal } from "@/components/ui/text-reveal";
 import { aboutConfig } from "@/config/about";
 
 const About: React.FC = () => {
-  const textRevealRef = useRef<HTMLDivElement>(null);
   return (
     <section
-      className=" -mt-[55vw] grid place-items-center min-h-screen  pt-10"
+      className="relative z-20 w-full mt-48 sm:mt-64 lg:mt-72"
       id="about"
     >
-      <div ref={textRevealRef} className="w-full flex justify-center">
-        <TextReveal className="text-black font-averta-std !text-sm sm:!text-base md:!text-lg lg:!text-xl leading-relaxed">
-          {aboutConfig.description}
-        </TextReveal>
-      </div>
+      <TextReveal className="text-white font-averta-std">
+        {aboutConfig.description}
+      </TextReveal>
     </section>
   );
 };
 
 export default About;
+

@@ -69,13 +69,13 @@ export default function ContactSection() {
       id="contact"
       className="py-20 px-4 sm:px-6 lg:px-12 max-w-4xl mx-auto"
     >
-      <div className="bg-white rounded-3xl border-2 border-black/10 p-8 sm:p-12 shadow-lg">
+      <div className="bg-[#141414] rounded-3xl border border-white/10 p-8 sm:p-12 shadow-2xl">
         {/* Header */}
         <div className="text-center mb-8">
           <Typography.Display className="font-sketch-block font-normal text-primary text-4xl sm:text-5xl md:text-6xl leading-tight">
             GET IN TOUCH
           </Typography.Display>
-          <Typography.Lead className="font-prompt text-gray-700 text-sm sm:text-base max-w-lg mx-auto mt-2">
+          <Typography.Lead className="font-prompt text-white/80 text-sm sm:text-base max-w-lg mx-auto mt-2">
             Have questions, ideas for collaboration, or want to join Anveshan?
             Drop us a message!
           </Typography.Lead>
@@ -83,15 +83,15 @@ export default function ContactSection() {
 
         {/* Status Alerts */}
         {success && (
-          <div className="mb-6 p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 flex items-center gap-3">
-            <CheckCircle2 className="size-5 text-green-600 shrink-0" />
+          <div className="mb-6 p-4 rounded-xl bg-green-950/40 border border-green-500/30 text-green-300 flex items-center gap-3">
+            <CheckCircle2 className="size-5 text-green-400 shrink-0" />
             <p className="text-sm font-medium">{success}</p>
           </div>
         )}
 
         {error && (
-          <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 flex items-center gap-3">
-            <AlertCircle className="size-5 text-red-600 shrink-0" />
+          <div className="mb-6 p-4 rounded-xl bg-red-950/40 border border-red-500/30 text-red-300 flex items-center gap-3">
+            <AlertCircle className="size-5 text-red-400 shrink-0" />
             <p className="text-sm font-medium">{error}</p>
           </div>
         )}
@@ -99,11 +99,11 @@ export default function ContactSection() {
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-semibold text-gray-800 mb-2">
+            <label className="block text-sm font-semibold text-white/90 mb-2">
               Your Name
             </label>
             <div className="relative">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-gray-400" />
+              <User className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-white/40" />
               <input
                 type="text"
                 name="name"
@@ -111,17 +111,17 @@ export default function ContactSection() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 placeholder:text-gray-400 text-sm"
+                className="w-full pl-12 pr-4 py-3 rounded-xl bg-[#1c1c1c] border border-white/10 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/40 text-white placeholder:text-white/40 text-sm"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-800 mb-2">
+            <label className="block text-sm font-semibold text-white/90 mb-2">
               Your Email
             </label>
             <div className="relative">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-gray-400" />
+              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-white/40" />
               <input
                 type="email"
                 name="email"
@@ -129,17 +129,17 @@ export default function ContactSection() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="you@domain.com"
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 placeholder:text-gray-400 text-sm"
+                className="w-full pl-12 pr-4 py-3 rounded-xl bg-[#1c1c1c] border border-white/10 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/40 text-white placeholder:text-white/40 text-sm"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-800 mb-2">
+            <label className="block text-sm font-semibold text-white/90 mb-2">
               Message
             </label>
             <div className="relative">
-              <MessageSquare className="absolute left-4 top-4 size-5 text-gray-400" />
+              <MessageSquare className="absolute left-4 top-4 size-5 text-white/40" />
               <textarea
                 name="message"
                 required
@@ -147,7 +147,7 @@ export default function ContactSection() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell us what's on your mind..."
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 placeholder:text-gray-400 text-sm resize-none"
+                className="w-full pl-12 pr-4 py-3 rounded-xl bg-[#1c1c1c] border border-white/10 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/40 text-white placeholder:text-white/40 text-sm resize-none"
               />
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function ContactSection() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 px-6 rounded-xl bg-primary text-white font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer shadow-md"
+            className="w-full py-3.5 px-6 rounded-xl bg-primary text-black font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all disabled:opacity-50 cursor-pointer shadow-lg"
           >
             {loading ? (
               <>

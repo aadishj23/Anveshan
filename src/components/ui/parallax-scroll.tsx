@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -9,7 +9,9 @@ import PortraitSVG from "./portrait-svg";
 
 interface ParallaxScrollProps {
   images: string[];
-  overlay?: React.ReactNode;
+  overlay?:
+    | React.ReactNode
+    | ((progress: MotionValue<number>) => React.ReactNode);
 }
 
 export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
@@ -69,7 +71,7 @@ export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {
     <div ref={containerRef} className={cn("relative w-full h-[300vh]")}>
       {/* Overlay */}
       <div className="sticky top-0 h-screen z-20 flex items-center justify-center">
-        {overlay}
+        {typeof overlay === "function" ? overlay(scrollYProgress) : overlay}
       </div>
 
       {/* Mobile Layout: 2 columns */}

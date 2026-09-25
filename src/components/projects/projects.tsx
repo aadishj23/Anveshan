@@ -17,7 +17,7 @@ export default function ProjectsSection() {
         <Typography.Display className="font-sketch-block font-normal text-primary text-5xl sm:text-6xl md:text-7xl leading-tight">
           PROJECTS
         </Typography.Display>
-        <Typography.Lead className="font-prompt text-gray-700 text-base sm:text-lg max-w-2xl mx-auto mt-2">
+        <Typography.Lead className="font-prompt text-white/80 text-base sm:text-lg max-w-2xl mx-auto mt-2">
           Showcase of innovative software built and maintained by our community
           members.
         </Typography.Lead>
@@ -27,10 +27,10 @@ export default function ProjectsSection() {
         {projectsData.map((project) => (
           <div
             key={project.id}
-            className="group bg-white rounded-2xl border-2 border-black/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            className="group bg-[#141414] rounded-2xl border border-white/10 hover:border-primary/50 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col"
           >
             {/* Project Preview Image */}
-            <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+            <div className="relative w-full h-48 bg-[#1f1f1f] overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.name}
@@ -43,31 +43,31 @@ export default function ProjectsSection() {
             {/* Content */}
             <div className="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <Typography.H3 className="font-sketch-block text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                <Typography.H3 className="font-sketch-block text-2xl font-bold text-white group-hover:text-primary transition-colors">
                   {project.name}
                 </Typography.H3>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mt-1">
                   {project.Work}
                 </p>
-                <p className="text-sm text-gray-600 mt-2 line-clamp-3">
+                <p className="text-sm text-white/85 mt-2 line-clamp-3">
                   {project.description}
                 </p>
-                <p className="text-xs text-gray-400 mt-2">
+                <p className="text-xs text-white/60 mt-2">
                   Built by{" "}
-                  <span className="font-medium text-gray-600">
+                  <span className="font-medium text-white/95">
                     {project.owner}
                   </span>
                 </p>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
+              <div className="flex items-center gap-3 mt-6 pt-4 border-t border-white/10">
                 {project.Deployment && (
                   <Link
                     href={project.Deployment}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2 px-3 rounded-lg bg-primary text-white text-xs font-semibold flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity"
+                    className="flex-1 py-2 px-3 rounded-lg bg-primary text-black text-xs font-bold flex items-center justify-center gap-1.5 hover:brightness-110 shadow-sm transition-all"
                   >
                     <ExternalLink size={14} />
                     Live Demo
@@ -78,7 +78,7 @@ export default function ProjectsSection() {
                     href={project.GithubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg border border-gray-200 text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="p-2 rounded-lg border border-white/20 text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/40 transition-colors"
                     aria-label={`${project.name} GitHub Repository`}
                   >
                     <Github size={16} />

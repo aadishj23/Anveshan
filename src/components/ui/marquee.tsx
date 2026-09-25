@@ -15,14 +15,14 @@ const marqueeItems: MarqueeItem[] = [
     text: "student run",
     velocity: -100,
     className: "flex items-center h-16",
-    wrapperClassName: "w-full bg-black text-white relative z-10",
+    wrapperClassName: "w-full bg-[#111111] text-white border-y border-white/10 relative z-10",
   },
   {
     text: "biggest hackathon",
     velocity: 100,
     className: "flex items-center h-16",
     wrapperClassName:
-      "absolute top-1/2 -translate-y-1/2 -left-5 -rotate-12 lg:-rotate-[8deg] bg-[#0617B0] text-white w-[110%]",
+      "absolute top-1/2 -translate-y-1/2 -left-5 -rotate-12 lg:-rotate-[8deg] bg-primary text-black font-extrabold w-[110%] shadow-2xl",
   },
 ];
 

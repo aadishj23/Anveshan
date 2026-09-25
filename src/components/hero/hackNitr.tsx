@@ -19,14 +19,14 @@ export const HackNitr = () => {
       <div className="flex flex-row px-[5vw]">
         {/* Left Column */}
         <div className="flex flex-col h-[25dvh] justify-between flex-shrink-0">
-          <div className="text-black text-center text-[1vw] font-light font-averta-std leading-[1.5vw] tracking-widest">
+          <div className="text-white/80 text-center text-[1vw] font-light font-averta-std leading-[1.5vw] tracking-widest">
             PREMIER TECHNICAL
             <br />
             SOCIETY OF BPIT
           </div>
           <div className="relative w-[8vw] h-[8vw] mx-auto">
-            <div className="absolute top-0 left-[40%] w-[4vw] h-[4vw] bg-[#EAEAEA]" />
-            <div className="absolute bottom-0 right-[60%] w-[4vw] h-[4vw] bg-[#EAEAEA]" />
+            <div className="absolute top-0 left-[40%] w-[4vw] h-[4vw] bg-[#262626]" />
+            <div className="absolute bottom-0 right-[60%] w-[4vw] h-[4vw] bg-[#262626]" />
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export const HackNitr = () => {
                       key={`line-div-${index}`}
                       style={{
                         position: "absolute",
-                        backgroundColor: "#C7C7C7",
+                        backgroundColor: "#333333",
                         ...line.style,
                       }}
                     />
@@ -88,7 +88,7 @@ export const HackNitr = () => {
               {measurementData.labels.map((item, index) => (
                 <div
                   key={`label-${index}`}
-                  className="absolute text-[#3a3a3a] text-right whitespace-nowrap font-museo transform -translate-x-1/2 -translate-y-1/2"
+                  className="absolute text-[#a3a3a3] text-right whitespace-nowrap font-museo transform -translate-x-1/2 -translate-y-1/2"
                   style={{
                     fontWeight: 300,
                     letterSpacing: "3.01px",
@@ -113,7 +113,7 @@ export const HackNitr = () => {
                   <div
                     key={charIndex}
                     className={`
-                      text-black text-center text-[0.9vw] leading-snug
+                      text-white/80 text-center text-[0.9vw] leading-snug
                       ${item.isBold ? "font-bold" : "font-light"}
                     `}
                   >
@@ -122,14 +122,14 @@ export const HackNitr = () => {
                 ))}
               </div>
             ))}
-            <div className="w-8 h-8 xl:w-[3vw] xl:h-[3vw] bg-[#EAEAEA] mt-2 xl:mt-4" />
+            <div className="w-8 h-8 xl:w-[3vw] xl:h-[3vw] bg-[#262626] mt-2 xl:mt-4" />
           </div>
         </div>
       </div>
 
-      <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3">
-        EXPLORE <span className="text-[#0534C7]">•</span> INNOVATE{" "}
-        <span className="text-[#0534C7]">•</span> BUILD
+      <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3 text-white">
+        EXPLORE <span className="text-[#FFBE0D]">•</span> INNOVATE{" "}
+        <span className="text-[#FFBE0D]">•</span> BUILD
       </div>
       <DevfolioAndDiscordButtons />
     </div>

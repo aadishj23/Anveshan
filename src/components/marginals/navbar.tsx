@@ -55,13 +55,10 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
                 e.preventDefault();
                 handleScrollToSection(item.href);
               }}
-              className="transition-colors cursor-pointer"
+              className="transition-colors cursor-pointer group"
             >
               <Typography.P
-                className="!text-sm md:!text-base mb-0 text-center font-semibold transition-colors duration-300"
-                style={{
-                  color: isBlackSection ? "white" : "rgb(55, 65, 81)",
-                }}
+                className="!text-sm md:!text-base mb-0 text-center font-semibold text-white/90 group-hover:text-primary transition-colors duration-300"
               >
                 {item.name}
               </Typography.P>
@@ -95,13 +92,10 @@ function MobileNavbar({
         </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="z-50 transition-colors duration-300"
-          style={{
-            color: isBlackSection ? "white" : "rgb(55, 65, 81)",
-          }}
+          className="z-50 transition-colors duration-300 text-white"
         >
           {isOpen ? (
-            <X size={24} className={`text-black`} />
+            <X size={24} className="text-white" />
           ) : (
             <Image
               src={hamburgerIcon.src}
@@ -109,14 +103,14 @@ function MobileNavbar({
               width={hamburgerIcon.width}
               height={hamburgerIcon.height}
               style={{
-                filter: isBlackSection ? "brightness(0) invert(1)" : "none",
+                filter: "brightness(0) invert(1)",
               }}
             />
           )}
         </button>
       </div>
       <div
-        className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-0 bg-[#0d0d0d] z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out lg:hidden ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -132,7 +126,7 @@ function MobileNavbar({
             }}
             className="transition-colors"
           >
-            <Typography.P className="text-gray-800 text-xl font-semibold text-center hover:text-primary">
+            <Typography.P className="text-white text-xl font-semibold text-center hover:text-primary transition-colors">
               {item.name}
             </Typography.P>
           </button>

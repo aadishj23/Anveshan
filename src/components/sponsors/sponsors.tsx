@@ -97,7 +97,7 @@ export const Sponsors = () => {
           className="absolute -top-1 left-0 md:-left-1 3xl:-top-2 3xl:-left-2 -translate-x-[10%] -translate-y-[60%] size-[8vw] smd:size-[6vw] md:h-[5vw] md:w-[5vw]"
         />
 
-        <Typography.H1 className=" font-normal font-wc-rough-trad text-[#f2f3f7] text-[clamp(3.5rem,5vw,6rem)]">
+        <Typography.H1 className=" font-normal font-wc-rough-trad text-primary text-[clamp(3.5rem,5vw,6rem)]">
           SPONSORS
         </Typography.H1>
       </div>

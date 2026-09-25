@@ -36,8 +36,8 @@ export default function DevfolioAndDiscordButtons() {
         }
         onClick={() => handleScrollTo("events")}
       >
-        <Calendar className="size-6 text-white" />
-        <Typography.P className="text-white !text-[1.10rem] md:!text-xl font-semibold text-center mb-0">
+        <Calendar className="size-6 text-black" />
+        <Typography.P className="text-black !text-[1.10rem] md:!text-xl font-bold text-center mb-0">
           Explore Events
         </Typography.P>
       </Button>

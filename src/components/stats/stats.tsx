@@ -92,11 +92,11 @@ const StatItem = React.memo<StatItemProps & { shouldAnimate: boolean }>(
     return (
       <div className="flex flex-col mt-auto">
         <div>
-          <Typography.H3 className="font-wc-rough-trad font-normal text-center">
+          <Typography.H3 className="font-wc-rough-trad font-normal text-center text-primary">
             {animatedNumber}
           </Typography.H3>
         </div>
-        <Typography.P className="text-center font-semibold text-black">
+        <Typography.P className="text-center font-semibold text-white/90">
           {stat.label}
         </Typography.P>
         <Image
@@ -141,11 +141,11 @@ const MobileStatItem = React.memo<
       {index === 1 && (
         <div className="mb-20">
           <div>
-            <Typography.H3 className="font-wc-rough-trad font-normal text-[#11004E] text-center">
+            <Typography.H3 className="font-wc-rough-trad font-normal text-primary text-center">
               {animatedFirstStat}
             </Typography.H3>
           </div>
-          <Typography.P className="text-center font-semibold text-black -mt-5">
+          <Typography.P className="text-center font-semibold text-white/90 -mt-5">
             {statsData[0]?.label}
           </Typography.P>
         </div>
@@ -153,24 +153,24 @@ const MobileStatItem = React.memo<
       {index === 3 && (
         <div className="mb-20">
           <div>
-            <Typography.H3 className="font-wc-rough-trad font-normal text-[#11004E] text-center">
+            <Typography.H3 className="font-wc-rough-trad font-normal text-primary text-center">
               {animatedLastStat}
             </Typography.H3>
           </div>
-          <Typography.P className="text-center font-semibold text-black -mt-5">
+          <Typography.P className="text-center font-semibold text-white/90 -mt-5">
             {statsData[4]?.label}
           </Typography.P>
         </div>
       )}
       <div>
         <Typography.H3
-          className={`font-wc-rough-trad font-normal text-[#11004E] text-center ${index === 2 ? "scale-150" : "scale-100"}`}
+          className={`font-wc-rough-trad font-normal text-primary text-center ${index === 2 ? "scale-150" : "scale-100"}`}
         >
           {animatedNumber}
         </Typography.H3>
       </div>
       <Typography.P
-        className={`text-center font-semibold text-black ${index === 2 ? "scale-120" : "scale-100"}`}
+        className={`text-center font-semibold text-white/90 ${index === 2 ? "scale-120" : "scale-100"}`}
       >
         {stat.label}
       </Typography.P>
@@ -235,8 +235,8 @@ const Stats: React.FC = () => {
   }, [isMobile, shouldAnimateCounters]);
 
   return (
-    <section className={`relative`} id="stats">
-      <Typography.H1 className="text-center font-wc-rough-trad font-normal text-blue-800 text-[clamp(3.5rem,5vw,6rem)]">
+    <section className="relative pt-24 sm:pt-36" id="stats">
+      <Typography.H1 className="text-center font-wc-rough-trad font-normal text-primary text-[clamp(3.5rem,5vw,6rem)]">
         STATS
       </Typography.H1>
 
