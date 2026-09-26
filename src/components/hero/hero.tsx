@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Clouds from "@/components/hero/clouds";
-import { HackNitr } from "@/components/hero/hackNitr";
+import { HeroDesktop } from "@/components/hero/heroDesktop";
 import { HeroMobile } from "@/components/hero/heroMobile";
 
 export default function Hero() {
@@ -34,7 +34,7 @@ export default function Hero() {
           className={`min-h-[100vh] pt-20 lg:pt-24 pb-8 sticky top-0 hidden ${padCheck ? "" : "lg:flex"} flex-col justify-center items-center`}
           style={{ opacity }}
         >
-          <HackNitr />
+          <HeroDesktop />
         </div>
 
         <div

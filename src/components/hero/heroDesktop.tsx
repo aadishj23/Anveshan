@@ -13,7 +13,7 @@ import DevfolioAndDiscordButtons from "@/components/hero/hero-buttons";
 
 const filesToKeepAsImages = ["line-132.svg", "line-134.svg", "line-133.svg"];
 
-export const HackNitr = () => {
+export const HeroDesktop = () => {
   return (
     <div className="w-full overflow-hidden ">
       <div className="flex flex-row px-[5vw]">
@@ -135,3 +135,4 @@ export const HackNitr = () => {
     </div>
   );
 };
+

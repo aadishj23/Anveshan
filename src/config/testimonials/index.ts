@@ -17,7 +17,7 @@ export const testimonialInfo = [
       "Anveshan gave me a family of passionate builders and problem-solvers. The mentorship culture is what truly sets our society apart and prepares every student for industry leadership.",
     time: "2020-24",
     date: "Batch 2024",
-    hacknitr: "Former President",
+    roleTag: "Former President",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const testimonialInfo = [
       "From late-night hackathon preparations to hands-on web cohorts, Anveshan was the turning point in my engineering journey at BPIT.",
     time: "2020-24",
     date: "Batch 2024",
-    hacknitr: "Alumni Spotlight",
+    roleTag: "Alumni Spotlight",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const testimonialInfo = [
       "The focus on practical implementation, cloud architecture, and open source collaboration gave me the exact skills needed to excel in top engineering interviews.",
     time: "2020-24",
     date: "Batch 2024",
-    hacknitr: "DevOps & SWE",
+    roleTag: "DevOps & SWE",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const testimonialInfo = [
       "Being part of Anveshan pushed me to learn Android development deeply, leading to my role at Rooter.gg and building products millions love.",
     time: "2021-25",
     date: "Batch 2025",
-    hacknitr: "Former President",
+    roleTag: "Former President",
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ export const testimonialInfo = [
       "Anveshan provided the launchpad to build high-scale products, collaborate with brilliant seniors, and develop the startup mindset early on.",
     time: "2022-26",
     date: "Batch 2026",
-    hacknitr: "AI & Web",
+    roleTag: "AI & Web",
   },
   {
     id: 6,
@@ -72,6 +72,6 @@ export const testimonialInfo = [
       "The peer learning culture at Anveshan gave me the confidence to participate in national hackathons and secure top podium finishes.",
     time: "2022-26",
     date: "Batch 2026",
-    hacknitr: "Hackathon Achiever",
+    roleTag: "Hackathon Achiever",
   },
 ];

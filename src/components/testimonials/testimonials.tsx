@@ -139,7 +139,7 @@ const Testimonials: React.FC = () => {
                   <div className="flex gap-[1vw] font-averta-std text-white/60 text-sm sm:text-base 2xl:text-xl">
                     <Small>{cardNum.time}</Small>
                     <Small>{cardNum.date}</Small>
-                    <Small>{cardNum.hacknitr}</Small>
+                    <Small>{cardNum.roleTag}</Small>
                   </div>
                 </div>
               </div>
