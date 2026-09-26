@@ -1,13 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import { X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { hamburgerIcon, logo, navItems } from "@/config/marginals";
+import { logo, navItems } from "@/config/marginals";
 
-import { handleRedirect } from "../hero/hero-buttons";
 import Typography from "../Typography";
 import Button from "../ui/button";
 
@@ -33,21 +32,26 @@ const handleScrollToSection = (href: string) => {
   }
 };
 
-function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
+function DesktopNavbar() {
   return (
     <div className="hidden relative lg:flex w-full items-center justify-between py-3">
-      <div className="absolute left-0 h-full">
-        <Link href={logo.href}>
+      {/* Brand Logo */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center">
+        <Link href={logo.href} className="flex items-center transition-opacity hover:opacity-90">
           <Image
             src={logo.src}
             alt={logo.alt}
             width={logo.width}
             height={logo.height}
+            className="h-9 w-auto object-contain"
+            priority
           />
         </Link>
       </div>
-      <div className=" h-full flex justify-center mx-auto">
-        <div className="flex gap-[5vw] w-full justify-center">
+
+      {/* Nav Links */}
+      <div className="h-full flex justify-center mx-auto">
+        <div className="flex gap-[4vw] xl:gap-[5vw] w-full justify-center items-center">
           {navItems.map((item: { name: string; href: string }) => (
             <button
               key={item.name}
@@ -55,11 +59,9 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
                 e.preventDefault();
                 handleScrollToSection(item.href);
               }}
-              className="transition-colors cursor-pointer group"
+              className="transition-colors cursor-pointer group py-1"
             >
-              <Typography.P
-                className="!text-sm md:!text-base mb-0 text-center font-semibold text-white/90 group-hover:text-primary transition-colors duration-300"
-              >
+              <Typography.P className="!text-sm md:!text-base mb-0 text-center font-semibold text-neutral-300 group-hover:text-primary transition-colors duration-200">
                 {item.name}
               </Typography.P>
             </button>
@@ -70,126 +72,13 @@ function DesktopNavbar({ isBlackSection }: { isBlackSection: boolean }) {
   );
 }
 
-function MobileNavbar({
-  isOpen,
-  setIsOpen,
-  isBlackSection,
-}: {
-  isOpen: boolean;
-  setIsOpen: (open: boolean) => void;
-  isBlackSection: boolean;
-}) {
-  return (
-    <>
-      <div className="flex lg:hidden w-full items-center justify-between h-full">
-        <Link href={logo.href}>
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={logo.width}
-            height={logo.height}
-          />
-        </Link>
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="z-50 transition-colors duration-300 text-white"
-        >
-          {isOpen ? (
-            <X size={24} className="text-white" />
-          ) : (
-            <Image
-              src={hamburgerIcon.src}
-              alt={hamburgerIcon.alt}
-              width={hamburgerIcon.width}
-              height={hamburgerIcon.height}
-              style={{
-                filter: "brightness(0) invert(1)",
-              }}
-            />
-          )}
-        </button>
-      </div>
-      <div
-        className={`fixed inset-0 bg-[#0d0d0d] z-40 flex flex-col justify-center items-center space-y-6 px-4 transition-opacity duration-300 ease-in-out lg:hidden ${
-          isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        {navItems.map((item: { name: string; href: string }) => (
-          <button
-            key={item.name}
-            onClick={(e) => {
-              e.preventDefault();
-              handleScrollToSection(item.href);
-              setIsOpen(false);
-            }}
-            className="transition-colors"
-          >
-            <Typography.P className="text-white text-xl font-semibold text-center hover:text-primary transition-colors">
-              {item.name}
-            </Typography.P>
-          </button>
-        ))}
-
-        <Button
-          className={
-            "h-14 mb-0.5 !p-0 min-w-[320px] mt-5 xs:mt-0  my-auto flex flex-row items-center justify-center gap-4"
-          }
-          onClick={() => handleRedirect("discord")}
-        >
-          <Image
-            src={"./discord.svg"}
-            alt={"Discord Button"}
-            width={100}
-            height={100}
-            className={"size-8 block"}
-          />
-
-          <Typography.P className="text-white text-[1.10rem] font-semibold text-center mb-0">
-            Join Discord
-          </Typography.P>
-        </Button>
-      </div>
-    </>
-  );
-}
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isBlackSection, setIsBlackSection] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const blackSections = ["gallery", "faqs", "testimonials", "sponsors"];
-      const whiteSections = ["hero", "about", "prizes", "footer"];
-
-      const viewportHeight = window.innerHeight;
-      const scrollPosition = window.scrollY + viewportHeight / 5;
-
-      let currentSection = "";
-      let minDistance = Infinity;
-
-      [...blackSections, ...whiteSections].forEach((sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const elementTop = rect.top + window.scrollY;
-          const elementBottom = elementTop + rect.height;
-
-          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
-            const distance = Math.abs(
-              scrollPosition - (elementTop + rect.height / 2),
-            );
-            if (distance < minDistance) {
-              minDistance = distance;
-              currentSection = sectionId;
-            }
-          }
-        }
-      });
-
-      setIsBlackSection(blackSections.includes(currentSection));
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -199,20 +88,104 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className="fixed top-0 left-0 w-full z-50 py-2 transition-all duration-500 ease-out"
-      style={{
-        backgroundColor: isBlackSection ? "#141414" : "#ffffff",
-      }}
-    >
-      <div className="px-4 sm:px-6 lg:px-10">
-        <DesktopNavbar isBlackSection={isBlackSection} />
-        <MobileNavbar
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          isBlackSection={isBlackSection}
-        />
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 py-2 transition-all duration-300 bg-black/90 backdrop-blur-md border-b ${
+          scrolled
+            ? "border-neutral-800 shadow-lg shadow-black/60"
+            : "border-white/5"
+        }`}
+      >
+        <div className="px-4 sm:px-6 lg:px-10">
+          <DesktopNavbar />
+          {/* Mobile Bar */}
+          <div className="flex lg:hidden w-full items-center justify-between h-full py-2">
+            <Link href={logo.href} className="flex items-center">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={120}
+                height={36}
+                className="h-8 w-auto object-contain"
+                priority
+              />
+            </Link>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="p-2 text-white hover:text-primary transition-colors duration-200 focus:outline-none"
+              aria-label="Open Navigation Menu"
+            >
+              <Menu size={26} className="text-white" />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Fullscreen Mobile Drawer as Sibling (Z-[100] Solid Background) */}
+      <div
+        className={`fixed inset-0 bg-[#0a0a0a] z-[100] flex flex-col justify-between px-6 py-4 transition-opacity duration-300 ease-in-out lg:hidden ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {/* Drawer Header */}
+        <div className="flex w-full items-center justify-between">
+          <Link
+            href={logo.href}
+            onClick={() => setIsOpen(false)}
+            className="flex items-center"
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={120}
+              height={36}
+              className="h-8 w-auto object-contain"
+            />
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 text-white hover:text-primary transition-colors duration-200 focus:outline-none"
+            aria-label="Close Navigation Menu"
+          >
+            <X size={28} className="text-white" />
+          </button>
+        </div>
+
+        {/* Drawer Links */}
+        <div className="flex flex-col items-center justify-center space-y-6 my-auto">
+          {navItems.map((item: { name: string; href: string }) => (
+            <button
+              key={item.name}
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollToSection(item.href);
+                setIsOpen(false);
+              }}
+              className="transition-colors py-1.5"
+            >
+              <Typography.P className="text-white text-2xl font-semibold text-center hover:text-primary transition-colors">
+                {item.name}
+              </Typography.P>
+            </button>
+          ))}
+        </div>
+
+        {/* Drawer Footer / CTA */}
+        <div className="flex justify-center pb-6">
+          <Button
+            className="h-12 !px-8 min-w-[240px] flex items-center justify-center"
+            onClick={() => {
+              handleScrollToSection("/#contact");
+              setIsOpen(false);
+            }}
+          >
+            <span className="text-black font-bold text-base">Contact Us</span>
+          </Button>
+        </div>
       </div>
-    </nav>
+    </>
   );
 }
+
