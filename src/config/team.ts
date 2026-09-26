@@ -236,7 +236,7 @@ export const seniorCouncil: TeamMember[] = [
     position: "Secretary",
     category: "Senior Council",
     image: "/assets/team-photos/senior-council/kaavy.jpg",
-    LinkedinLink: "https://www.linkedin.com/in/kaavya-sharma-420b572b6",
+    LinkedinLink: "https://www.linkedin.com/in/kaavy-aggarwal-15b639333",
     GithubLink: "https://github.com/kaavy05",
     LeetcodeLink: "https://leetcode.com/u/kaavy05/",
   },

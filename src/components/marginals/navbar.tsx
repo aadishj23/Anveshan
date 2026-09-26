@@ -44,6 +44,7 @@ function DesktopNavbar() {
             width={logo.width}
             height={logo.height}
             className="h-9 w-auto object-contain"
+            unoptimized
             priority
           />
         </Link>
@@ -107,6 +108,7 @@ export default function Navbar() {
                 width={120}
                 height={36}
                 className="h-8 w-auto object-contain"
+                unoptimized
                 priority
               />
             </Link>
@@ -142,6 +144,7 @@ export default function Navbar() {
               width={120}
               height={36}
               className="h-8 w-auto object-contain"
+              unoptimized
             />
           </Link>
           <button

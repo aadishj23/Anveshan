@@ -7,64 +7,76 @@ export interface Question {
 }
 
 export const questions: Question[] = [
-  //{
-  // question: 'What are the dates for HackNITR 7.0?',
-  // answer:
-  //   'HackNITR 7.0 will be held on 31st Oct 1st Nov and 2nd Nov 2025. We will be waiting for you with a warm welcome.\n',
-  // answerStyle: 'h-35',
-  //  questionStyle: 'mb-25 -bottom-25',
-  //fontSizeScaling: 'text-[clamp(.85rem,2vw,1rem)]',
-  //},
   {
-    question: "What could be the size of the team?",
+    question: "What is Reforged '26?",
     answer:
-      "We're only looking for groups of 2 to 4 heroes this time. No solo adventurers allowed. Gather your buddies and get ready for an epic adventure together!\n",
+      "Reforged '26 is Anveshan's flagship hackathon hosted at BPIT, Delhi. It is not another 'make a PPT and call it innovation' hackathon — it's focused purely on solid technical architecture, working prototypes, and shipping software that actually works.",
+    answerStyle: "h-44",
+    questionStyle: "mb-44 -bottom-44",
+    fontSizeScaling: "text-[clamp(0.82rem,2vw,0.95rem)]",
+  },
+  {
+    question: "What are the key dates, rounds, and venue?",
+    answer:
+      "Reforged '26 features two stages: Round 1 & Round 2 are Online on 15 October 2026 (submit your architecture and working prototype). Shortlisted teams then battle it out live at the Offline Finale at BPIT Campus, Delhi on 30 October 2026!",
+    answerStyle: "h-44",
+    questionStyle: "mb-44 -bottom-44",
+    fontSizeScaling: "text-[clamp(0.82rem,2vw,0.95rem)]",
+  },
+  {
+    question: "Who can participate and what is the team size?",
+    answer:
+      "Teams must consist of 2 to 4 members (no solo participants). Inter-college teams, cross-branch, and cross-year collaborations are 100% allowed and encouraged! All college students passionate about building are welcome.",
     answerStyle: "h-40",
-    questionStyle: "mb-30 -bottom-30",
-    fontSizeScaling: "text-[clamp(0.8rem,3vw,1rem)]",
+    questionStyle: "mb-40 -bottom-40",
+    fontSizeScaling: "text-[clamp(0.82rem,2vw,0.95rem)]",
   },
   {
-    question: "Will my travel expenses be reimbursed?",
+    question: "What are the hackathon tracks?",
     answer:
-      "Since HackNITR 7.0 is a student-run hackathon, we will not be able to cover your travel expenses.",
-    answerStyle: "h-30",
-    questionStyle: "mb-22 -bottom-22",
-    fontSizeScaling: "text-[clamp(0.78rem,2vw,1rem)]",
+      "We have three battlegrounds: (1) n8n Sponsored Track: AI workflows, integrations, data pipelines & automation; (2) Agentic Track: Autonomous multi-agent systems and intelligent tools; (3) Open Innovation: FinTech, Web3, CyberSecurity, HealthTech, DevTools, or IoT.",
+    answerStyle: "h-48",
+    questionStyle: "mb-48 -bottom-48",
+    fontSizeScaling: "text-[clamp(0.8rem,2vw,0.92rem)]",
   },
   {
-    question: "Who can participate?",
+    question: "What prizes, perks, and food are provided?",
     answer:
-      "Any student with a zeal to innovate and have some fun with creativity can apply. But the status of your application can be changed anytime by the organizing team. " +
-      "The final decision is vested with the organizing team and the candidature can be changed based on the undertaking.",
-    answerStyle: "h-60",
-    questionStyle: "mb-45 -bottom-45",
-    fontSizeScaling: "text-[clamp(0.75rem,3vw,1rem)]",
-  },
-  {
-    question: "Can I participate online?",
-    answer:
-      "No, since HackNITR 7.0 is a completely offline hackathon, online participation is not encouraged.",
-    answerStyle: "h-30",
-    questionStyle: "mb-22 -bottom-22",
-    fontSizeScaling: "text-[clamp(0.8rem,3vw,1rem)]",
-  },
-  {
-    question:
-      "What all things do you need to with while attending the hackathon?",
-    answer:
-      "Although we will provide you with a lot of things, you should bring your laptop, chargers, extension cords, and any other hardware you might need. Furthermore it is mandatory" +
-      " to bring a physical copy of your undertaking form signed by your college authority and the hacker ID assigned to you within 24 hrs before the event along with a valid govt. ID. " +
-      "For further information please look at Things to carry for HackNITR 7.0 notion link. Students failing to submit the MoU within the stipulated time will be disqualified from the event.",
-    answerStyle: "h-85",
-    questionStyle: "mb-73 -bottom-73",
-    fontSizeScaling: "text-[clamp(0.7rem,3.4vw,.9rem)]",
+      "Reforged '26 offers a ₹10,000 prize pool plus goodies for winners and participants. Every qualifying offline team receives a FREE n8n account, plus delicious meals and snacks provided free of cost during the offline finale at BPIT!",
+    answerStyle: "h-44",
+    questionStyle: "mb-44 -bottom-44",
+    fontSizeScaling: "text-[clamp(0.82rem,2vw,0.95rem)]",
   },
   // {
-  //   question: 'Will food be provided at the hackathon?',
+  //   question: "Is there any registration fee to participate?",
   //   answer:
-  //     'Of course!! Meals, water, snacks and most importantly- Coffee, will be provided FREE OF COST.',
-  //   answerStyle: 'h-30',
-  //   questionStyle: 'mb-22 -bottom-22',
-  //   fontSizeScaling: 'text-[clamp(0.85rem,3vw,1rem)]',
+  //     "Zero! Reforged '26 is 100% free to enter. There are no registration fees or hidden costs for both the online evaluation rounds and the offline grand finale at BPIT.",
+  //   answerStyle: "h-36",
+  //   questionStyle: "mb-36 -bottom-36",
+  //   fontSizeScaling: "text-[clamp(0.82rem,2vw,0.95rem)]",
+  // },
+  // {
+  //   question: "Do I need a fully finished product for the online round?",
+  //   answer:
+  //     "Don't have a fully polished product? Who cares! You just need a working demo/prototype, a solid technical architecture, and a clear explanation of what you're building and why it matters. No 50-slide pitch decks required.",
+  //   answerStyle: "h-44",
+  //   questionStyle: "mb-44 -bottom-44",
+  //   fontSizeScaling: "text-[clamp(0.82rem,2vw,0.95rem)]",
+  // },
+  // {
+  //   question: "What are the judging criteria and hackathon rules?",
+  //   answer:
+  //     "Projects will be judged on technical architecture, execution, working demo, innovation, and real-world impact. Plagiarism or copy-pasting existing repos means an instant disqualification. Qualifying teams must attend the offline finale at BPIT.",
+  //   answerStyle: "h-48",
+  //   questionStyle: "mb-48 -bottom-48",
+  //   fontSizeScaling: "text-[clamp(0.8rem,2vw,0.92rem)]",
+  // },
+  // {
+  //   question: "What is Anveshan and how can I join the community?",
+  //   answer:
+  //     "Anveshan is the premier technical society of BPIT, mentoring students across DSA, Full-Stack, AI/ML, and Open Source. Join our official WhatsApp community or visit reforged.anveshan.dev to connect with fellow builders and stay updated on upcoming cohorts!",
+  //   answerStyle: "h-48",
+  //   questionStyle: "mb-48 -bottom-48",
+  //   fontSizeScaling: "text-[clamp(0.8rem,2vw,0.92rem)]",
   // },
 ];

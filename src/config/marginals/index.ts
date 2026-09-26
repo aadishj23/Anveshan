@@ -10,10 +10,10 @@ export const navItems = [
 
 export const logo = {
   href: "/#hero",
-  src: "/assets/logo_bg_remove.png",
+  src: "/assets/logo_bg_remove.png?v=2026",
   alt: "Anveshan Logo",
-  width: 140,
-  height: 40,
+  width: 160,
+  height: 36,
 };
 
 export const hamburgerIcon = {
