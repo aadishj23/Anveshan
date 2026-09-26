@@ -4,7 +4,7 @@ export const timelineData = {
       eventNumber: 1,
       title: "Tech Starter 2k24",
       duration: "14 Sept - 17 Oct 2024",
-      description: `Month-long foundational cohort covering HTML, CSS, JavaScript, Git, C++, and DSA for beginners.`,
+      description: `Month-long foundational cohort covering HTML, CSS, JavaScript, Git, DSA in C++ & JAVA, AI/ML and Agentic AI for beginners.`,
       className:
         "absolute lg:top-[125%] lg:left-[7%] xlg:left-[6%] xl:left-[12%]",
     },

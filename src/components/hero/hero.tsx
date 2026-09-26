@@ -31,14 +31,14 @@ export default function Hero() {
     <>
       <div id="hero">
         <div
-          className={` min-h-[100vh] sticky top-0 hidden ${padCheck ? "" : "lg:flex"} justify-center items-center`}
+          className={`min-h-[100vh] pt-20 lg:pt-24 pb-8 sticky top-0 hidden ${padCheck ? "" : "lg:flex"} flex-col justify-center items-center`}
           style={{ opacity }}
         >
           <HackNitr />
         </div>
 
         <div
-          className={`pt-14 max-h-[100vh] sticky top-0  ${padCheck ? "" : "lg:hidden"}`}
+          className={`pt-20 max-h-[100vh] sticky top-0 ${padCheck ? "" : "lg:hidden"}`}
           style={{ opacity }}
         >
           <HeroMobile />

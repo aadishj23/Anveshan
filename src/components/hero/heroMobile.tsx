@@ -18,9 +18,9 @@ export const HeroMobile = React.memo(() => {
         {/* Top Section */}
         <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-4 pb-[4svh]">
           <div className="text-white/80 text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">
-            LARGEST STUDENT
+            PREMIER TECHNICAL
             <br />
-            RUN HACKATHON
+            SOCIETY OF BPIT
           </div>
           <div className="w-[16vw] h-[16vw] ">
             <div className="w-[8vw] h-[8vw] ml-[8vw] bg-[#262626]"></div>

@@ -134,8 +134,8 @@ export const TimelineEffect = ({
         >
           <foreignObject x="-40" y="-40" width="80" height="80">
             <Image
-              src="/logo.png"
-              alt="Logo"
+              src="/assets/logo.png"
+              alt="Anveshan Logo"
               width={80}
               height={80}
               className="rounded-full"
