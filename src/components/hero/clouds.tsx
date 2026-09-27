@@ -21,7 +21,7 @@ export default function Clouds() {
 
   return (
     <div
-      className={`overflow-x-clip relative z-10 pointer-events-none ${
+      className={`overflow-x-clip relative z-20 pointer-events-none ${
         isSmall ? " -mt-[18svh]" : "mt-20"
       } `}
     >
@@ -35,6 +35,7 @@ export default function Clouds() {
           height={1290}
           className={`mobileClouds ${isSmall ? "absolute object-center  my-[19svh] left-[-7%]" : " -my-[8%]"}`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -47,6 +48,7 @@ export default function Clouds() {
               : "mx-[6%] -my-[17%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -59,6 +61,7 @@ export default function Clouds() {
               : " mx-[8%] -my-[17%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -71,6 +74,7 @@ export default function Clouds() {
               : "mx-[10%] -my-[17%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -83,6 +87,7 @@ export default function Clouds() {
               : "-mx-[10%] -my-[32%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -95,6 +100,7 @@ export default function Clouds() {
               : "-mx-[10%] -my-[5%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -107,6 +113,7 @@ export default function Clouds() {
               : "-mx-[10%] -my-[1%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -119,6 +126,7 @@ export default function Clouds() {
               : "-mx-[10%] -my-[15%]"
           }`}
           priority
+          unoptimized
         />
         <Image
           src={HERO_CLOUDS_CONFIG.backgrounds.repeat}
@@ -131,6 +139,7 @@ export default function Clouds() {
               : "mx-[15%] -my-[28%]"
           }`}
           priority
+          unoptimized
         />
       </div>
     </div>

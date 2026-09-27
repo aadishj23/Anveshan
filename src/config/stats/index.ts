@@ -13,12 +13,9 @@ export const statsData: StatData[] = [
 ];
 
 export const IMAGES = {
-  barLong:
-    "https://res.cloudinary.com/dscnitrourkela/image/upload/v1756504086/hacknitr/inpvcemympebubnkrtyf.png",
-  barShort:
-    "https://res.cloudinary.com/dscnitrourkela/image/upload/v1756504223/hacknitr/qswpaemtccarskbybvzn.png",
-  clouds:
-    "https://res.cloudinary.com/dscnitrourkela/image/upload/v1756504932/hacknitr/xpzzkjkg0wllqk02ivek.png",
+  barLong: "/assets/stats/bar_long.png",
+  barShort: "/assets/stats/bar_short.png",
+  clouds: "/assets/clouds/stats_clouds.png",
 } as const;
 
 export const MOBILE_BREAKPOINT = 768;

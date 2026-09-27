@@ -251,6 +251,7 @@ const Stats: React.FC = () => {
         height={1280}
         className="absolute scale-y-100 lg:scale-y-85 bottom-5 translate-y-1/2"
         priority
+        unoptimized
       />
     </section>
   );

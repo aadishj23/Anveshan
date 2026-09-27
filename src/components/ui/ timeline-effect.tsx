@@ -66,17 +66,21 @@ export const TimelineEffect = ({
       <Image
         src={PencilIcon.link}
         alt={PencilIcon.alt}
-        width={0}
-        height={0}
-        className="   absolute lg:h-36 lg:w-36  xl:h-48 xl:w-48 
-        2xl:h-56 2xl:w-56
-        lg:-top-[96px] xlg:-top-[94px] xl:-top-[132px] 2xl:-top-[155px] 3xl:-top-[148px] 5xl:-top-[140px] 6xl:-top-[135px] lg:-left-[86px] xlg:-left-[82px] xl:-left-[124px] 2xl:-left-[136px] 3xl:-left-[130px] 5xl:-left-[122px] 6xl:-left-[110px] "
+        width={372}
+        height={752}
+        unoptimized
+        priority
+        className="absolute lg:w-[44px] lg:h-[88px] xl:w-[54px] xl:h-[108px] 2xl:w-[60px] 2xl:h-[120px]
+        lg:-top-[58px] xl:-top-[78px] 2xl:-top-[90px]
+        lg:-left-[28px] xl:-left-[50px] 2xl:-left-[55px]"
       />
       <Image
         src={RobotIcon.link}
         alt={RobotIcon.alt}
-        height={0}
-        width={0}
+        width={1024}
+        height={1536}
+        unoptimized
+        priority
         className={cn(
           "absolute lg:h-60 lg:w-40 xl:w-50 xl:h-76",
           "lg:top-[42vw] xlg:top-[48vw] xl:top-[44vw] 2xl:top-[50vw]  ",

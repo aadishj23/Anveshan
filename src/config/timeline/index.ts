@@ -41,11 +41,11 @@ export const svgs = {
     alt: "border",
   },
   pencil: {
-    link: "https://res.cloudinary.com/du5qoczcn/image/upload/v1756218415/image_2724_wexjew.svg",
+    link: "/assets/timeline/pencil.png",
     alt: "pencil",
   },
   robot: {
-    link: "https://res.cloudinary.com/du5qoczcn/image/upload/v1756233158/image_2716_ifvv6o.svg",
+    link: "/assets/timeline/robot.png",
     alt: "robot",
   },
 };

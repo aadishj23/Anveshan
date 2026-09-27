@@ -58,4 +58,4 @@ export const SOCIALS: Social[] = [
 ];
 
 export const FOOTER_TEXT =
-  "© All Rights Reserved | Designed & Built with ❤️ by Team Anveshan";
+  "© 2026 Anveshan (BPIT) · Architected & Engineered by Student Builders";

@@ -38,12 +38,12 @@ export default function Gallery() {
 
   const renderOverlay = (progress: MotionValue<number>) => (
     <div
-      className="w-full max-w-screen px-4 sm:px-[5vw] pt-0 pb-0 md:pt-32 lg:pt-50 md:pb-36 lg:pb-50 relative z-20"
+      className="w-full max-w-screen px-4 sm:px-[5vw] py-4 sm:py-6 md:py-8 relative z-20"
       id="gallery"
     >
       <div className="grid grid-cols-[auto_1fr_auto] items-start gap-4 sm:gap-6 md:gap-12 lg:gap-20">
         {/* Left Column */}
-        <div className="flex flex-col items-center justify-center pt-19 sm:pt-31 md:pt-28 lg:pt-27 xl:pt-33 w-[clamp(1.5rem,6vw,6rem)]">
+        <div className="flex flex-col items-center justify-center pt-2 sm:pt-4 md:pt-6 w-[clamp(1.5rem,6vw,6rem)]">
           <div className="relative w-[clamp(2rem,6vw,6rem)] h-[clamp(2rem,6vw,6rem)]">
             <div className="absolute top-0 left-[40%] w-[clamp(0.8rem,2.5vw,2.75rem)] h-[clamp(0.8rem,3vw,2.75rem)] bg-[#262626]" />
             <div className="absolute bottom-0 right-[60%] w-[clamp(0.8rem,2.5vw,2.75rem)] h-[clamp(0.8rem,3vw,2.75rem)] bg-[#262626]" />
@@ -52,7 +52,7 @@ export default function Gallery() {
 
         {/* Middle Content */}
         <div className="flex flex-col items-center text-center max-w-[1000px] mx-auto px-1 sm:px-2">
-          <div className="mb-3 sm:mb-10 md:mb-5 lg:mb-9 xl:mb-1 w-full px-1 sm:px-2">
+          <div className="mb-3 sm:mb-6 md:mb-5 lg:mb-6 w-full px-1 sm:px-2">
             <Typography.H2
               className="font-wc-rough-trad font-normal text-white leading-[0.95] tracking-tight 
                          text-[clamp(3rem,9vw,9rem)]
@@ -60,7 +60,7 @@ export default function Gallery() {
                          md:text-[clamp(5rem,8vw,10rem)] 
                          lg:text-[clamp(5rem,7.5vw,10rem)] 
                          xl:text-[clamp(4rem,6.4vw,8rem)]
-                         flex flex-col pt-[1.2em] md:pt-[1.2em] lg:pt-[1.2em]"
+                         flex flex-col pt-0"
             >
               <span className="block">HOW'S THE</span>
               <span className="block text-primary">JOURNEY</span>
@@ -84,7 +84,7 @@ export default function Gallery() {
         </div>
 
         {/* Right Column */}
-        <div className="flex items-center justify-center font-averta-std pt-19 sm:pt-31 md:pt-28 lg:pt-27 xl:pt-33 w-[clamp(1.2rem,6vw,6rem)]">
+        <div className="flex items-center justify-center font-averta-std pt-2 sm:pt-4 md:pt-6 w-[clamp(1.2rem,6vw,6rem)]">
           <div className="flex flex-col items-center gap-2 sm:gap-2 xl:gap-5">
             {textItems.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -107,7 +107,7 @@ export default function Gallery() {
   );
 
   return (
-    <div className="relative w-full py-10 sm:py-40 md:py-52 lg:py-70">
+    <div className="relative w-full py-0">
       <ParallaxScroll images={GALLERY_PARALLAX_IMAGES} overlay={renderOverlay} />
     </div>
   );

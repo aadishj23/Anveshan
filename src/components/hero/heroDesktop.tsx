@@ -77,6 +77,7 @@ export const HeroDesktop = () => {
                   >
                     <TypographyComponent
                       className={`text-center ${textEl.className} `}
+                      style={textEl.textStyle}
                     >
                       {textEl.component}
                     </TypographyComponent>
