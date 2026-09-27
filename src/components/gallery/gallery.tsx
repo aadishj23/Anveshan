@@ -54,7 +54,7 @@ export default function Gallery() {
         <div className="flex flex-col items-center text-center max-w-[1000px] mx-auto px-1 sm:px-2">
           <div className="mb-3 sm:mb-6 md:mb-5 lg:mb-6 w-full px-1 sm:px-2">
             <Typography.H2
-              className="font-wc-rough-trad font-normal text-white leading-[0.95] tracking-tight 
+              className="font-wc-rough-trad font-normal text-white leading-[0.78] sm:leading-[0.8] tracking-tight 
                          text-[clamp(3rem,9vw,9rem)]
                          sm:text-[clamp(5rem,8vw,10rem)] 
                          md:text-[clamp(5rem,8vw,10rem)] 
@@ -63,13 +63,13 @@ export default function Gallery() {
                          flex flex-col pt-0"
             >
               <span className="block">HOW'S THE</span>
-              <span className="block text-primary">JOURNEY</span>
-              <span className="block">SO FAR</span>
+              <span className="block text-primary -mt-2 sm:-mt-3 md:-mt-4">JOURNEY</span>
+              <span className="block -mt-2 sm:-mt-3 md:-mt-4">SO FAR</span>
             </Typography.H2>
           </div>
           <div
-            className="text-center font-averta-std font-normal leading-[1.6] 
-            text-[clamp(0.75rem,1.4vw,1.15rem)] max-w-[65ch] mx-auto px-2 sm:px-4 lg:pb-[0.5em]"
+            className="text-center font-averta-std font-normal leading-[1.65] 
+            text-[clamp(1.05rem,1.8vw,1.45rem)] max-w-[72ch] mx-auto px-2 sm:px-4 lg:pb-[0.5em]"
           >
             {words.map((word, i) => {
               const start = 0.06 + (i / words.length) * 0.58;

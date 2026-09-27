@@ -35,7 +35,6 @@ export default function Home() {
       <ScrollMarquee />
 
       <TeamSection />
-      <ScrollMarquee />
 
       <AchieversSection />
 

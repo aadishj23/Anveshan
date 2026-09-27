@@ -32,18 +32,36 @@ const handleScrollToSection = (href: string) => {
   }
 };
 
-function DesktopNavbar() {
+function DesktopNavbar({ isWhite }: { isWhite: boolean }) {
   return (
     <div className="hidden relative lg:flex w-full items-center justify-between py-3">
-      {/* Brand Logo */}
+      {/* Brand Logo with Smooth Cross-Fade */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center">
-        <Link href={logo.href} className="flex items-center transition-opacity hover:opacity-90">
+        <Link
+          href={logo.href}
+          className="relative flex items-center h-9 w-[160px] transition-opacity hover:opacity-90"
+        >
+          {/* Light Theme Logo (White 'nvesh' for dark navbar) */}
           <Image
             src={logo.src}
             alt={logo.alt}
             width={logo.width}
             height={logo.height}
-            className="h-9 w-auto object-contain"
+            className={`h-9 w-auto object-contain transition-opacity duration-300 ease-in-out ${
+              isWhite ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+            unoptimized
+            priority
+          />
+          {/* Dark Theme Logo (Black 'nvesh' for white navbar) */}
+          <Image
+            src="/assets/dark_logo_bg_remove.png"
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+            className={`absolute left-0 top-0 h-9 w-auto object-contain transition-opacity duration-300 ease-in-out ${
+              isWhite ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
             unoptimized
             priority
           />
@@ -62,7 +80,13 @@ function DesktopNavbar() {
               }}
               className="transition-colors cursor-pointer group py-1"
             >
-              <Typography.P className="!text-sm md:!text-base mb-0 text-center font-semibold text-neutral-300 group-hover:text-primary transition-colors duration-200">
+              <Typography.P
+                className={`!text-sm md:!text-base mb-0 text-center font-semibold transition-colors duration-200 ${
+                  isWhite
+                    ? "text-neutral-900 group-hover:text-primary"
+                    : "text-neutral-300 group-hover:text-primary"
+                }`}
+              >
                 {item.name}
               </Typography.P>
             </button>
@@ -76,48 +100,95 @@ function DesktopNavbar() {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isWhite, setIsWhite] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
+      const teamSection =
+        document.getElementById("team-section") ||
+        document.getElementById("team");
+      if (teamSection) {
+        const rect = teamSection.getBoundingClientRect();
+        const teamDivider = document.getElementById("team-divider");
+        const dividerRect = teamDivider ? teamDivider.getBoundingClientRect() : null;
+
+        // Navbar height is ~72px. When the top of team-section hits or goes under the navbar,
+        // it enters the white page. When the divider hits the navbar, it leaves.
+        const navbarThreshold = 80;
+        const overWhite =
+          rect.top <= navbarThreshold &&
+          (dividerRect ? dividerRect.top > navbarThreshold : rect.bottom > navbarThreshold);
+
+        setIsWhite(overWhite);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    const timer = setTimeout(handleScroll, 100);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 py-2 transition-all duration-300 bg-black/90 backdrop-blur-md border-b ${
-          scrolled
-            ? "border-neutral-800 shadow-lg shadow-black/60"
-            : "border-white/5"
+        className={`fixed top-0 left-0 w-full z-50 py-2 transition-all duration-300 ${
+          isWhite
+            ? "bg-white/95 backdrop-blur-md border-b border-neutral-200/90 shadow-md shadow-neutral-950/5 text-neutral-900"
+            : `bg-black/90 backdrop-blur-md border-b ${
+                scrolled
+                  ? "border-neutral-800 shadow-lg shadow-black/60"
+                  : "border-white/5"
+              } text-white`
         }`}
       >
         <div className="px-4 sm:px-6 lg:px-10">
-          <DesktopNavbar />
+          <DesktopNavbar isWhite={isWhite} />
           {/* Mobile Bar */}
           <div className="flex lg:hidden w-full items-center justify-between h-full py-2">
-            <Link href={logo.href} className="flex items-center">
+            <Link href={logo.href} className="relative flex items-center h-8 w-[120px]">
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={120}
                 height={36}
-                className="h-8 w-auto object-contain"
+                className={`h-8 w-auto object-contain transition-opacity duration-300 ease-in-out ${
+                  isWhite ? "opacity-0 pointer-events-none" : "opacity-100"
+                }`}
+                unoptimized
+                priority
+              />
+              <Image
+                src="/assets/dark_logo_bg_remove.png"
+                alt={logo.alt}
+                width={120}
+                height={36}
+                className={`absolute left-0 top-0 h-8 w-auto object-contain transition-opacity duration-300 ease-in-out ${
+                  isWhite ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}
                 unoptimized
                 priority
               />
             </Link>
             <button
               onClick={() => setIsOpen(true)}
-              className="p-2 text-white hover:text-primary transition-colors duration-200 focus:outline-none"
+              className={`p-2 transition-colors duration-200 focus:outline-none ${
+                isWhite
+                  ? "text-neutral-900 hover:text-primary"
+                  : "text-white hover:text-primary"
+              }`}
               aria-label="Open Navigation Menu"
             >
-              <Menu size={26} className="text-white" />
+              <Menu size={26} className={isWhite ? "text-neutral-900" : "text-white"} />
             </button>
           </div>
         </div>
@@ -191,4 +262,3 @@ export default function Navbar() {
     </>
   );
 }
-

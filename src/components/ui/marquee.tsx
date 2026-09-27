@@ -15,14 +15,15 @@ const marqueeItems: MarqueeItem[] = [
     text: "student run",
     velocity: -100,
     className: "flex items-center h-16",
-    wrapperClassName: "w-full bg-[#111111] text-white border-y border-white/10 relative z-10",
+    wrapperClassName:
+      "w-[110%] -left-5 rotate-2 lg:rotate-[1.5deg] bg-[#111111] text-white border-y border-white/10 relative z-10 shadow-xl",
   },
   {
     text: "biggest hackathon",
     velocity: 100,
     className: "flex items-center h-16",
     wrapperClassName:
-      "absolute top-1/2 -translate-y-1/2 -left-5 -rotate-12 lg:-rotate-[8deg] bg-primary text-black font-extrabold w-[110%] shadow-2xl",
+      "absolute top-1/2 -translate-y-1/2 -left-5 -rotate-12 lg:-rotate-[5deg] bg-primary text-black font-extrabold w-[110%] shadow-2xl z-30",
   },
 ];
 
@@ -68,7 +69,7 @@ MarqueeStrip.displayName = "MarqueeStrip";
 
 const ScrollMarquee = memo(() => {
   return (
-    <div className="relative w-full overflow-x-clip">
+    <div className="relative z-30 w-full overflow-x-clip py-4 sm:py-6 -mb-6 sm:-mb-8 pointer-events-auto">
       {marqueeItems.map((item, index) => (
         <MarqueeStrip key={item.text} item={item} index={index} />
       ))}
