@@ -5,11 +5,11 @@ export interface StatData {
 }
 
 export const statsData: StatData[] = [
-  { id: 1, number: "1500+", label: "Community Members" },
-  { id: 2, number: "25+", label: "Tech Events & Workshops" },
-  { id: 3, number: "50+", label: "Student Projects Built" },
-  { id: 4, number: "20+", label: "Top Achievers & Placements" },
-  { id: 5, number: "100+", label: "Hackathon Teams Hosted" },
+  { id: 1, number: "400+", label: "Community Members" },
+  { id: 2, number: "50+", label: "Tech Events" },
+  { id: 3, number: "70+", label: "Projects Built" },
+  { id: 4, number: "30+", label: "Top Achievers & Placements" },
+  { id: 5, number: "15+", label: "Hackathons & Workshops Hosted" },
 ];
 
 export const IMAGES = {

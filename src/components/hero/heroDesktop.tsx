@@ -129,8 +129,8 @@ export const HeroDesktop = () => {
       </div>
 
       <div className="-mt-[2vw] font-sketch-block text-[1.85vw] text-center mb-3 text-white">
-        EXPLORE <span className="text-[#FFBE0D]">•</span> INNOVATE{" "}
-        <span className="text-[#FFBE0D]">•</span> BUILD
+        ENTER <span className="text-[#FFBE0D]">•</span> THE{" "}
+        <span className="text-[#FFBE0D]">•</span> ARENA
       </div>
       <DevfolioAndDiscordButtons />
     </div>
