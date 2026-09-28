@@ -3,7 +3,7 @@ import React from "react";
 
 import { useScroll, useTransform } from "motion/react";
 
-import { TimelineEffect } from "../ui/ timeline-effect";
+import { TimelineEffect } from "../ui/timeline-effect";
 import TimelineEvents from "./timeline-events";
 
 export function Timeline() {
