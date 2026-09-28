@@ -141,24 +141,24 @@ export default async function EventDetailPage({ params }: Props) {
 
               {/* Reforged Special Action Portal Box */}
               {isReforged && (
-                <div className="p-6 mb-8 rounded-2xl bg-gradient-to-r from-[#1c1800] via-[#161616] to-[#121212] border-2 border-primary shadow-[4px_4px_0px_#FFBE0D]">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div>
+                <div className="p-5 sm:p-6 mb-8 rounded-2xl bg-gradient-to-r from-[#1c1800] via-[#161616] to-[#121212] border-2 border-primary shadow-[4px_4px_0px_#FFBE0D]">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+                    <div className="flex-1 min-w-0 pr-0 md:pr-4">
                       <h3 className="font-sketch-block text-xl sm:text-2xl text-white font-bold flex items-center gap-2">
-                        <Trophy className="text-[#FFBE0D]" size={22} />
+                        <Trophy className="text-[#FFBE0D] shrink-0" size={22} />
                         <span>Official Reforged '26 Registration</span>
                       </h3>
                       <p className="font-averta-std text-xs sm:text-sm text-neutral-300 mt-1">
                         Explore problem tracks, submit architecture blueprints, and join the offline hackathon.
                       </p>
                     </div>
-                    <div className="flex flex-wrap items-center gap-3">
+                    <div className="w-full md:w-auto flex flex-col items-end gap-2.5 shrink-0 md:ml-auto">
                       {event.officialLink && (
                         <Link
                           href={event.officialLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-black font-sketch-block text-sm sm:text-base font-bold rounded-xl border-2 border-primary hover:bg-white hover:border-white transition-all shadow-[2px_2px_0px_#000000]"
+                          className="w-full sm:w-auto min-w-[215px] inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary text-black font-sketch-block text-sm sm:text-base font-bold rounded-xl border-2 border-primary hover:bg-white hover:border-white transition-all shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 shrink-0"
                         >
                           <span>Dedicated Portal</span>
                           <ExternalLink size={16} />
@@ -169,7 +169,7 @@ export default async function EventDetailPage({ params }: Props) {
                           href={event.whatsappLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black font-sketch-block text-sm font-bold rounded-xl transition-all shadow-[2px_2px_0px_#000000]"
+                          className="w-full sm:w-auto min-w-[215px] inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black font-sketch-block text-sm font-bold rounded-xl transition-all shadow-[2px_2px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 shrink-0"
                         >
                           <MessageSquare size={16} />
                           <span>WhatsApp Community</span>
@@ -628,20 +628,31 @@ export default async function EventDetailPage({ params }: Props) {
                     {event.rounds.map((round, i) => (
                       <div
                         key={i}
-                        className="p-5 rounded-xl bg-neutral-900 border border-neutral-800"
+                        className="p-5 rounded-xl bg-neutral-900 border border-neutral-800 flex flex-col justify-between"
                       >
-                        <div className="flex items-center justify-between gap-2 mb-2">
-                          <span className="text-primary font-sketch-block text-lg font-bold">
+                        <div>
+                          {/* Round Header: Phase Pill + Clean Single-Line Date Badge */}
+                          <div className="flex items-center justify-between gap-3 mb-3">
+                            <div className="flex items-center gap-1.5 text-primary font-mono text-xs uppercase font-bold tracking-wider">
+                              <Sparkles size={14} className="shrink-0" />
+                              <span>Round 0{i + 1}</span>
+                            </div>
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black border border-[#FFBE0D]/30 text-xs font-mono text-[#FFBE0D] whitespace-nowrap shrink-0">
+                              <Clock size={12} className="shrink-0 text-[#FFBE0D]" />
+                              <span className="whitespace-nowrap font-semibold">{round.date}</span>
+                            </span>
+                          </div>
+
+                          {/* Round Title */}
+                          <h4 className="font-sketch-block text-lg sm:text-xl text-white font-bold leading-snug mb-2">
                             {round.title}
-                          </span>
-                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-black border border-neutral-800 text-xs font-mono text-[#FFBE0D]">
-                            <Clock size={12} />
-                            {round.date}
-                          </span>
+                          </h4>
+
+                          {/* Round Description */}
+                          <p className="font-averta-std text-xs sm:text-sm text-neutral-300 leading-relaxed">
+                            {round.description}
+                          </p>
                         </div>
-                        <p className="font-averta-std text-sm text-neutral-300 mt-2">
-                          {round.description}
-                        </p>
                       </div>
                     ))}
                   </div>

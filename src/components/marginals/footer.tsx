@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Typography } from "@/components";
+import TechText from "@/components/ui/tech-text";
 import { FOOTER_TEXT, SOCIALS } from "@/config/marginals";
+import { sketchBlock } from "@/fonts";
 
 export default function Footer() {
   const leftSocials = SOCIALS.slice(0, 2);
@@ -11,10 +13,10 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative w-full flex flex-col justify-end mt-24 md:mt-32 pb-8"
+      className="relative w-full flex flex-col justify-end mt-14 md:mt-20 pb-6"
     >
       {/* Desktop Social Links */}
-      <div className="hidden lg:flex w-full justify-center items-center gap-[20vw] mb-8">
+      <div className="hidden lg:flex w-full justify-center items-center gap-[20vw] mb-3 md:mb-4">
         {/* Left Socials */}
         <div className="flex gap-6 lg:gap-8">
           {leftSocials.map((social) => (
@@ -67,7 +69,7 @@ export default function Footer() {
       </div>
 
       {/* Mobile Social Links */}
-      <div className="flex lg:hidden w-full justify-center items-center gap-8 mb-6">
+      <div className="flex lg:hidden w-full justify-center items-center gap-8 mb-3">
         {SOCIALS.map((social) => (
           <Link
             key={social.name}
@@ -90,18 +92,32 @@ export default function Footer() {
 
       {/* Main Brand Typography Section */}
       <div className="w-full flex items-center justify-center relative">
-        <div className="relative flex flex-col items-center justify-center">
-          <Typography.Display className="text-center font-sketch-block font-normal text-primary text-[14vw] sm:text-[12vw] leading-none tracking-wider">
-            ANVESHAN
-          </Typography.Display>
-          <Typography.Lead className="font-prompt text-xs sm:text-sm md:text-base text-white/70 -mt-2 tracking-widest uppercase">
+        <div className="relative flex flex-col items-center justify-center w-full">
+          <div
+            style={{ width: "100%", position: "relative" }}
+            className="h-[120px] sm:h-[160px] md:h-[190px] lg:h-[210px] flex items-center justify-center"
+          >
+            <TechText
+              text="ANVESHAN"
+              fontFamily={sketchBlock.style.fontFamily}
+              fontWeight={600}
+              fontSize={150}
+              color="#FFBE0D"
+              accentColor="#FFBE0D"
+              reveal="letter"
+              dashLength={4}
+              dashGap={2}
+              specks={15}
+            />
+          </div>
+          <Typography.Lead className="font-prompt text-xs sm:text-sm md:text-base text-white/70 mt-0 sm:mt-1 tracking-widest uppercase z-10">
             Bhagwan Parshuram Institute of Technology
           </Typography.Lead>
         </div>
       </div>
 
       {/* Footer Text */}
-      <Typography.Lead className="text-xs sm:text-sm text-white/60 text-center mt-6">
+      <Typography.Lead className="text-xs sm:text-sm text-white/60 text-center mt-3 sm:mt-4">
         {FOOTER_TEXT}
       </Typography.Lead>
     </footer>

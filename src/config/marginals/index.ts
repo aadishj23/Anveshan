@@ -1,10 +1,10 @@
 export const navItems = [
   { name: "About", href: "/#about" },
-  { name: "Events", href: "/#events" },
-  { name: "Team", href: "/#team" },
-  { name: "Projects", href: "/#projects" },
-  { name: "Achievers", href: "/#achievers" },
   { name: "Stats", href: "/#stats" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Team", href: "/#team" },
+  { name: "Achievers", href: "/#achievers" },
+  { name: "Events", href: "/#events" },
   { name: "Contact", href: "/#contact" },
 ];
 

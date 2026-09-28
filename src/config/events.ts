@@ -449,6 +449,12 @@ export const eventsData: EventItem[] = [
         url: "https://youtu.be/gWxwco6QMY8?si=M8T81p8R4xwcBz_V",
         videoId: "gWxwco6QMY8",
       },
+      {
+        title: "Tech Starter 3.0 | AI/ML",
+        session: "Module 06",
+        url: "https://youtu.be/o4PoUigA-S4?si=oNAPpdXbsMwrVrHx",
+        videoId: "o4PoUigA-S4",
+      },
     ],
   },
   {
@@ -462,7 +468,7 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Upcoming",
     location: "Hybrid (Online Evaluation + Offline Finale at BPIT, Delhi)",
     attendeesCount: "600+ Hackers Expected",
-    prizePool: "₹10,00,000 Cash + Swag & Goodies",
+    prizePool: "₹10,000 Cash + Swag & Goodies",
     bannerFormat: "widescreen",
     image: "/assets/event-photos/Reforged 26/banner.webp",
     cardImage: "/assets/event-photos/Reforged 26/banner.webp",
@@ -512,7 +518,7 @@ export const eventsData: EventItem[] = [
           "Teams submit system architecture blueprints and working MVP repositories via the dedicated portal.",
       },
       {
-        title: "Offline Grand Finale: 30-Hour On-Site Hackathon",
+        title: "Offline Grand Finale: 10-Hour On-Site Hackathon",
         date: "30 October 2026",
         description:
           "Finalist teams hack on-site at BPIT Delhi, featuring live mentor checkpoints and jury presentations.",

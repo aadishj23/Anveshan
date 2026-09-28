@@ -334,7 +334,7 @@ export const juniorCouncil: TeamMember[] = [
     image: "/assets/team-photos/junior-council/aditya_sharma.jpg",
     LinkedinLink: "https://www.linkedin.com/in/sharma-aadi24",
     GithubLink: "https://github.com/sharma-aadi24",
-    LeetcodeLink: "https://leetcode.com/sharma_aadi24/",
+    LeetcodeLink: "https://leetcode.com/AdS_24",
   },
   {
     id: 14,
