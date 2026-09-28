@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
       {
         hostname: "pbs.twimg.com",
       },
+      {
+        hostname: "img.youtube.com",
+      },
+      {
+        hostname: "i.ytimg.com",
+      },
     ],
   },
 };

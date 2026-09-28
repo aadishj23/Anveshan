@@ -22,7 +22,7 @@ export default function Home() {
       <About />
       <Stats />
 
-      <div id="events">
+      <div id="timeline">
         <Timeline />
       </div>
 
