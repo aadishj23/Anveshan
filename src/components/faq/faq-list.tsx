@@ -22,14 +22,14 @@ export const FaqList: React.FC = () => {
         </div>
 
         {/* Centered FAQ Title */}
-        <div className="flex items-center justify-center p-8 w-full text-center">
+        <div className="flex items-center justify-center pt-4 pb-2 px-6 w-full text-center">
           <Typography.H1 className=" font-normal font-wc-rough-trad text-primary text-[clamp(3.5rem,5vw,6rem)]">
             FAQ's
           </Typography.H1>
         </div>
       </div>
 
-      <div className="w-full max-w-2xl flex flex-col gap-4 mt-32">
+      <div className="w-full max-w-2xl flex flex-col gap-4 mt-4 sm:mt-6">
         {questions.map((question, index) => (
           <Dropdown
             key={`question` + index}

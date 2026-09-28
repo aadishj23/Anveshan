@@ -254,27 +254,16 @@ export default function Testimonials() {
       className="min-h-screen font-sans relative !overflow-x-clip pt-12 pb-24"
       id="events"
     >
-      {/* Background Sticky Headline */}
-      <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none z-0">
-        <div ref={headingRef} className="text-center opacity-40 select-none">
-          <Typography.H1 className="text-5xl sm:text-8xl lg:text-9xl 2xl:text-[10rem] uppercase text-white/20 font-wc-rough-trad font-normal tracking-tight">
-            EVENTS
+      {/* Background Sticky Headline & Subheading (Cards cover subheading as they scroll up) */}
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center pointer-events-none z-0">
+        <div ref={headingRef} className="text-center px-2 sm:px-4 w-full select-none">
+          <Typography.H1 className="text-[clamp(2.4rem,7.2vw,11.5rem)] uppercase text-white font-wc-rough-trad font-normal tracking-tight whitespace-nowrap leading-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)]">
+            EVENTS & HACKATHONS
           </Typography.H1>
+          <p className="font-cabin-sketch italic text-neutral-200 text-sm sm:text-base md:text-lg lg:text-xl tracking-wider max-w-xl sm:max-w-2xl mx-auto mt-4 sm:mt-5 px-4 leading-relaxed">
+            From 30-hour national hackathons and developer cohorts to hands-on Agentic AI masterclasses—explore our engineering milestones.
+          </p>
         </div>
-      </div>
-
-      {/* Main Section Header */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mb-8 sm:mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/40 text-primary font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider mb-4">
-          <Sparkles size={14} />
-          <span>CHRONICLES // TIMELINE</span>
-        </div>
-        <Typography.Display className="font-sketch-block text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight">
-          EVENTS & HACKATHONS
-        </Typography.Display>
-        <Typography.Lead className="font-prompt text-neutral-300 text-sm sm:text-lg max-w-2xl mx-auto mt-3">
-          From 30-hour national hackathons and developer cohorts to hands-on Agentic AI masterclasses—explore our engineering milestones.
-        </Typography.Lead>
       </div>
 
       {/* Stacking Cards Container */}
@@ -282,7 +271,7 @@ export default function Testimonials() {
         ref={containerRef}
         className="w-full max-w-[340px] sm:max-w-[560px] md:max-w-[660px] lg:max-w-[740px] mx-auto relative z-10 px-3 sm:px-4"
         style={{
-          paddingTop: "1.5rem",
+          paddingTop: "2rem",
           paddingBottom: "calc(65vh - 35vh)",
         }}
       >
