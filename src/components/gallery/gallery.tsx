@@ -63,7 +63,9 @@ export default function Gallery() {
                          flex flex-col pt-0"
             >
               <span className="block">HOW'S THE</span>
-              <span className="block text-primary -mt-2 sm:-mt-3 md:-mt-4">JOURNEY</span>
+              <span className="block text-primary -mt-2 sm:-mt-3 md:-mt-4">
+                JOURNEY
+              </span>
               <span className="block -mt-2 sm:-mt-3 md:-mt-4">SO FAR</span>
             </Typography.H2>
           </div>
@@ -108,8 +110,10 @@ export default function Gallery() {
 
   return (
     <div className="relative w-full py-0">
-      <ParallaxScroll images={GALLERY_PARALLAX_IMAGES} overlay={renderOverlay} />
+      <ParallaxScroll
+        images={GALLERY_PARALLAX_IMAGES}
+        overlay={renderOverlay}
+      />
     </div>
   );
 }
-

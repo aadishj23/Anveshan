@@ -112,7 +112,9 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
           <h3 className="font-sketch-block text-2xl font-bold tracking-tight leading-snug line-clamp-1 text-white group-hover:text-primary transition-colors">
             {member.name}
           </h3>
-          {showPosition && member.position && member.position !== "Junior Council" ? (
+          {showPosition &&
+          member.position &&
+          member.position !== "Junior Council" ? (
             <p className="text-xs sm:text-sm font-semibold mt-0.5 line-clamp-1 text-neutral-300 font-prompt">
               {member.position}
             </p>
@@ -126,7 +128,10 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
 }
 export default function TeamSection() {
   return (
-    <div id="team-section" className="relative w-full text-neutral-900 pt-20 overflow-x-clip bg-white">
+    <div
+      id="team-section"
+      className="relative w-full text-neutral-900 pt-20 overflow-x-clip bg-white"
+    >
       {/* Exact grainy white page texture from original project (project-yogurt) */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -140,15 +145,15 @@ export default function TeamSection() {
         <section id="team" className="w-full">
           {/* Section Header */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center mb-12">
-          <Typography.Display className="font-sketch-block font-normal text-neutral-950 text-5xl sm:text-6xl md:text-7xl leading-tight">
-            OUR TEAM
-          </Typography.Display>
-          <Typography.Lead className="font-prompt text-neutral-600 text-base sm:text-lg max-w-2xl mx-auto mt-2">
-            Meet the minds and leaders powering Anveshan at BPIT.
-          </Typography.Lead>
+            <Typography.Display className="font-sketch-block font-normal text-neutral-950 text-5xl sm:text-6xl md:text-7xl leading-tight">
+              OUR TEAM
+            </Typography.Display>
+            <Typography.Lead className="font-prompt text-neutral-600 text-base sm:text-lg max-w-2xl mx-auto mt-2">
+              Meet the minds and leaders powering Anveshan at BPIT.
+            </Typography.Lead>
 
-          {/* Council Selection Option - Commented out as requested; displaying both SC and JC by default */}
-          {/*
+            {/* Council Selection Option - Commented out as requested; displaying both SC and JC by default */}
+            {/*
           <div className="flex justify-center items-center gap-3 mt-8">
             <button className="px-5 py-2 rounded-full font-semibold text-sm bg-primary text-black font-bold shadow-md">
               All Councils
@@ -161,87 +166,87 @@ export default function TeamSection() {
             </button>
           </div>
           */}
-        </div>
+          </div>
 
-        {/* Senior Council Auto-Scrolling Showcase */}
-        <div className="w-full mb-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-3 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-              <h4 className="font-sketch-block text-xl sm:text-2xl font-bold text-neutral-900 tracking-wide">
-                Senior Council
-              </h4>
-              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-neutral-100/90 text-neutral-600 border border-neutral-200">
-                {seniorCouncil.length} Leads
+          {/* Senior Council Auto-Scrolling Showcase */}
+          <div className="w-full mb-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-3 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+                <h4 className="font-sketch-block text-xl sm:text-2xl font-bold text-neutral-900 tracking-wide">
+                  Senior Council
+                </h4>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-neutral-100/90 text-neutral-600 border border-neutral-200">
+                  {seniorCouncil.length} Leads
+                </span>
+              </div>
+              <span className="text-xs font-medium text-neutral-500 hidden sm:inline-block">
+                Hover to pause & connect
               </span>
             </div>
-            <span className="text-xs font-medium text-neutral-500 hidden sm:inline-block">
-              Hover to pause & connect
-            </span>
+
+            {/* Marquee with scrollbars completely hidden */}
+            <div className="w-full overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              <Marquee
+                pauseOnHover={true}
+                speed={36}
+                gradient={false}
+                autoFill={true}
+                className="py-6 overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+              >
+                {seniorCouncil.map((member, index) => (
+                  <div key={`sc-${member.id}`} className="px-3">
+                    <TeamCard
+                      member={member}
+                      index={index}
+                      showPosition={true}
+                    />
+                  </div>
+                ))}
+              </Marquee>
+            </div>
           </div>
 
-          {/* Marquee with scrollbars completely hidden */}
-          <div className="w-full overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <Marquee
-              pauseOnHover={true}
-              speed={36}
-              gradient={false}
-              autoFill={true}
-              className="py-6 overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-            >
-              {seniorCouncil.map((member, index) => (
-                <div key={`sc-${member.id}`} className="px-3">
-                  <TeamCard
-                    member={member}
-                    index={index}
-                    showPosition={true}
-                  />
-                </div>
-              ))}
-            </Marquee>
-          </div>
-        </div>
-
-        {/* Junior Council Auto-Scrolling Showcase */}
-        <div className="w-full mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-3 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-              <h4 className="font-sketch-block text-xl sm:text-2xl font-bold text-neutral-900 tracking-wide">
-                Junior Council
-              </h4>
-              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-neutral-100/90 text-neutral-600 border border-neutral-200">
-                {juniorCouncil.length} Members
+          {/* Junior Council Auto-Scrolling Showcase */}
+          <div className="w-full mb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-3 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                <h4 className="font-sketch-block text-xl sm:text-2xl font-bold text-neutral-900 tracking-wide">
+                  Junior Council
+                </h4>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-neutral-100/90 text-neutral-600 border border-neutral-200">
+                  {juniorCouncil.length} Members
+                </span>
+              </div>
+              <span className="text-xs font-medium text-neutral-500 hidden sm:inline-block">
+                Hover to pause & connect
               </span>
             </div>
-            <span className="text-xs font-medium text-neutral-500 hidden sm:inline-block">
-              Hover to pause & connect
-            </span>
-          </div>
 
-          {/* Marquee with scrollbars completely hidden */}
-          <div className="w-full overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <Marquee
-              pauseOnHover={true}
-              speed={32}
-              direction="right"
-              gradient={false}
-              autoFill={true}
-              className="py-6 overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-            >
-              {juniorCouncil.map((member, index) => (
-                <div key={`jc-${member.id}`} className="px-3">
-                  <TeamCard
-                    member={member}
-                    index={index}
-                    showPosition={false}
-                  />
-                </div>
-              ))}
-            </Marquee>
+            {/* Marquee with scrollbars completely hidden */}
+            <div className="w-full overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              <Marquee
+                pauseOnHover={true}
+                speed={32}
+                direction="right"
+                gradient={false}
+                autoFill={true}
+                className="py-6 overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+              >
+                {juniorCouncil.map((member, index) => (
+                  <div key={`jc-${member.id}`} className="px-3">
+                    <TeamCard
+                      member={member}
+                      index={index}
+                      showPosition={false}
+                    />
+                  </div>
+                ))}
+              </Marquee>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Mountain Divider leading seamlessly into Hall of Fame */}
         <TeamDivider />

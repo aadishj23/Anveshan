@@ -1,0 +1,73 @@
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.marqueeRow {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  will-change: transform;
+}
+
+.marqueeRowLeft .marqueeTrack {
+  animation: scrollLeft 45s linear infinite;
+}
+
+.marqueeRowRight .marqueeTrack {
+  animation: scrollRight 45s linear infinite;
+}
+
+.marqueeRow:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-50% - 0.625rem), 0, 0);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translate3d(calc(-50% - 0.625rem), 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .marqueeTrack {
+    gap: 1rem;
+  }
+  @keyframes scrollLeft {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(calc(-50% - 0.5rem), 0, 0);
+    }
+  }
+  @keyframes scrollRight {
+    from {
+      transform: translate3d(calc(-50% - 0.5rem), 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

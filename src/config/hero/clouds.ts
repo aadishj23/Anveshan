@@ -4,4 +4,3 @@ export const HERO_CLOUDS_CONFIG = {
     repeat: "/assets/clouds/hero_clouds_repeat.png",
   },
 } as const;
-

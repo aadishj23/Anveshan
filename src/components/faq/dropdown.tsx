@@ -51,7 +51,11 @@ export const Dropdown: React.FC<DropdownProps> = ({
           ></div>
           <div className={backgroundStyle}>
             <div className={answerStyle}>
-              <Typography.P className={`${typography} text-white/90 leading-relaxed`}>{answer}</Typography.P>
+              <Typography.P
+                className={`${typography} text-white/90 leading-relaxed`}
+              >
+                {answer}
+              </Typography.P>
             </div>
           </div>
         </div>

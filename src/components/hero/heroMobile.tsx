@@ -2,10 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import {
-  measurementData,
-  textItems,
-} from "@/config/hero/heroMobile";
+import { measurementData, textItems } from "@/config/hero/heroMobile";
 
 import DevfolioAndDiscordButtons from "./hero-buttons";
 

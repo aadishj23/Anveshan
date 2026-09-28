@@ -112,14 +112,18 @@ export default function Navbar() {
       if (teamSection) {
         const rect = teamSection.getBoundingClientRect();
         const teamDivider = document.getElementById("team-divider");
-        const dividerRect = teamDivider ? teamDivider.getBoundingClientRect() : null;
+        const dividerRect = teamDivider
+          ? teamDivider.getBoundingClientRect()
+          : null;
 
         // Navbar height is ~72px. When the top of team-section hits or goes under the navbar,
         // it enters the white page. When the divider hits the navbar, it leaves.
         const navbarThreshold = 80;
         const overWhite =
           rect.top <= navbarThreshold &&
-          (dividerRect ? dividerRect.top > navbarThreshold : rect.bottom > navbarThreshold);
+          (dividerRect
+            ? dividerRect.top > navbarThreshold
+            : rect.bottom > navbarThreshold);
 
         setIsWhite(overWhite);
       }
@@ -155,7 +159,10 @@ export default function Navbar() {
           <DesktopNavbar isWhite={isWhite} />
           {/* Mobile Bar */}
           <div className="flex lg:hidden w-full items-center justify-between h-full py-2">
-            <Link href={logo.href} className="relative flex items-center h-8 w-[120px]">
+            <Link
+              href={logo.href}
+              className="relative flex items-center h-8 w-[120px]"
+            >
               <Image
                 src={logo.src}
                 alt={logo.alt}
@@ -188,7 +195,10 @@ export default function Navbar() {
               }`}
               aria-label="Open Navigation Menu"
             >
-              <Menu size={26} className={isWhite ? "text-neutral-900" : "text-white"} />
+              <Menu
+                size={26}
+                className={isWhite ? "text-neutral-900" : "text-white"}
+              />
             </button>
           </div>
         </div>

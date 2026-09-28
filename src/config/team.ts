@@ -240,7 +240,7 @@ export const seniorCouncil: TeamMember[] = [
     GithubLink: "https://github.com/kaavy05",
     LeetcodeLink: "https://leetcode.com/u/kaavy05/",
   },
-   {
+  {
     id: 5,
     name: "Pallavi",
     position: "Web Head",

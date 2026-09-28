@@ -10,8 +10,7 @@ import PortraitSVG from "./portrait-svg";
 interface ParallaxScrollProps {
   images: string[];
   overlay?:
-    | React.ReactNode
-    | ((progress: MotionValue<number>) => React.ReactNode);
+    React.ReactNode | ((progress: MotionValue<number>) => React.ReactNode);
 }
 
 export const ParallaxScroll = ({ images, overlay }: ParallaxScrollProps) => {

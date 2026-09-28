@@ -115,11 +115,19 @@ export default function FlipCard({
   const gx = useMotionValue(50);
   const gy = useMotionValue(50);
 
-  const sumX = useTransform([turn, tiltX], ([t, x]) => (t as number) + (x as number));
-  const sumY = useTransform([turn, tiltY], ([t, y]) => (t as number) + (y as number));
+  const sumX = useTransform(
+    [turn, tiltX],
+    ([t, x]) => (t as number) + (x as number),
+  );
+  const sumY = useTransform(
+    [turn, tiltY],
+    ([t, y]) => (t as number) + (y as number),
+  );
   const turnY = useMotionTemplate`perspective(${perspective}px) scale(${lift}) rotateX(${tiltX}deg) rotateY(${sumY}deg)`;
   const turnX = useMotionTemplate`perspective(${perspective}px) scale(${lift}) rotateY(${tiltY}deg) rotateX(${sumX}deg)`;
-  const facing = useTransform(turn, (t) => Math.abs(Math.cos(((t as number) * Math.PI) / 180)));
+  const facing = useTransform(turn, (t) =>
+    Math.abs(Math.cos(((t as number) * Math.PI) / 180)),
+  );
   const spread = useTransform(facing, (f) => 0.08 + 0.92 * f);
   const shade = useTransform(facing, (f) => 0.1 + 0.9 * f * f);
   const gxPct = useMotionTemplate`${gx}%`;
@@ -224,13 +232,18 @@ export default function FlipCard({
         dragDistance > 0
           ? dragDistance
           : axis === "x"
-            ? (typeof height === "number" ? height : rect.height || 420)
-            : (typeof width === "number" ? width : rect.width || 320);
+            ? typeof height === "number"
+              ? height
+              : rect.height || 420
+            : typeof width === "number"
+              ? width
+              : rect.width || 320;
       const deg = g.base + (axis === "x" ? -1 : 1) * (d / span) * 180;
       turn.set(deg);
       const now = performance.now();
       g.hist.push({ t: now, v: deg });
-      while (g.hist.length > 2 && now - g.hist[0].t > HISTORY_MS) g.hist.shift();
+      while (g.hist.length > 2 && now - g.hist[0].t > HISTORY_MS)
+        g.hist.shift();
       return;
     }
     if (!tilt || reduce || disabled || e.pointerType === "touch") return;
@@ -244,7 +257,10 @@ export default function FlipCard({
     sheen.set(1);
   };
 
-  const release = (e: React.PointerEvent<HTMLDivElement>, cancelled: boolean) => {
+  const release = (
+    e: React.PointerEvent<HTMLDivElement>,
+    cancelled: boolean,
+  ) => {
     const g = grip.current;
     if (!g || g.id !== e.pointerId) return;
     grip.current = null;
@@ -253,7 +269,8 @@ export default function FlipCard({
         e.currentTarget.releasePointerCapture(e.pointerId);
     } catch {}
     setDragging(false);
-    if (e.pointerType === "touch" || !rootRef.current?.matches(":hover")) rest();
+    if (e.pointerType === "touch" || !rootRef.current?.matches(":hover"))
+      rest();
     if (!g.moved) {
       if (!cancelled && flipOnClick) flip(false);
       else settle(target.current, 0, false);
@@ -267,7 +284,11 @@ export default function FlipCard({
       velocity = ((b.v - a.v) / (b.t - a.t)) * 1000;
     const to = cancelled
       ? snap(g.base)
-      : clamp(snap(here + velocity * FLING), snap(here) - 180, snap(here) + 180);
+      : clamp(
+          snap(here + velocity * FLING),
+          snap(here) - 180,
+          snap(here) + 180,
+        );
     settle(to, velocity, false);
   };
 
@@ -351,7 +372,9 @@ export default function FlipCard({
           inert={shown ? true : undefined}
         >
           {front}
-          {glare ? <span className="flip-card__glare" aria-hidden="true" /> : null}
+          {glare ? (
+            <span className="flip-card__glare" aria-hidden="true" />
+          ) : null}
         </div>
         <div
           className="flip-card__face flip-card__face--back"
@@ -359,7 +382,9 @@ export default function FlipCard({
           inert={!shown ? true : undefined}
         >
           {back}
-          {glare ? <span className="flip-card__glare" aria-hidden="true" /> : null}
+          {glare ? (
+            <span className="flip-card__glare" aria-hidden="true" />
+          ) : null}
         </div>
       </motion.div>
     </div>

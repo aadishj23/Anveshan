@@ -12,7 +12,7 @@
   --color-foreground: #f5f5f5;
 
   /* Primary Brand Colors */
-  --color-primary: #FFBE0D;
+  --color-primary: #ffbe0d;
   --color-primary-dark: #d49b00;
   --color-primary-light: #ffcf4d;
   --color-primary-soft: rgba(255, 190, 13, 0.15);
@@ -36,7 +36,7 @@
   /* Custom Usage (Reversed for dark theme) */
   --color-heading: #ffffff;
   --color-subheading: #a3a3a3;
-  --color-button-primary: #FFBE0D;
+  --color-button-primary: #ffbe0d;
   --color-button-secondary: #ffcf4d;
   --color-border: #262626;
   --radius: 0.625rem;
@@ -46,7 +46,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #FFBE0D;
+  --primary: #ffbe0d;
   --primary-foreground: #000000;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -57,7 +57,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: #FFBE0D;
+  --ring: #ffbe0d;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);

@@ -2,7 +2,10 @@ import React from "react";
 
 export default function TeamDivider() {
   return (
-    <div id="team-divider" className="w-full overflow-hidden leading-none select-none pointer-events-none -mb-1 bg-transparent">
+    <div
+      id="team-divider"
+      className="w-full overflow-hidden leading-none select-none pointer-events-none -mb-1 bg-transparent"
+    >
       <svg
         viewBox="0 -15 1714 235"
         fill="none"

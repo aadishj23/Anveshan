@@ -60,7 +60,10 @@ export default function ProjectsSection() {
                           // {project.Work}
                         </span>
                         <span className="font-cabin-sketch text-[8px] sm:text-xs text-neutral-400 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wider select-none shrink-0">
-                          <RotateCw size={9} className="transition-transform duration-500 group-hover:rotate-180" />
+                          <RotateCw
+                            size={9}
+                            className="transition-transform duration-500 group-hover:rotate-180"
+                          />
                           <span className="hidden sm:inline">flip</span>
                         </span>
                       </div>
@@ -131,11 +134,15 @@ export default function ProjectsSection() {
                         )}
                       </div>
                       <div className="text-center mt-0.5 sm:mt-1.5 flex items-center justify-center gap-1">
-                        <span className="text-[#FFBE0D] text-[7px] sm:text-[10px]">✎</span>
+                        <span className="text-[#FFBE0D] text-[7px] sm:text-[10px]">
+                          ✎
+                        </span>
                         <span className="font-cabin-sketch text-[7px] sm:text-[10px] text-neutral-400 tracking-wider uppercase">
                           CLICK TO FLIP
                         </span>
-                        <span className="text-[#FFBE0D] text-[7px] sm:text-[10px]">✎</span>
+                        <span className="text-[#FFBE0D] text-[7px] sm:text-[10px]">
+                          ✎
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -153,7 +160,9 @@ export default function ProjectsSection() {
                         </span>
                       </div>
                       <span className="font-cabin-sketch text-[8px] sm:text-xs font-bold text-black bg-primary px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg border border-black sm:border-2 shadow-[1px_1px_0px_0px_#000] flex items-center gap-1 shrink-0">
-                        <RotateCw size={8} strokeWidth={2.5} /> <span className="hidden sm:inline">Flip back</span><span className="sm:hidden">Back</span>
+                        <RotateCw size={8} strokeWidth={2.5} />{" "}
+                        <span className="hidden sm:inline">Flip back</span>
+                        <span className="sm:hidden">Back</span>
                       </span>
                     </div>
 
@@ -212,7 +221,9 @@ export default function ProjectsSection() {
           className="px-5 py-2 rounded-xl bg-[#141414] border-2 border-neutral-700 hover:border-primary text-white hover:text-primary font-cabin-sketch text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center gap-2 shadow-[2px_2px_0px_0px_#000000] active:translate-x-[1px] active:translate-y-[1px] transition-all cursor-pointer"
           aria-expanded={showAllMobile}
         >
-          <span>{showAllMobile ? "View Less Projects" : "View More Projects"}</span>
+          <span>
+            {showAllMobile ? "View Less Projects" : "View More Projects"}
+          </span>
           <ChevronDown
             size={15}
             className={`transition-transform duration-300 ${
