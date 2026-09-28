@@ -12,16 +12,28 @@ export interface ProjectItem {
 export const projectsData: ProjectItem[] = [
   {
     id: 1,
-    name: "Meal Wheel",
-    owner: "Surender",
-    GithubRepo: "https://github.com/surender18/MealWheel18",
-    Deployment: "https://meal-wheel-ruby.vercel.app/",
-    image: "/assets/projects/1.png",
-    Work: "Interactive food website",
-    description: "MealWheel lets you easily explore and manage dishes.",
+    name: "Houdry",
+    owner: "Garvit Arora",
+    GithubRepo: "https://github.com/houdry-genomex",
+    Deployment: "https://houdry.live/",
+    image: "/assets/projects/garvit1.png",
+    Work: "Air-Gapped Engineering",
+    description:
+      "Houdry Fabric enables air-gapped engineering on local GPUs. It processes calculations, P&IDs, and websites offline, keeping sensitive refinery data secure on the plant LAN without cloud exposure.",
   },
   {
     id: 2,
+    name: "Incident Memory Agent",
+    owner: "Pallavi Jain",
+    GithubRepo: "https://github.com/pallavithegod/ima-agent.git",
+    Deployment: "https://imagent-zeta.vercel.app/",
+    image: "/assets/projects/pallavi1.png",
+    Work: "Incident Monitoring & Remediation",
+    description:
+      "An automated incident monitoring and remediation dashboard for Vercel and Render. It tracks live health, uses AI to diagnose failures, and generates draft pull requests for rapid fixes.",
+  },
+  {
+    id: 3,
     name: "DhunMart",
     owner: "Surender",
     GithubRepo: "https://github.com/surender18/DhunMart",
@@ -32,7 +44,7 @@ export const projectsData: ProjectItem[] = [
       "Online platform for electronics enthusiasts, specializing in high-quality earphones and audio gear.",
   },
   {
-    id: 3,
+    id: 4,
     name: "Quizzical",
     owner: "Aadish Jain",
     GithubRepo: "https://github.com/aadishj23/Quiz-App",
@@ -42,7 +54,7 @@ export const projectsData: ProjectItem[] = [
     description: "Quiz from 7+ categories and 3 difficulty levels",
   },
   {
-    id: 4,
+    id: 5,
     name: "Sanskaar Group Website",
     owner: "Kaushal and Tanay",
     GithubRepo: "https://github.com/sanskaargroup/sg-website",
@@ -52,7 +64,7 @@ export const projectsData: ProjectItem[] = [
     description: "Manage all types of social and corporate events",
   },
   {
-    id: 5,
+    id: 6,
     name: "Learniverse",
     owner: "Tanay Kumar",
     GithubRepo: "https://github.com/tanaykmr/learniverse",
@@ -63,7 +75,7 @@ export const projectsData: ProjectItem[] = [
       "A platform for educators to teach to the masses and for students to have quality education with their choice of tutors.",
   },
   {
-    id: 6,
+    id: 7,
     name: "ReelPick",
     owner: "Shubham Kumar",
     GithubRepo: "https://github.com/shubham-kumar4285/reelpick/",
@@ -74,7 +86,7 @@ export const projectsData: ProjectItem[] = [
       "Reel Pick helps you find movies you'll love based on your preferences.",
   },
   {
-    id: 7,
+    id: 8,
     name: "Financify",
     owner: "Keshav Mehra",
     GithubRepo: "https://github.com/Airbone25/nextjs-finance-dashboard.git",
@@ -82,15 +94,5 @@ export const projectsData: ProjectItem[] = [
     image: "/assets/projects/7.png",
     Work: "Finance Dashboard app",
     description: "Manage invoices and customers with this one web app",
-  },
-  {
-    id: 8,
-    name: "ChatApp",
-    owner: "Keshav Mehra",
-    GithubRepo: "https://github.com/Airbone25/ChatApp.git",
-    Deployment: "https://chatapp-b2fm.onrender.com/",
-    image: "/assets/projects/8.png",
-    Work: "Chat room",
-    description: "Chat with your friends.",
   },
 ];

@@ -194,16 +194,16 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Fullscreen Mobile Drawer as Sibling (Z-[100] Solid Background) */}
+      {/* Fullscreen Mobile Drawer as Sibling (Z-[100] Solid Background, Overflow Protected) */}
       <div
-        className={`fixed inset-0 bg-[#0a0a0a] z-[100] flex flex-col justify-between px-6 py-4 transition-opacity duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-0 bg-[#0a0a0a]/98 backdrop-blur-xl z-[100] flex flex-col justify-between px-5 sm:px-6 py-4 overflow-y-auto overscroll-contain transition-opacity duration-300 ease-in-out lg:hidden ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
       >
         {/* Drawer Header */}
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center justify-between shrink-0 pb-2 border-b border-white/10">
           <Link
             href={logo.href}
             onClick={() => setIsOpen(false)}
@@ -223,12 +223,12 @@ export default function Navbar() {
             className="p-2 text-white hover:text-primary transition-colors duration-200 focus:outline-none"
             aria-label="Close Navigation Menu"
           >
-            <X size={28} className="text-white" />
+            <X size={26} className="text-white" />
           </button>
         </div>
 
-        {/* Drawer Links */}
-        <div className="flex flex-col items-center justify-center space-y-6 my-auto">
+        {/* Drawer Links: Compact spacing ensuring all 7 options fit effortlessly */}
+        <div className="flex flex-col items-center justify-center my-auto py-3 space-y-2 sm:space-y-3.5 w-full">
           {navItems.map((item: { name: string; href: string }) => (
             <button
               key={item.name}
@@ -237,25 +237,27 @@ export default function Navbar() {
                 handleScrollToSection(item.href);
                 setIsOpen(false);
               }}
-              className="transition-colors py-1.5"
+              className="transition-colors py-1 px-4 rounded-lg hover:bg-white/5 active:bg-white/10 w-full max-w-xs text-center"
             >
-              <Typography.P className="text-white text-2xl font-semibold text-center hover:text-primary transition-colors">
+              <span className="font-sketch-block text-xl sm:text-2xl text-white hover:text-primary transition-colors tracking-wide">
                 {item.name}
-              </Typography.P>
+              </span>
             </button>
           ))}
         </div>
 
         {/* Drawer Footer / CTA */}
-        <div className="flex justify-center pb-6">
+        <div className="flex justify-center shrink-0 pt-2 pb-4">
           <Button
-            className="h-12 !px-8 min-w-[240px] flex items-center justify-center"
+            className="h-11 !px-6 min-w-[200px] flex items-center justify-center"
             onClick={() => {
               handleScrollToSection("/#contact");
               setIsOpen(false);
             }}
           >
-            <span className="text-black font-bold text-base">Contact Us</span>
+            <span className="text-black font-bold text-sm sm:text-base font-cabin-sketch uppercase tracking-wider">
+              Contact Us
+            </span>
           </Button>
         </div>
       </div>

@@ -1,104 +1,91 @@
 export const measurementData = {
   lines: [
+    // Top guideline across Anveshan
     {
-      id: "l1",
-      src: "line-121.svg",
-      style: { width: "78%", height: "1px", top: "21%", left: "10%" },
+      id: "l-top",
+      style: { width: "76%", height: "1px", top: "15%", left: "5%" },
     },
+    // Baseline guideline under Anveshan
     {
-      id: "l2",
-      src: "line-124.svg",
-      style: { width: "78%", height: "1px", top: "75%", left: "10%" },
+      id: "l-baseline",
+      style: { width: "76%", height: "1px", top: "55%", left: "5%" },
     },
+    // Left vertical guideline framing Anve
     {
-      id: "l3",
-      src: "line-121.svg",
-      style: { width: "78%", height: "1px", top: "95%", left: "10%" },
+      id: "l-left",
+      style: { width: "1px", height: "54%", top: "4%", left: "7%" },
     },
+    // Right vertical guideline framing shan
     {
-      id: "l4",
-      src: "line-124.svg",
-      style: { width: "78%", height: "1px", top: "150%", left: "10%" },
+      id: "l-right",
+      style: { width: "1px", height: "54%", top: "4%", left: "78.5%" },
     },
+    // Center vertical guideline (Anve / shan boundary)
     {
-      id: "l5",
-      src: "line-123.svg",
-      style: { width: "1px", height: "210%", top: "0%", left: "84%" },
+      id: "l-mid-1",
+      style: { width: "1px", height: "66%", top: "4%", left: "45.5%" },
     },
+    // BPIT horizontal top guideline
     {
-      id: "l6",
-      src: "line-123.svg",
-      style: { width: "1px", height: "170%", top: "1.9%", left: "18%" },
+      id: "l-bpit-top",
+      style: { width: "31%", height: "1px", top: "60%", left: "48%" },
     },
+    // BPIT horizontal bottom guideline
     {
-      id: "l7",
-      src: "line-126.svg",
-      style: { width: "24%", height: "1px", top: "162%", left: "62%" },
+      id: "l-bpit-bottom",
+      style: { width: "31%", height: "1px", top: "80%", left: "48%" },
     },
+    // BPIT vertical left guideline
     {
-      id: "l8",
-      src: "line-126.svg",
-      style: { width: "24%", height: "1px", top: "200%", left: "62%" },
+      id: "l-bpit-left",
+      style: { width: "1px", height: "25%", top: "57%", left: "49%" },
     },
+    // BPIT vertical right guideline
     {
-      id: "l9",
-      src: "line-128.svg",
-      style: { width: "1px", height: "51%", top: "158%", left: "64%" },
+      id: "l-bpit-right",
+      style: { width: "1px", height: "25%", top: "57%", left: "78.5%" },
     },
+    // Horizontal Arrow above Anve (20cm)
     {
-      id: "l10",
+      id: "arr-anve",
       src: "/lines/line-132.svg",
-      style: { width: "66.3%", height: "4.1%", top: "6.5%", left: "18%" },
+      style: { width: "38.5%", height: "3.5%", top: "7%", left: "7%" },
       isSvg: true,
     },
+    // Horizontal Arrow above shan (25cm)
     {
-      id: "l11",
-      src: "/lines/line-133.svg",
-      style: { width: "2.5%", height: "35.4%", top: "164.2%", left: "86.5%" },
+      id: "arr-shan",
+      src: "/lines/line-132.svg",
+      style: { width: "33%", height: "3.5%", top: "7%", left: "45.5%" },
       isSvg: true,
     },
+    // Small Arrow between Anve and shan (0.5cm)
     {
-      id: "l12",
+      id: "arr-gap",
+      src: "/lines/line-134.svg",
+      style: { width: "3.5%", height: "2%", top: "62%", left: "43.8%" },
+      isSvg: true,
+    },
+    // Vertical Arrow for BPIT (5cm)
+    {
+      id: "arr-bpit",
       src: "/lines/line-133.svg",
-      style: { width: "1.5%", height: "20.4%", top: "75.2%", left: "11.5%" },
+      style: { width: "2.5%", height: "20%", top: "60%", left: "80%" },
       isSvg: true,
     },
   ],
   labels: [
-    { id: "lb1", label: "20cm", style: { top: "0%", left: "51.9%" } },
+    { id: "lb1", label: "20cm", style: { top: "1%", left: "26.2%" } },
+    { id: "lb2", label: "25cm", style: { top: "1%", left: "62%" } },
     {
-      id: "lb2",
+      id: "lb3",
       label: "0.5cm",
-      style: { top: "85.4%", left: "6.1%" },
+      style: { top: "69%", left: "45.5%" },
       isSmall: true,
     },
-    { id: "lb3", label: "5cm", style: { top: "183.6%", left: "96%" } },
+    { id: "lb4", label: "5cm", style: { top: "70%", left: "85%" } },
   ],
 };
-
-export const textElements = [
-  {
-    id: "te1",
-    component: "Anve",
-    style: { top: "4%", left: "-10%" },
-    className: "font-sketch-block font-normal text-primary text-[24.6vw]",
-    type: "Display",
-  },
-  {
-    id: "te2",
-    component: "shan",
-    style: { top: "82%", left: "0%" },
-    className: "font-grutch-shaded font-normal text-[20vw]",
-    type: "Display",
-  },
-  {
-    id: "te3",
-    component: "BPIT",
-    style: { top: "150%", left: "45%" },
-    className: "font-sketch-block font-normal text-[17vw]",
-    type: "H1",
-  },
-];
 
 export const textItems = [
   { id: "ti1", text: "EXPLORE", isBold: false },

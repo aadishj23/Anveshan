@@ -4,43 +4,41 @@ import Image from "next/image";
 
 import {
   measurementData,
-  textElements,
   textItems,
 } from "@/config/hero/heroMobile";
 
-import Typography from "../Typography";
 import DevfolioAndDiscordButtons from "./hero-buttons";
 
 export const HeroMobile = React.memo(() => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden relative">
       <div className="flex flex-col">
-        {/* Top Section */}
-        <div className="flex flex-row justify-between items-center gap-10 mx-auto pt-4 pb-[4svh]">
-          <div className="text-white/80 text-center text-[3vw] font-light font-averta-std leading-[5vw] tracking-widest">
+        {/* Top Section: Society Subheading & Blueprint Grid Box */}
+        <div className="flex flex-row justify-between items-center px-5 pt-1 pb-3 w-full max-w-sm mx-auto mb-1">
+          <div className="text-white/80 text-left text-xs font-light font-averta-std leading-tight tracking-widest">
             PREMIER TECHNICAL
             <br />
             SOCIETY OF BPIT
           </div>
-          <div className="w-[16vw] h-[16vw] ">
-            <div className="w-[8vw] h-[8vw] ml-[8vw] bg-[#262626]"></div>
-            <div className="w-[8vw] h-[8vw]  bg-[#262626]"></div>
+          <div className="w-8 h-8 relative">
+            <div className="w-4 h-4 ml-4 bg-[#262626]" />
+            <div className="w-4 h-4 bg-[#262626]" />
           </div>
         </div>
 
-        {/* Main */}
-        <div className="relative w-[100vw] pt-[37.09%] lg:pt-[39.09%] ">
-          <div className="absolute top-0 left-0 w-[100vw] h-full ">
-            {/* Measurement Lines */}
+        {/* Main Blueprint Canvas: Proportioned so Anveshan renders in ONE single big heading */}
+        <div className="relative w-full pt-[64%]">
+          <div className="absolute top-0 left-0 w-full h-full">
+            {/* Measurement Guidelines & Dimension Arrows */}
             {measurementData.lines.map((line) => {
               if (line.isSvg) {
                 return (
                   <div key={line.id} className="absolute" style={line.style}>
                     <Image
-                      src={line.src}
-                      alt=""
+                      src={line.src!}
+                      alt="Measurement arrow"
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 );
@@ -55,36 +53,38 @@ export const HeroMobile = React.memo(() => {
               }
             })}
 
-            {textElements.map((textEl) => {
-              const TypographyComponent =
-                Typography[textEl.type as keyof typeof Typography];
-              return (
-                <div
-                  key={textEl.id}
-                  className="absolute transform translate-x-1/2"
-                  style={textEl.style}
-                >
-                  <TypographyComponent
-                    className={`text-center mb-0 ${textEl.className}`}
-                  >
-                    {textEl.component}
-                  </TypographyComponent>
-                </div>
-              );
-            })}
+            {/* Big Heading: Anveshan rendered together in ONE continuous line */}
+            <div className="absolute top-[21%] left-[7%] flex items-baseline whitespace-nowrap select-none z-10">
+              <h1 className="font-sketch-block font-normal text-primary text-[17.2vw] leading-none mb-0">
+                Anve
+              </h1>
+              <h1
+                className="font-grutch-shaded font-normal text-white text-[16.8vw] leading-none mb-0 ml-[1px]"
+                style={{ position: "relative", top: "-0.085em" }}
+              >
+                shan
+              </h1>
+            </div>
 
-            {/* Measurement Labels */}
+            {/* BPIT Sub-heading */}
+            <div className="absolute top-[61%] left-[50%] select-none z-10">
+              <span className="font-sketch-block font-normal text-white text-[9.5vw] leading-none">
+                BPIT
+              </span>
+            </div>
+
+            {/* Measurement Dimension Labels */}
             {measurementData.labels.map((item) => (
               <div
                 key={item.id}
-                className="absolute text-[#a3a3a3] text-right whitespace-nowrap font-museo transform -translate-x-1/2 -translate-y-1/2"
+                className="absolute text-[#a3a3a3] text-center whitespace-nowrap font-museo transform -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none"
                 style={{
                   fontWeight: 300,
-                  letterSpacing: "3.01px",
+                  letterSpacing: "1.5px",
                   fontSize: item.isSmall
-                    ? "clamp(0.5rem, 1.5vw, 0.75rem)"
-                    : "clamp(0.7rem, 2vw, 1rem)",
-                  lineHeight: "1.4",
+                    ? "clamp(0.55rem, 1.8vw, 0.75rem)"
+                    : "clamp(0.65rem, 2.2vw, 0.85rem)",
+                  lineHeight: "1.2",
                   ...item.style,
                 }}
               >
@@ -95,15 +95,15 @@ export const HeroMobile = React.memo(() => {
         </div>
 
         {/* Vertical Text on the Right */}
-        <div className="absolute top-[18.85%] left-[90%] flex-shrink-0">
-          <div className="flex flex-col items-center gap-[2.2vw] font-averta-std">
+        <div className="absolute top-[16%] right-[2.5%] flex-shrink-0 z-10 pointer-events-none">
+          <div className="flex flex-col items-center gap-1 font-averta-std">
             {textItems.map((item) => (
               <div key={item.id} className="flex flex-col items-center">
                 {item.text.split("").map((char, charIndex) => (
                   <div
                     key={`${item.id}-${charIndex}`}
-                    className={`text-white/80 text-center text-base leading-snug text-[clamp(0.5rem,1.7vw,5rem)] ${
-                      item.isBold ? "font-bold" : "font-light"
+                    className={`text-white/70 text-center leading-none text-[8px] sm:text-[9px] ${
+                      item.isBold ? "font-bold text-white/90" : "font-light"
                     }`}
                   >
                     {char}
@@ -111,19 +111,18 @@ export const HeroMobile = React.memo(() => {
                 ))}
               </div>
             ))}
-            <div className="w-[6vw] h-[6vw] bg-[#262626] mt-2 xl:mt-4" />
+            <div className="w-3.5 h-3.5 bg-[#262626] mt-2" />
           </div>
         </div>
-        {/* <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center">
-          Registeration <span className="text-[#FFBE0D]">Deadline </span>
-          Extended
-        </div> */}
 
-        <div className="mt-[46%] font-sketch-block text-[3.85vw] text-center text-white">
+        {/* Bottom Explorer Tagline */}
+        <div className="mt-3 sm:mt-5 font-sketch-block text-base sm:text-lg text-center text-white tracking-wide">
           EXPLORE <span className="text-[#FFBE0D]">•</span> INNOVATE{" "}
           <span className="text-[#FFBE0D]">•</span> BUILD
         </div>
-        <div>
+
+        {/* Action Buttons */}
+        <div className="mt-2 pb-6">
           <DevfolioAndDiscordButtons />
         </div>
       </div>
