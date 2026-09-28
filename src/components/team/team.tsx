@@ -25,15 +25,15 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
       {/* Sliding bottom lip in Anveshan's signature Golden Yellow (#FFBE0D) */}
       <div className="absolute bottom-1 left-5 right-5 h-7 rounded-b-[1.75rem] transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-y-2 pointer-events-none bg-primary shadow-xs" />
 
-      {/* Main Architectural Drafting Card Body (Dark Grey matching Project Card) */}
+      {/* Main Architectural Drafting Card Body (Lightened charcoal softening contrast on white page) */}
       <div
-        className="relative z-10 rounded-[2rem] p-4 flex flex-col transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] bg-gradient-to-b from-[#222222] to-[#181818] border-2 border-neutral-700/80 shadow-md group-hover:shadow-2xl group-hover:border-primary/60 group-hover:-translate-y-2 group-hover:!rotate-0 group-hover:scale-[1.02]"
+        className="relative z-10 rounded-[2rem] p-4 flex flex-col transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] bg-gradient-to-b from-[#323232] to-[#222222] border-2 border-neutral-600/70 shadow-lg group-hover:shadow-2xl group-hover:border-primary/70 group-hover:-translate-y-2 group-hover:!rotate-0 group-hover:scale-[1.02]"
         style={{
           transform: `rotate(${restTilt}deg)`,
         }}
       >
-        {/* Photo Container - Square (1:1 ratio) with dark grey framing */}
-        <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-neutral-800/80 border border-neutral-700/80 shadow-inner">
+        {/* Photo Container - Square (1:1 ratio) with softened framing */}
+        <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-neutral-800/70 border border-neutral-600/70 shadow-inner">
           <Image
             src={member.image || "/assets/team-photos/avatar-placeholder.svg"}
             alt={member.name}
@@ -51,7 +51,7 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="w-7 h-7 rounded-full bg-neutral-800/90 text-neutral-200 border border-neutral-700 transition-all duration-200 hover:scale-115 hover:bg-primary hover:text-black hover:border-primary flex items-center justify-center shadow-xs"
+              className="w-7 h-7 rounded-full bg-primary text-black border border-black/25 transition-all duration-200 hover:scale-115 hover:bg-white hover:text-black hover:border-white flex items-center justify-center shadow-xs"
               title="LinkedIn"
               aria-label={`${member.name} LinkedIn`}
             >
@@ -65,7 +65,7 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="w-7 h-7 rounded-full bg-neutral-800/90 text-neutral-200 border border-neutral-700 transition-all duration-200 hover:scale-115 hover:bg-primary hover:text-black hover:border-primary flex items-center justify-center shadow-xs"
+              className="w-7 h-7 rounded-full bg-primary text-black border border-black/25 transition-all duration-200 hover:scale-115 hover:bg-white hover:text-black hover:border-white flex items-center justify-center shadow-xs"
               title="GitHub"
               aria-label={`${member.name} GitHub`}
             >
@@ -79,7 +79,7 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="w-7 h-7 rounded-full bg-neutral-800/90 text-neutral-200 border border-neutral-700 transition-all duration-200 hover:scale-115 hover:bg-primary hover:text-black hover:border-primary flex items-center justify-center shadow-xs"
+              className="w-7 h-7 rounded-full bg-primary text-black border border-black/25 transition-all duration-200 hover:scale-115 hover:bg-white hover:text-black hover:border-white flex items-center justify-center shadow-xs"
               title="LeetCode"
               aria-label={`${member.name} LeetCode`}
             >
@@ -93,7 +93,7 @@ function TeamCard({ member, index, showPosition }: TeamCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="w-7 h-7 rounded-full bg-neutral-800/90 text-neutral-200 border border-neutral-700 transition-all duration-200 hover:scale-115 hover:bg-primary hover:text-black hover:border-primary flex items-center justify-center shadow-xs"
+              className="w-7 h-7 rounded-full bg-primary text-black border border-black/25 transition-all duration-200 hover:scale-115 hover:bg-white hover:text-black hover:border-white flex items-center justify-center shadow-xs"
               title="Codolio"
               aria-label={`${member.name} Codolio`}
             >

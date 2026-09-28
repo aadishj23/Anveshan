@@ -19,7 +19,7 @@ const marqueeItems: MarqueeItem[] = [
       "w-[110%] -left-5 rotate-2 lg:rotate-[1.5deg] bg-[#111111] text-white border-y border-white/10 relative z-10 shadow-xl",
   },
   {
-    text: "biggest hackathon",
+    text: "the builder society",
     velocity: 100,
     className: "flex items-center h-16",
     wrapperClassName:

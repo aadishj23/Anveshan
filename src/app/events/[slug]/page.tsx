@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { eventsData, EventItem } from "@/config/events";
 import Typography from "@/components/Typography";
+import ScrollToTopOnMount from "@/components/events/scroll-to-top";
 
 interface Props {
   params: Promise<{
@@ -48,6 +49,7 @@ export default async function EventDetailPage({ params }: Props) {
 
   return (
     <main className="min-h-screen pt-28 pb-24 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto font-sans text-white">
+      <ScrollToTopOnMount />
       {/* Top Navigation */}
       <div className="mb-8 flex items-center justify-between flex-wrap gap-4">
         <Link
