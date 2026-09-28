@@ -57,6 +57,7 @@ export interface EventItem {
   winners?: WinnerItem[];
   gallery?: string[];
   youtubeLinks?: YoutubeLinkItem[];
+  bannerFormat?: "widescreen" | "square";
   officialLink?: string;
   whatsappLink?: string;
   perks?: string[];
@@ -78,6 +79,7 @@ export const eventsData: EventItem[] = [
     location: "BPIT Main Auditorium, New Delhi",
     attendeesCount: "100+ Teams (400+ Hackers)",
     prizePool: "₹1,00,000 Total (₹50k Cash)",
+    bannerFormat: "square",
     image: "/assets/event-photos/HackBPIT 2k23/Square Poster .jpg",
     cardImage: "/assets/event-photos/HackBPIT 2k23/Square Poster .jpg",
     shortSummary:
@@ -147,6 +149,7 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "Audi 2 & Seminar Hall, BPIT",
     attendeesCount: "250+ Students",
+    bannerFormat: "square",
     image: "/assets/event-photos/Meet Your Alumni/1.png",
     cardImage: "/assets/event-photos/Meet Your Alumni/1.png",
     shortSummary:
@@ -187,6 +190,7 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "Hybrid (BPIT Campus Labs & Discord)",
     attendeesCount: "350+ Students",
+    bannerFormat: "square",
     image: "/assets/event-photos/TechStarter 2k24/image.png",
     cardImage: "/assets/event-photos/TechStarter 2k24/image.png",
     shortSummary:
@@ -256,7 +260,11 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "BPIT Main Seminar Hall & Online",
     attendeesCount: "200+ Developers",
-    image: "",
+    bannerFormat: "square",
+    image:
+      "/assets/event-photos/web3 and blockchain 2024/WhatsApp Image 2026-09-28 at 2.40.55 PM.jpeg",
+    cardImage:
+      "/assets/event-photos/web3 and blockchain 2024/WhatsApp Image 2026-09-28 at 2.40.55 PM.jpeg",
     shortSummary:
       "Hands-on decentralized workshop with QuillAI Network exploring smart contracts, Web3 protocols, blockchain security, and live dApp development.",
     description:
@@ -274,7 +282,6 @@ export const eventsData: EventItem[] = [
         company: "QuillAI Network",
       },
     ],
-    hasImagePlaceholders: true,
   },
   {
     id: 5,
@@ -287,7 +294,11 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "Room 6A, BPIT, New Delhi",
     attendeesCount: "180+ Engineers",
-    image: "",
+    bannerFormat: "square",
+    image:
+      "/assets/event-photos/Beyond DSA/WhatsApp Image 2026-09-28 at 2.40.55 PM.jpeg",
+    cardImage:
+      "/assets/event-photos/Beyond DSA/WhatsApp Image 2026-09-28 at 2.40.55 PM.jpeg",
     shortSummary:
       "High-impact talk with startup engineers Tanay Kumar & Shivank Kapur on product engineering, off-campus hiring, and tech growth.",
     description:
@@ -310,7 +321,6 @@ export const eventsData: EventItem[] = [
         company: "Stealth",
       },
     ],
-    hasImagePlaceholders: true,
   },
   {
     id: 6,
@@ -323,7 +333,11 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "BPIT Main Computer Lab, New Delhi",
     attendeesCount: "220+ Participants",
-    image: "",
+    bannerFormat: "square",
+    image:
+      "/assets/event-photos/Introduction to AI Agents/poster.jpeg",
+    cardImage:
+      "/assets/event-photos/Introduction to AI Agents/poster.jpeg",
     shortSummary:
       "Hands-on masterclass building autonomous AI agents with LangChain, CrewAI, and Vector DBs, deployed via FastAPI and React.",
     description:
@@ -335,7 +349,12 @@ export const eventsData: EventItem[] = [
       "End-to-end full-stack integration using Python, FastAPI, and React",
       "Live deployment of working autonomous agents during the session",
     ],
-    hasImagePlaceholders: true,
+    gallery: [
+      "/assets/event-photos/Introduction to AI Agents/1774328990873.jpg",
+      "/assets/event-photos/Introduction to AI Agents/1774328991301.jpg",
+      "/assets/event-photos/Introduction to AI Agents/1774328991810.jpg",
+      "/assets/event-photos/Introduction to AI Agents/WhatsApp Image 2026-09-28 at 4.04.05 PM.jpeg",
+    ],
   },
   {
     id: 7,
@@ -348,7 +367,11 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "Main Auditorium, BPIT, New Delhi",
     attendeesCount: "400+ Incoming Engineers",
-    image: "",
+    bannerFormat: "square",
+    image:
+      "/assets/event-photos/Orientation/WhatsApp Image 2026-09-28 at 2.48.05 PM.jpeg",
+    cardImage:
+      "/assets/event-photos/Orientation/WhatsApp Image 2026-09-28 at 2.48.05 PM.jpeg",
     shortSummary:
       "Annual community induction paired with a winning Smart India Hackathon playbook session and the official launch of TechStarter.",
     description:
@@ -368,7 +391,6 @@ export const eventsData: EventItem[] = [
         videoId: "2i_MjcrYEKU",
       },
     ],
-    hasImagePlaceholders: true,
   },
   {
     id: 8,
@@ -381,7 +403,9 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Past",
     location: "Hybrid (BPIT Labs & Online Community Discord)",
     attendeesCount: "450+ Enrolled Learners",
-    image: "",
+    bannerFormat: "widescreen",
+    image: "/assets/event-photos/Techstarter 26/poster.jpg",
+    cardImage: "/assets/event-photos/Techstarter 26/poster.jpg",
     shortSummary:
       "Accelerated month-long cohort spanning full-stack web, DSA in C++/Java, AI/ML, and hands-on Agentic AI workflow modules.",
     description:
@@ -438,8 +462,10 @@ export const eventsData: EventItem[] = [
     timelineStatus: "Upcoming",
     location: "Hybrid (Online Evaluation + Offline Finale at BPIT, Delhi)",
     attendeesCount: "600+ Hackers Expected",
-    prizePool: "₹10,000 Cash + Swag & Goodies",
-    image: "",
+    prizePool: "₹10,00,000 Cash + Swag & Goodies",
+    bannerFormat: "widescreen",
+    image: "/assets/event-photos/Reforged 26/banner.webp",
+    cardImage: "/assets/event-photos/Reforged 26/banner.webp",
     shortSummary:
       "Anveshan's upcoming premier hybrid hackathon featuring n8n workflows, Agentic AI tracks, cash prizes, and an offline BPIT finale.",
     description:

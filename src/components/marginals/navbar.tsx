@@ -15,7 +15,10 @@ const handleScrollToSection = (href: string) => {
   if (href.startsWith("/#")) {
     const targetId = href.substring(2);
     const currentPage = window.location.pathname;
-    if (currentPage !== "/") window.location.href = "/#" + targetId;
+    if (currentPage !== "/") {
+      window.location.href = href;
+      return;
+    }
     const element = document.getElementById(targetId);
     if (element) {
       const elementPosition =
@@ -26,6 +29,7 @@ const handleScrollToSection = (href: string) => {
         top: offsetPosition,
         behavior: "smooth",
       });
+      window.history.pushState(null, "", href);
     }
   } else {
     window.open(href, "_blank");
@@ -139,6 +143,33 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
       clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    const fixLegacyHash = () => {
+      if (typeof window !== "undefined") {
+        const hash = window.location.hash.toLowerCase();
+        if (hash === "#testimonials" || hash === "#testiminials") {
+          window.history.replaceState(null, "", "/#events");
+          const element = document.getElementById("events");
+          if (element) {
+            const elementPosition =
+              element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - SCROLL_OFFSET;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        }
+      }
+    };
+
+    fixLegacyHash();
+    window.addEventListener("hashchange", fixLegacyHash);
+    return () => {
+      window.removeEventListener("hashchange", fixLegacyHash);
     };
   }, []);
 

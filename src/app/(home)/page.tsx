@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import About from "@/components/about/about";
 import AsciiLogger from "@/components/ASCII/ASCIIlog";
@@ -16,6 +16,23 @@ import AchieversSection from "@/components/achievers/achievers";
 import ContactSection from "@/components/contact/contact";
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === "#testimonials" || hash === "#testiminials") {
+        window.history.replaceState(null, "", "/#events");
+        const element = document.getElementById("events");
+        if (element) {
+          const elementPosition =
+            element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - 80,
+            behavior: "smooth",
+          });
+        }
+      }
+    }
+  }, []);
   return (
     <>
       <Hero />

@@ -44,6 +44,7 @@ export default async function EventDetailPage({ params }: Props) {
   }
 
   const isReforged = event.slug === "reforged-26";
+  const isWidescreen = event.bannerFormat === "widescreen" || isReforged;
 
   return (
     <main className="min-h-screen pt-28 pb-24 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto font-sans text-white">
@@ -74,370 +75,291 @@ export default async function EventDetailPage({ params }: Props) {
 
       {/* Main Event Article Card */}
       <article className="bg-[#121212] rounded-3xl border-2 border-neutral-800 overflow-hidden shadow-[8px_8px_0px_#000000]">
-        {/* Banner Area */}
-        {event.image ? (
-          <div className="relative w-full h-64 sm:h-96 md:h-[420px] bg-neutral-900 border-b-2 border-neutral-800">
-            <Image
-              src={event.image}
-              alt={event.name}
-              fill
-              priority
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent pointer-events-none" />
-          </div>
-        ) : (
-          <div className="relative w-full py-12 px-6 sm:px-12 bg-gradient-to-br from-neutral-900 via-[#181818] to-black border-b-2 border-neutral-800 flex flex-col justify-center">
-            <div className="flex items-center gap-2 text-primary font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
-              <Sparkles size={16} />
-              <span>{event.badge}</span>
-            </div>
-            <Typography.Display className="font-sketch-block text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
-              {event.name}
-            </Typography.Display>
-            <p className="font-prompt text-neutral-400 text-sm sm:text-base max-w-3xl mt-3">
-              {event.shortSummary}
-            </p>
-          </div>
-        )}
-
-        {/* Header & Meta Bar */}
-        <div className="p-6 sm:p-10 lg:p-12">
-          {event.image && (
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-2 text-primary font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
-                <Sparkles size={16} />
-                <span>{event.badge}</span>
+        {/* =========================================================================
+            HERO & OVERVIEW SECTION
+            - Widescreen banners (Reforged '26, TechStarter 3.0): 16:9 Banner + compact side-by-side Overview
+            - Square Posters (all others): Split 2-Column Hero (Poster left, Overview + Highlights right)
+           ========================================================================= */}
+        {isWidescreen ? (
+          <div>
+            {/* 16:9 Edge-to-Edge Banner */}
+            {event.image && (
+              <div className="relative w-full aspect-[16/9] max-h-[460px] bg-neutral-950 border-b-2 border-neutral-800 overflow-hidden">
+                <Image
+                  src={event.image}
+                  alt={event.name}
+                  fill
+                  priority
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent pointer-events-none" />
               </div>
-              <Typography.Display className="font-sketch-block text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                {event.name}
-              </Typography.Display>
-            </div>
-          )}
-
-          {/* Quick Meta Pills */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-neutral-300 pb-6 mb-8 border-b border-neutral-800">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800">
-              <Calendar size={15} className="text-primary" />
-              <span>{event.date}</span>
-            </span>
-
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800">
-              <MapPin size={15} className="text-primary" />
-              <span>{event.location}</span>
-            </span>
-
-            {event.attendeesCount && (
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800">
-                <Users size={15} className="text-primary" />
-                <span>{event.attendeesCount}</span>
-              </span>
             )}
 
-            {event.prizePool && (
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/40 text-primary font-bold">
-                <Trophy size={15} />
-                <span>{event.prizePool}</span>
-              </span>
-            )}
-          </div>
-
-          {/* Reforged Special Action Buttons & Links */}
-          {isReforged && (
-            <div className="p-6 mb-10 rounded-2xl bg-gradient-to-r from-[#1c1800] via-[#161616] to-[#121212] border-2 border-primary shadow-[4px_4px_0px_#FFBE0D]">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                  <h3 className="font-sketch-block text-xl sm:text-2xl text-white font-bold flex items-center gap-2">
-                    <Trophy className="text-[#FFBE0D]" size={22} />
-                    <span>Official Reforged '26 Registration</span>
-                  </h3>
-                  <p className="font-averta-std text-xs sm:text-sm text-neutral-300 mt-1">
-                    Explore problem tracks, submit architecture blueprints, and join the offline hackathon.
-                  </p>
+            {/* Widescreen Header & Details */}
+            <div className="p-6 sm:p-10 lg:p-12 pb-8">
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 text-primary font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
+                  <Sparkles size={16} />
+                  <span>{event.badge}</span>
                 </div>
-                <div className="flex flex-wrap items-center gap-3">
-                  {event.officialLink && (
-                    <Link
-                      href={event.officialLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-black font-sketch-block text-sm sm:text-base font-bold rounded-xl border-2 border-primary hover:bg-white hover:border-white transition-all shadow-[2px_2px_0px_#000000]"
-                    >
-                      <span>Dedicated Portal</span>
-                      <ExternalLink size={16} />
-                    </Link>
-                  )}
-                  {event.whatsappLink && (
-                    <Link
-                      href={event.whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black font-sketch-block text-sm font-bold rounded-xl transition-all shadow-[2px_2px_0px_#000000]"
-                    >
-                      <MessageSquare size={16} />
-                      <span>WhatsApp Community</span>
-                    </Link>
-                  )}
-                </div>
+                <Typography.Display className="font-sketch-block text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  {event.name}
+                </Typography.Display>
+                <p className="font-prompt text-neutral-400 text-sm sm:text-base max-w-3xl mt-3">
+                  {event.shortSummary}
+                </p>
               </div>
-            </div>
-          )}
 
-          {/* Detailed Overview */}
-          <div className="mb-10">
-            <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-primary">//</span>
-              <span>Overview & Context</span>
-            </h2>
-            <div className="font-averta-std text-neutral-300 text-base sm:text-lg leading-relaxed space-y-4">
-              {event.description.split("\n\n").map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
-            </div>
-          </div>
+              {/* Quick Meta Pills */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-neutral-300 pb-6 mb-8 border-b border-neutral-800">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800">
+                  <Calendar size={15} className="text-primary" />
+                  <span>{event.date}</span>
+                </span>
 
-          {/* Key Highlights */}
-          {event.highlights && event.highlights.length > 0 && (
-            <div className="mb-10">
-              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-primary">//</span>
-                <span>Key Highlights & Outcomes</span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {event.highlights.map((highlight, i) => (
-                  <div
-                    key={i}
-                    className="flex items-start gap-3 p-4 rounded-xl bg-neutral-900/90 border border-neutral-800"
-                  >
-                    <CheckCircle2
-                      size={18}
-                      className="text-primary shrink-0 mt-0.5"
-                    />
-                    <span className="font-averta-std text-sm sm:text-base text-neutral-200">
-                      {highlight}
-                    </span>
-                  </div>
-                ))}
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800">
+                  <MapPin size={15} className="text-primary" />
+                  <span>{event.location}</span>
+                </span>
+
+                {event.attendeesCount && (
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800">
+                    <Users size={15} className="text-primary" />
+                    <span>{event.attendeesCount}</span>
+                  </span>
+                )}
+
+                {event.prizePool && (
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/40 text-primary font-bold">
+                    <Trophy size={15} />
+                    <span>{event.prizePool}</span>
+                  </span>
+                )}
               </div>
-            </div>
-          )}
 
-          {/* Reforged Tracks, Perks, and Rounds */}
-          {isReforged && (
-            <>
-              {/* Tracks */}
-              {event.tracks && (
-                <div className="mb-10">
-                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span className="text-primary">//</span>
-                    <span>Problem Tracks</span>
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {event.tracks.map((track, i) => (
-                      <div
-                        key={i}
-                        className="p-5 rounded-xl bg-neutral-900 border border-neutral-800 flex flex-col justify-between"
-                      >
-                        <div>
-                          <div className="flex items-center gap-2 text-primary font-mono text-xs uppercase font-bold mb-2">
-                            <Layers size={14} />
-                            <span>Track 0{i + 1}</span>
-                          </div>
-                          <h4 className="font-sketch-block text-xl text-white font-bold mb-2">
-                            {track.title}
-                          </h4>
-                          <p className="font-averta-std text-xs sm:text-sm text-neutral-300 leading-relaxed">
-                            {track.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Rounds & Schedule */}
-              {event.rounds && (
-                <div className="mb-10">
-                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span className="text-primary">//</span>
-                    <span>Schedule & Evaluation Rounds</span>
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {event.rounds.map((round, i) => (
-                      <div
-                        key={i}
-                        className="p-5 rounded-xl bg-neutral-900 border border-neutral-800"
-                      >
-                        <div className="flex items-center justify-between gap-2 mb-2">
-                          <span className="text-primary font-sketch-block text-lg font-bold">
-                            {round.title}
-                          </span>
-                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-black border border-neutral-800 text-xs font-mono text-[#FFBE0D]">
-                            <Clock size={12} />
-                            {round.date}
-                          </span>
-                        </div>
-                        <p className="font-averta-std text-sm text-neutral-300 mt-2">
-                          {round.description}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Perks & Rewards */}
-              {event.perks && (
-                <div className="mb-10">
-                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span className="text-primary">//</span>
-                    <span>Perks & Goodies</span>
-                  </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {event.perks.map((perk, i) => (
-                      <div
-                        key={i}
-                        className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800 flex items-start gap-3"
-                      >
-                        <Gift size={18} className="text-primary shrink-0 mt-0.5" />
-                        <span className="font-averta-std text-xs sm:text-sm text-neutral-200">
-                          {perk}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </>
-          )}
-
-          {/* Speakers / Mentors Section */}
-          {event.speakersOrMentors && event.speakersOrMentors.length > 0 && (
-            <div className="mb-10">
-              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-primary">//</span>
-                <span>Featured Speakers & Mentors</span>
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {event.speakersOrMentors.map((speaker, i) => (
-                  <div
-                    key={i}
-                    className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center gap-4"
-                  >
-                    {speaker.image ? (
-                      <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/50 shrink-0 bg-neutral-800">
-                        <Image
-                          src={speaker.image}
-                          alt={speaker.name}
-                          fill
-                          sizes="56px"
-                          className="object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-14 h-14 rounded-full bg-neutral-800 border-2 border-primary/40 flex items-center justify-center text-primary font-bold text-lg shrink-0">
-                        {speaker.name.charAt(0)}
-                      </div>
-                    )}
-                    <div className="min-w-0">
-                      <h4 className="font-sketch-block text-white text-lg font-bold truncate">
-                        {speaker.name}
-                      </h4>
-                      <p className="font-averta-std text-xs text-neutral-300 truncate">
-                        {speaker.role}
+              {/* Reforged Special Action Portal Box */}
+              {isReforged && (
+                <div className="p-6 mb-8 rounded-2xl bg-gradient-to-r from-[#1c1800] via-[#161616] to-[#121212] border-2 border-primary shadow-[4px_4px_0px_#FFBE0D]">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div>
+                      <h3 className="font-sketch-block text-xl sm:text-2xl text-white font-bold flex items-center gap-2">
+                        <Trophy className="text-[#FFBE0D]" size={22} />
+                        <span>Official Reforged '26 Registration</span>
+                      </h3>
+                      <p className="font-averta-std text-xs sm:text-sm text-neutral-300 mt-1">
+                        Explore problem tracks, submit architecture blueprints, and join the offline hackathon.
                       </p>
-                      {speaker.company && (
-                        <p className="font-mono text-[11px] text-primary truncate">
-                          @{speaker.company}
-                        </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3">
+                      {event.officialLink && (
+                        <Link
+                          href={event.officialLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-black font-sketch-block text-sm sm:text-base font-bold rounded-xl border-2 border-primary hover:bg-white hover:border-white transition-all shadow-[2px_2px_0px_#000000]"
+                        >
+                          <span>Dedicated Portal</span>
+                          <ExternalLink size={16} />
+                        </Link>
+                      )}
+                      {event.whatsappLink && (
+                        <Link
+                          href={event.whatsappLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black font-sketch-block text-sm font-bold rounded-xl transition-all shadow-[2px_2px_0px_#000000]"
+                        >
+                          <MessageSquare size={16} />
+                          <span>WhatsApp Community</span>
+                        </Link>
                       )}
                     </div>
                   </div>
-                ))}
+                </div>
+              )}
+
+              {/* Compact Side-by-Side: Overview (col-span-7) & Highlights (col-span-5) */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4">
+                <div className="lg:col-span-7">
+                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-primary">//</span>
+                    <span>Overview & Context</span>
+                  </h2>
+                  <div className="font-averta-std text-neutral-300 text-sm sm:text-base leading-relaxed space-y-3">
+                    {event.description.split("\n\n").map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5">
+                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-primary">//</span>
+                    <span>Key Highlights</span>
+                  </h2>
+                  <div className="space-y-2.5">
+                    {event.highlights.map((highlight, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start gap-2.5 p-3 rounded-xl bg-neutral-900/90 border border-neutral-800 text-xs sm:text-sm text-neutral-200"
+                      >
+                        <CheckCircle2
+                          size={16}
+                          className="text-primary shrink-0 mt-0.5"
+                        />
+                        <span className="leading-snug">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          )}
+          </div>
+        ) : (
+          /* Split 2-Column Hero for Square Posters */
+          <div className="p-6 sm:p-8 lg:p-10 border-b-2 border-neutral-800">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+              {/* Left Column: 1:1 Poster + Quick Meta + Actions */}
+              <div className="lg:col-span-5 flex flex-col gap-4">
+                {event.image && (
+                  <div className="relative w-full max-w-[420px] aspect-square mx-auto lg:mx-0 rounded-2xl overflow-hidden border-2 border-neutral-700/80 shadow-[0_12px_40px_rgba(0,0,0,0.8)] bg-neutral-900">
+                    <Image
+                      src={event.image}
+                      alt={event.name}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 90vw, 420px"
+                      className="object-contain"
+                    />
+                  </div>
+                )}
 
-          {/* Judges Section (HackBPIT 2k23) */}
-          {event.judges && event.judges.length > 0 && (
-            <div className="mb-10">
-              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-primary">//</span>
-                <span>Mentors & Jury Panel</span>
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                {event.judges.map((judge, i) => (
-                  <div
-                    key={i}
-                    className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col items-center text-center group hover:border-primary/50 transition-colors"
-                  >
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-primary/60 mb-3 bg-neutral-800">
-                      <Image
-                        src={judge.image}
-                        alt={judge.name}
-                        fill
-                        sizes="80px"
-                        className="object-cover group-hover:scale-105 transition-transform"
-                      />
+                {/* Quick Meta Details under poster */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 text-xs text-neutral-300 max-w-[420px] mx-auto lg:mx-0 w-full">
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-neutral-900/90 border border-neutral-800">
+                    <Calendar size={15} className="text-primary shrink-0" />
+                    <span className="truncate">{event.date}</span>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-neutral-900/90 border border-neutral-800">
+                    <MapPin size={15} className="text-primary shrink-0" />
+                    <span className="truncate">{event.location}</span>
+                  </div>
+
+                  {event.attendeesCount && (
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-neutral-900/90 border border-neutral-800">
+                      <Users size={15} className="text-primary shrink-0" />
+                      <span className="truncate">{event.attendeesCount}</span>
                     </div>
-                    <h4 className="font-sketch-block text-white text-base font-bold leading-snug">
-                      {judge.name}
-                    </h4>
-                    {judge.role && (
-                      <p className="font-averta-std text-[11px] text-neutral-400 mt-1">
-                        {judge.role}
-                      </p>
+                  )}
+
+                  {event.prizePool && (
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-primary/10 border border-primary/40 text-primary font-bold">
+                      <Trophy size={15} className="shrink-0" />
+                      <span className="truncate">{event.prizePool}</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Actions if present */}
+                {(event.officialLink || event.whatsappLink) && (
+                  <div className="flex flex-col gap-2 max-w-[420px] mx-auto lg:mx-0 w-full pt-1">
+                    {event.officialLink && (
+                      <Link
+                        href={event.officialLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-black font-sketch-block text-sm font-bold rounded-xl border-2 border-primary hover:bg-white hover:border-white transition-all shadow-[2px_2px_0px_#000000]"
+                      >
+                        <span>Visit Official Portal</span>
+                        <ExternalLink size={15} />
+                      </Link>
+                    )}
+                    {event.whatsappLink && (
+                      <Link
+                        href={event.whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black font-sketch-block text-sm font-bold rounded-xl transition-all shadow-[2px_2px_0px_#000000]"
+                      >
+                        <MessageSquare size={15} />
+                        <span>Join WhatsApp Group</span>
+                      </Link>
                     )}
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          )}
 
-          {/* Winners Section (HackBPIT 2k23) */}
-          {event.winners && event.winners.length > 0 && (
-            <div className="mb-10">
-              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                <Trophy size={26} className="text-[#FFBE0D]" />
-                <span>Hackathon Winners</span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {event.winners.map((winner, i) => (
-                  <div
-                    key={i}
-                    className="rounded-2xl bg-neutral-900 border-2 border-[#FFBE0D]/50 overflow-hidden shadow-[4px_4px_0px_#000000]"
-                  >
-                    <div className="relative w-full h-56 sm:h-64 bg-neutral-800">
-                      <Image
-                        src={winner.image}
-                        alt={winner.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 500px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-4 flex items-center justify-between">
-                      <div>
-                        <span className="font-mono text-xs text-[#FFBE0D] font-bold">
-                          {winner.title}
-                        </span>
-                        <h4 className="font-sketch-block text-lg sm:text-xl text-white font-bold">
-                          {winner.teamName}
-                        </h4>
-                      </div>
-                      <Award size={24} className="text-[#FFBE0D]" />
+              {/* Right Column: Title + Short Summary + Overview + Highlights */}
+              <div className="lg:col-span-7 flex flex-col justify-start">
+                <div className="inline-flex items-center gap-2 text-primary font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">
+                  <Sparkles size={16} />
+                  <span>{event.badge}</span>
+                </div>
+
+                <Typography.Display className="font-sketch-block text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
+                  {event.name}
+                </Typography.Display>
+
+                <p className="font-prompt text-neutral-400 text-sm sm:text-base leading-relaxed mb-6 border-b border-neutral-800/80 pb-4">
+                  {event.shortSummary}
+                </p>
+
+                {/* Overview & Context */}
+                <div className="mb-6">
+                  <h3 className="font-sketch-block text-xl sm:text-2xl font-bold text-white mb-2.5 flex items-center gap-2">
+                    <span className="text-primary">//</span>
+                    <span>Overview & Context</span>
+                  </h3>
+                  <div className="font-averta-std text-neutral-300 text-sm sm:text-base leading-relaxed space-y-2.5">
+                    {event.description.split("\n\n").map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Compact Highlights Grid */}
+                {event.highlights && event.highlights.length > 0 && (
+                  <div>
+                    <h3 className="font-sketch-block text-xl sm:text-2xl font-bold text-white mb-2.5 flex items-center gap-2">
+                      <span className="text-primary">//</span>
+                      <span>Key Highlights & Outcomes</span>
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {event.highlights.map((highlight, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start gap-2 p-2.5 rounded-xl bg-neutral-900/80 border border-neutral-800 text-xs text-neutral-200"
+                        >
+                          <CheckCircle2
+                            size={15}
+                            className="text-primary shrink-0 mt-0.5"
+                          />
+                          <span className="leading-snug">{highlight}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* YouTube Video Links Section */}
+        {/* =========================================================================
+            HIGH PRIORITY CONTENT SECTIONS
+            Priority given to:
+            1. YouTube Session Recordings
+            2. Event Snapshots & Media Archive
+            3. Mentors / Jury Panel / Winners
+            4. Reforged Tracks, Schedule & Perks
+           ========================================================================= */}
+        <div className="p-6 sm:p-10 lg:p-12 space-y-12">
+          {/* Priority 1: YouTube Video Links */}
           {event.youtubeLinks && event.youtubeLinks.length > 0 && (
-            <div className="mb-10">
+            <div>
               <div className="flex items-center justify-between flex-wrap gap-2 mb-5">
                 <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white flex items-center gap-2">
                   <Video size={24} className="text-primary" />
@@ -508,24 +430,29 @@ export default async function EventDetailPage({ params }: Props) {
             </div>
           )}
 
-          {/* Photo Gallery (Available Offline Images) */}
+          {/* Priority 2: Event Snapshots & Photo Archive */}
           {event.gallery && event.gallery.length > 0 && (
-            <div className="mb-10">
-              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
-                <Camera size={24} className="text-primary" />
-                <span>Event Snapshots & Archive</span>
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-5">
+                <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white flex items-center gap-2">
+                  <Camera size={24} className="text-primary" />
+                  <span>Event Snapshots & Archive ({event.gallery.length})</span>
+                </h2>
+                <span className="font-mono text-xs text-neutral-400">
+                  On-Site Photography & Lab Captures
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {event.gallery.map((img, i) => (
                   <div
                     key={i}
-                    className="relative w-full h-52 sm:h-60 rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 group"
+                    className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 group shadow-md"
                   >
                     <Image
                       src={img}
                       alt={`${event.name} photo ${i + 1}`}
                       fill
-                      sizes="(max-width: 768px) 100vw, 400px"
+                      sizes="(max-width: 768px) 100vw, 600px"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -534,9 +461,221 @@ export default async function EventDetailPage({ params }: Props) {
             </div>
           )}
 
+          {/* Speakers / Mentors Section */}
+          {event.speakersOrMentors && event.speakersOrMentors.length > 0 && (
+            <div>
+              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-primary">//</span>
+                <span>Featured Speakers & Mentors</span>
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {event.speakersOrMentors.map((speaker, i) => (
+                  <div
+                    key={i}
+                    className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center gap-4"
+                  >
+                    {speaker.image ? (
+                      <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/50 shrink-0 bg-neutral-800">
+                        <Image
+                          src={speaker.image}
+                          alt={speaker.name}
+                          fill
+                          sizes="56px"
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-14 h-14 rounded-full bg-neutral-800 border-2 border-primary/40 flex items-center justify-center text-primary font-bold text-lg shrink-0">
+                        {speaker.name.charAt(0)}
+                      </div>
+                    )}
+                    <div className="min-w-0">
+                      <h4 className="font-sketch-block text-white text-lg font-bold truncate">
+                        {speaker.name}
+                      </h4>
+                      <p className="font-averta-std text-xs text-neutral-300 truncate">
+                        {speaker.role}
+                      </p>
+                      {speaker.company && (
+                        <p className="font-mono text-[11px] text-primary truncate">
+                          @{speaker.company}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Mentors & Jury Panel (HackBPIT 2k23) */}
+          {event.judges && event.judges.length > 0 && (
+            <div>
+              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-primary">//</span>
+                <span>Mentors & Jury Panel</span>
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                {event.judges.map((judge, i) => (
+                  <div
+                    key={i}
+                    className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col items-center text-center group hover:border-primary/50 transition-colors"
+                  >
+                    <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-primary/60 mb-3 bg-neutral-800">
+                      <Image
+                        src={judge.image}
+                        alt={judge.name}
+                        fill
+                        sizes="80px"
+                        className="object-cover group-hover:scale-105 transition-transform"
+                      />
+                    </div>
+                    <h4 className="font-sketch-block text-white text-base font-bold leading-snug">
+                      {judge.name}
+                    </h4>
+                    {judge.role && (
+                      <p className="font-averta-std text-[11px] text-neutral-400 mt-1">
+                        {judge.role}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Winners Section (HackBPIT 2k23) */}
+          {event.winners && event.winners.length > 0 && (
+            <div>
+              <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
+                <Trophy size={26} className="text-[#FFBE0D]" />
+                <span>Hackathon Winners</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {event.winners.map((winner, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl bg-neutral-900 border-2 border-[#FFBE0D]/50 overflow-hidden shadow-[4px_4px_0px_#000000]"
+                  >
+                    <div className="relative w-full h-56 sm:h-64 bg-neutral-800">
+                      <Image
+                        src={winner.image}
+                        alt={winner.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 500px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-4 flex items-center justify-between">
+                      <div>
+                        <span className="font-mono text-xs text-[#FFBE0D] font-bold">
+                          {winner.title}
+                        </span>
+                        <h4 className="font-sketch-block text-lg sm:text-xl text-white font-bold">
+                          {winner.teamName}
+                        </h4>
+                      </div>
+                      <Award size={24} className="text-[#FFBE0D]" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Reforged Problem Tracks, Rounds & Perks */}
+          {isReforged && (
+            <>
+              {/* Problem Tracks */}
+              {event.tracks && (
+                <div>
+                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
+                    <span className="text-primary">//</span>
+                    <span>Problem Tracks</span>
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {event.tracks.map((track, i) => (
+                      <div
+                        key={i}
+                        className="p-5 rounded-xl bg-neutral-900 border border-neutral-800 flex flex-col justify-between"
+                      >
+                        <div>
+                          <div className="flex items-center gap-2 text-primary font-mono text-xs uppercase font-bold mb-2">
+                            <Layers size={14} />
+                            <span>Track 0{i + 1}</span>
+                          </div>
+                          <h4 className="font-sketch-block text-xl text-white font-bold mb-2">
+                            {track.title}
+                          </h4>
+                          <p className="font-averta-std text-xs sm:text-sm text-neutral-300 leading-relaxed">
+                            {track.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Schedule & Evaluation Rounds */}
+              {event.rounds && (
+                <div>
+                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
+                    <span className="text-primary">//</span>
+                    <span>Schedule & Evaluation Rounds</span>
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {event.rounds.map((round, i) => (
+                      <div
+                        key={i}
+                        className="p-5 rounded-xl bg-neutral-900 border border-neutral-800"
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <span className="text-primary font-sketch-block text-lg font-bold">
+                            {round.title}
+                          </span>
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-black border border-neutral-800 text-xs font-mono text-[#FFBE0D]">
+                            <Clock size={12} />
+                            {round.date}
+                          </span>
+                        </div>
+                        <p className="font-averta-std text-sm text-neutral-300 mt-2">
+                          {round.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Perks & Goodies */}
+              {event.perks && (
+                <div>
+                  <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-2">
+                    <span className="text-primary">//</span>
+                    <span>Perks & Goodies</span>
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {event.perks.map((perk, i) => (
+                      <div
+                        key={i}
+                        className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800 flex items-start gap-3"
+                      >
+                        <Gift size={18} className="text-primary shrink-0 mt-0.5" />
+                        <span className="font-averta-std text-xs sm:text-sm text-neutral-200">
+                          {perk}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+
           {/* Image Placeholders for Future/Upcoming Archive */}
           {event.hasImagePlaceholders && (
-            <div className="mb-6 p-6 rounded-2xl bg-neutral-900/60 border border-dashed border-neutral-700 text-center">
+            <div className="p-6 rounded-2xl bg-neutral-900/60 border border-dashed border-neutral-700 text-center">
               <div className="w-12 h-12 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto text-neutral-400 mb-3">
                 <Camera size={22} />
               </div>

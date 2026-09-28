@@ -13,18 +13,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 function EventCardBanner({ event }: { event: EventItem }) {
   if (event.image) {
+    const isReforged = event.slug === "reforged-26";
+
     return (
-      <div className="relative w-full h-[180px] sm:h-[230px] rounded-xl overflow-hidden border border-neutral-800 my-3.5 bg-neutral-900 group-hover:border-primary/50 transition-colors">
-        <Image
-          src={event.image}
-          alt={event.name}
-          fill
-          sizes="(max-width: 768px) 100vw, 760px"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute bottom-3 left-3 flex items-center gap-2">
-          <span className="px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-sm border border-white/10 text-[11px] sm:text-xs font-mono text-primary font-bold">
+      <div className="relative w-full h-[200px] sm:h-[250px] rounded-xl overflow-hidden border border-neutral-800 my-3.5 bg-black/90 group-hover:border-primary/50 transition-colors flex items-center justify-center">
+        {/* Ambient blurred backdrop so the container feels full and rich */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <Image
+            src={event.cardImage || event.image}
+            alt=""
+            fill
+            sizes="100px"
+            className="object-cover blur-xl opacity-35 scale-110"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+
+        {/* Crisp uncropped image */}
+        <div className="relative w-full h-full z-10 flex items-center justify-center p-1">
+          <Image
+            src={event.cardImage || event.image}
+            alt={event.name}
+            fill
+            sizes="(max-width: 768px) 100vw, 760px"
+            className={`transition-transform duration-500 group-hover:scale-[1.02] ${
+              isReforged ? "object-cover" : "object-contain"
+            }`}
+          />
+        </div>
+
+        {/* Date pill overlay */}
+        <div className="absolute bottom-3 left-3 z-20 flex items-center gap-2 pointer-events-none">
+          <span className="px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-white/15 text-[11px] sm:text-xs font-mono text-primary font-bold shadow-md">
             {event.date}
           </span>
         </div>
@@ -208,6 +228,13 @@ export default function Testimonials() {
             scrub: true,
           },
         });
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === "#testimonials" || hash === "#testiminials") {
+        window.history.replaceState(null, "", "/#events");
       }
     }
 
