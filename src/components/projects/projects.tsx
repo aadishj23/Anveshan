@@ -12,7 +12,10 @@ import { ExternalLink, Github, RotateCw, ChevronDown } from "lucide-react";
 function getOwnerGithubInfo(repoUrl: string) {
   if (!repoUrl) return { url: "", handle: "" };
   try {
-    const clean = repoUrl.trim().replace(/\.git\/?$/, "").replace(/\/+$/, "");
+    const clean = repoUrl
+      .trim()
+      .replace(/\.git\/?$/, "")
+      .replace(/\/+$/, "");
     const parsed = new URL(clean);
     const pathParts = parsed.pathname.split("/").filter(Boolean);
     if (pathParts.length >= 1) {
@@ -133,8 +136,13 @@ export default function ProjectsSection() {
                               className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-neutral-900/90 border border-neutral-800 hover:border-neutral-600 text-neutral-400 hover:text-neutral-200 font-mono text-[9px] sm:text-[11px] transition-all max-w-full group/builder cursor-pointer"
                               title={`Visit @${ownerInfo.handle} on GitHub`}
                             >
-                              <Github size={10} className="text-neutral-500 group-hover/builder:text-neutral-300 shrink-0" />
-                              <span className="truncate">@{ownerInfo.handle}</span>
+                              <Github
+                                size={10}
+                                className="text-neutral-500 group-hover/builder:text-neutral-300 shrink-0"
+                              />
+                              <span className="truncate">
+                                @{ownerInfo.handle}
+                              </span>
                             </Link>
                           </div>
                         )}
@@ -154,7 +162,11 @@ export default function ProjectsSection() {
                             onPointerDown={(e) => e.stopPropagation()}
                             className="flex-1 min-w-0 py-1.5 sm:py-2 px-1.5 sm:px-2.5 bg-primary text-black font-cabin-sketch text-[11px] sm:text-xs lg:text-sm font-bold tracking-wider uppercase border border-black sm:border-2 rounded-lg shadow-[1px_1px_0px_0px_#000000] sm:shadow-[2px_2px_0px_0px_#000000] hover:bg-neutral-200 hover:border-neutral-300 transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer"
                           >
-                            <ExternalLink size={12} strokeWidth={2.5} className="shrink-0" />
+                            <ExternalLink
+                              size={12}
+                              strokeWidth={2.5}
+                              className="shrink-0"
+                            />
                             <span className="truncate">Live Demo</span>
                           </Link>
                         )}
@@ -169,7 +181,11 @@ export default function ProjectsSection() {
                             className="flex-1 min-w-0 py-1.5 sm:py-2 px-1.5 sm:px-2.5 bg-neutral-900 text-neutral-200 border border-neutral-700 sm:border-2 rounded-lg shadow-[1px_1px_0px_0px_#000000] sm:shadow-[2px_2px_0px_0px_#000000] hover:border-primary hover:text-white transition-all flex items-center justify-center gap-1 sm:gap-1.5 font-cabin-sketch text-[11px] sm:text-xs lg:text-sm font-bold tracking-wider uppercase cursor-pointer"
                             aria-label={`${project.name} GitHub Repository`}
                           >
-                            <Github size={12} strokeWidth={2} className="shrink-0" />
+                            <Github
+                              size={12}
+                              strokeWidth={2}
+                              className="shrink-0"
+                            />
                             <span className="truncate">GitHub</span>
                           </Link>
                         )}
@@ -219,7 +235,11 @@ export default function ProjectsSection() {
                             onPointerDown={(e) => e.stopPropagation()}
                             className="flex-1 min-w-0 py-1 sm:py-1.5 px-1.5 sm:px-2.5 bg-primary text-black font-cabin-sketch text-[10px] sm:text-xs lg:text-sm font-bold tracking-wider uppercase border border-black sm:border-2 rounded-lg shadow-[1px_1px_0px_0px_#000000] sm:shadow-[2px_2px_0px_0px_#000000] hover:bg-neutral-200 hover:border-neutral-300 transition-all flex items-center justify-center gap-1 cursor-pointer"
                           >
-                            <ExternalLink size={11} strokeWidth={2.5} className="shrink-0" />
+                            <ExternalLink
+                              size={11}
+                              strokeWidth={2.5}
+                              className="shrink-0"
+                            />
                             <span className="truncate">Live Demo</span>
                           </Link>
                         )}
@@ -234,7 +254,11 @@ export default function ProjectsSection() {
                             className="flex-1 min-w-0 py-1 sm:py-1.5 px-1.5 sm:px-2.5 bg-neutral-900 border border-neutral-700 sm:border-2 rounded-lg text-neutral-200 shadow-[1px_1px_0px_0px_#000000] sm:shadow-[2px_2px_0px_0px_#000000] hover:border-primary hover:text-white transition-all flex items-center justify-center gap-1 font-cabin-sketch text-[10px] sm:text-xs lg:text-sm font-bold tracking-wider uppercase cursor-pointer"
                             aria-label={`${project.name} GitHub Repository`}
                           >
-                            <Github size={11} strokeWidth={2} className="shrink-0" />
+                            <Github
+                              size={11}
+                              strokeWidth={2}
+                              className="shrink-0"
+                            />
                             <span className="truncate">GitHub</span>
                           </Link>
                         )}

@@ -11,12 +11,17 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: [".next/**", "out/**", "build/**", "node_modules/**"],
+  },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
       "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/ban-ts-comment": "off",
       "react/no-unescaped-entities": "off",
+      "react/jsx-no-comment-textnodes": "off",
     },
   },
 ];

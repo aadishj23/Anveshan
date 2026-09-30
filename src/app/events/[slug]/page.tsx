@@ -20,7 +20,7 @@ import {
   Gift,
   Play,
 } from "lucide-react";
-import { eventsData, EventItem } from "@/config/events";
+import { eventsData } from "@/config/events";
 import Typography from "@/components/Typography";
 import ScrollToTopOnMount from "@/components/events/scroll-to-top";
 
@@ -151,7 +151,8 @@ export default async function EventDetailPage({ params }: Props) {
                         <span>Official Reforged '26 Registration</span>
                       </h3>
                       <p className="font-averta-std text-xs sm:text-sm text-neutral-300 mt-1">
-                        Explore problem tracks, submit architecture blueprints, and join the offline hackathon.
+                        Explore problem tracks, submit architecture blueprints,
+                        and join the offline hackathon.
                       </p>
                     </div>
                     <div className="w-full md:w-auto flex flex-col items-end gap-2.5 shrink-0 md:ml-auto">
@@ -365,7 +366,9 @@ export default async function EventDetailPage({ params }: Props) {
               <div className="flex items-center justify-between flex-wrap gap-2 mb-5">
                 <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white flex items-center gap-2">
                   <Video size={24} className="text-primary" />
-                  <span>Session Video Recordings ({event.youtubeLinks.length})</span>
+                  <span>
+                    Session Video Recordings ({event.youtubeLinks.length})
+                  </span>
                 </h2>
                 <span className="font-mono text-xs text-neutral-400">
                   Official Lecture Sessions & Streams
@@ -399,7 +402,10 @@ export default async function EventDetailPage({ params }: Props) {
                         )}
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                           <div className="w-11 h-11 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-red-600/90 transition-all backdrop-blur-[2px]">
-                            <Play size={17} className="fill-current ml-0.5 text-white/90" />
+                            <Play
+                              size={17}
+                              className="fill-current ml-0.5 text-white/90"
+                            />
                           </div>
                         </div>
                         {yt.session && (
@@ -438,7 +444,9 @@ export default async function EventDetailPage({ params }: Props) {
               <div className="flex items-center justify-between flex-wrap gap-2 mb-5">
                 <h2 className="font-sketch-block text-2xl sm:text-3xl font-bold text-white flex items-center gap-2">
                   <Camera size={24} className="text-primary" />
-                  <span>Event Snapshots & Archive ({event.gallery.length})</span>
+                  <span>
+                    Event Snapshots & Archive ({event.gallery.length})
+                  </span>
                 </h2>
                 <span className="font-mono text-xs text-neutral-400">
                   On-Site Photography & Lab Captures
@@ -640,8 +648,13 @@ export default async function EventDetailPage({ params }: Props) {
                               <span>Round 0{i + 1}</span>
                             </div>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black border border-[#FFBE0D]/30 text-xs font-mono text-[#FFBE0D] whitespace-nowrap shrink-0">
-                              <Clock size={12} className="shrink-0 text-[#FFBE0D]" />
-                              <span className="whitespace-nowrap font-semibold">{round.date}</span>
+                              <Clock
+                                size={12}
+                                className="shrink-0 text-[#FFBE0D]"
+                              />
+                              <span className="whitespace-nowrap font-semibold">
+                                {round.date}
+                              </span>
                             </span>
                           </div>
 
@@ -674,7 +687,10 @@ export default async function EventDetailPage({ params }: Props) {
                         key={i}
                         className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800 flex items-start gap-3"
                       >
-                        <Gift size={18} className="text-primary shrink-0 mt-0.5" />
+                        <Gift
+                          size={18}
+                          className="text-primary shrink-0 mt-0.5"
+                        />
                         <span className="font-averta-std text-xs sm:text-sm text-neutral-200">
                           {perk}
                         </span>
@@ -696,7 +712,8 @@ export default async function EventDetailPage({ params }: Props) {
                 Event Media Archive
               </h4>
               <p className="font-averta-std text-xs sm:text-sm text-neutral-400 max-w-md mx-auto mt-1">
-                High-resolution event photos, slide decks, and workshop captures are being processed and archived for this session.
+                High-resolution event photos, slide decks, and workshop captures
+                are being processed and archived for this session.
               </p>
             </div>
           )}

@@ -50,7 +50,7 @@ export interface EventItem {
   image: string;
   cardImage?: string;
   shortSummary: string; // Exactly ~20 words for the card
-  description: string;  // Detailed multi-paragraph description with polished third-person tone
+  description: string; // Detailed multi-paragraph description with polished third-person tone
   highlights: string[];
   speakersOrMentors?: SpeakerOrMentor[];
   judges?: JudgeItem[];
@@ -334,10 +334,8 @@ export const eventsData: EventItem[] = [
     location: "BPIT Main Computer Lab, New Delhi",
     attendeesCount: "220+ Participants",
     bannerFormat: "square",
-    image:
-      "/assets/event-photos/Introduction to AI Agents/poster.jpeg",
-    cardImage:
-      "/assets/event-photos/Introduction to AI Agents/poster.jpeg",
+    image: "/assets/event-photos/Introduction to AI Agents/poster.jpeg",
+    cardImage: "/assets/event-photos/Introduction to AI Agents/poster.jpeg",
     shortSummary:
       "Hands-on masterclass building autonomous AI agents with LangChain, CrewAI, and Vector DBs, deployed via FastAPI and React.",
     description:

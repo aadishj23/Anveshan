@@ -3,7 +3,16 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, ExternalLink, MapPin, Sparkles, Trophy, Cpu, Code2, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  Calendar,
+  ExternalLink,
+  MapPin,
+  Trophy,
+  Cpu,
+  Code2,
+  Globe,
+} from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { eventsData, EventItem } from "@/config/events";
@@ -96,18 +105,26 @@ function EventCardBanner({ event }: { event: EventItem }) {
             <Cpu size={14} />
             <span>AGENTIC AI MASTERCLASS</span>
           </div>
-          <span className="text-xs font-mono text-neutral-400">23 March 2026</span>
+          <span className="text-xs font-mono text-neutral-400">
+            23 March 2026
+          </span>
         </div>
         <div className="my-auto">
           <p className="font-mono text-xs text-primary font-bold uppercase tracking-widest">
             Autonomous Loop Architecture
           </p>
           <div className="flex items-center gap-2 sm:gap-3 text-sm sm:text-lg font-sketch-block text-white mt-1">
-            <span className="px-2 py-1 rounded bg-black/60 border border-white/10">Perceive</span>
+            <span className="px-2 py-1 rounded bg-black/60 border border-white/10">
+              Perceive
+            </span>
             <span>→</span>
-            <span className="px-2 py-1 rounded bg-black/60 border border-primary/40 text-primary">Think</span>
+            <span className="px-2 py-1 rounded bg-black/60 border border-primary/40 text-primary">
+              Think
+            </span>
             <span>→</span>
-            <span className="px-2 py-1 rounded bg-black/60 border border-white/10">Act</span>
+            <span className="px-2 py-1 rounded bg-black/60 border border-white/10">
+              Act
+            </span>
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-2">
@@ -133,7 +150,9 @@ function EventCardBanner({ event }: { event: EventItem }) {
             <Globe size={14} />
             <span>ANVESHAN × QUILLAI NETWORK</span>
           </div>
-          <span className="text-xs font-mono text-neutral-400">28 Dec 2024</span>
+          <span className="text-xs font-mono text-neutral-400">
+            28 Dec 2024
+          </span>
         </div>
         <div className="my-auto">
           <h4 className="font-sketch-block text-2xl sm:text-3xl text-white font-bold leading-tight">
@@ -211,7 +230,7 @@ export default function Testimonials() {
               end: "+=250",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
     }
@@ -256,12 +275,16 @@ export default function Testimonials() {
     >
       {/* Background Sticky Headline & Subheading (Cards cover subheading as they scroll up) */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center pointer-events-none z-0">
-        <div ref={headingRef} className="text-center px-2 sm:px-4 w-full select-none">
+        <div
+          ref={headingRef}
+          className="text-center px-2 sm:px-4 w-full select-none"
+        >
           <Typography.H1 className="text-[clamp(2.4rem,7.2vw,11.5rem)] uppercase text-white font-wc-rough-trad font-normal tracking-tight whitespace-nowrap leading-none drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)]">
             EVENTS & HACKATHONS
           </Typography.H1>
           <p className="font-cabin-sketch italic text-neutral-200 text-sm sm:text-base md:text-lg lg:text-xl tracking-wider max-w-xl sm:max-w-2xl mx-auto mt-4 sm:mt-5 px-4 leading-relaxed">
-            From 30-hour national hackathons and developer cohorts to hands-on Agentic AI masterclasses—explore our engineering milestones.
+            From 30-hour national hackathons and developer cohorts to hands-on
+            Agentic AI masterclasses—explore our engineering milestones.
           </p>
         </div>
       </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/ui/button";
 import Typography from "../Typography";
 import { Calendar, ExternalLink, Trophy } from "lucide-react";
 
@@ -19,7 +18,11 @@ export function handleScrollTo(id: string) {
 
 export function handleRedirect(type: string) {
   if (type === "reforged") {
-    window.open("https://reforged.anveshan.dev", "_blank", "noopener,noreferrer");
+    window.open(
+      "https://reforged.anveshan.dev",
+      "_blank",
+      "noopener,noreferrer",
+    );
   } else if (type === "discord" || type === "contact") {
     handleScrollTo("contact");
   } else {
@@ -48,7 +51,7 @@ export default function DevfolioAndDiscordButtons() {
           window.open(
             "https://reforged.anveshan.dev",
             "_blank",
-            "noopener,noreferrer"
+            "noopener,noreferrer",
           )
         }
       >
